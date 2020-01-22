@@ -1,18 +1,23 @@
 "/Users/zero5/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.18/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -G "CodeBlocks - Unix Makefiles" /Users/zero5/CLionProjects/LimeEvo1
--- The C compiler identification is AppleClang 10.0.0.10001145
--- The CXX compiler identification is AppleClang 10.0.0.10001145
--- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
--- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
--- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+-- 
+-- Checking for module SWIG
+-- Found SWIG version 3.0.12.
+Checking for GNU Radio Module: RUNTIME
+ * INCLUDES=/opt/local/include
+ * LIBS=/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib
+GNURADIO_RUNTIME_FOUND = TRUE
+Checking for GNU Radio Module: FILTER
+ * INCLUDES=/opt/local/include
+ * LIBS=/opt/local/lib/libgnuradio-filter.dylib;/opt/local/lib/libgnuradio-fft.dylib;/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib
+GNURADIO_FILTER_FOUND = TRUE
+Checking for GNU Radio Module: PMT
+ * INCLUDES=/opt/local/include
+ * LIBS=/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib
+GNURADIO_PMT_FOUND = TRUE
+GnuRadio runtime found
+
+
+Plugin Qt5::QGenericEnginePlugin is at location /opt/local/libexec/qt5/plugins/bearer/libqgenericbearer.dylib
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug

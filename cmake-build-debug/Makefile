@@ -120,35 +120,21 @@ LimeEvo1: cmake_check_build_system
 
 # fast build rule for target.
 LimeEvo1/fast:
-	$(MAKE) -f CMakeFiles/LimeEvo1.dir/build.make CMakeFiles/LimeEvo1.dir/build
+	$(MAKE) -f src/CMakeFiles/LimeEvo1.dir/build.make src/CMakeFiles/LimeEvo1.dir/build
 .PHONY : LimeEvo1/fast
 
-main.o: main.cpp.o
+#=============================================================================
+# Target rules for targets named LimeEvo1_autogen
 
-.PHONY : main.o
+# Build rule for target.
+LimeEvo1_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LimeEvo1_autogen
+.PHONY : LimeEvo1_autogen
 
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/LimeEvo1.dir/build.make CMakeFiles/LimeEvo1.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/LimeEvo1.dir/build.make CMakeFiles/LimeEvo1.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/LimeEvo1.dir/build.make CMakeFiles/LimeEvo1.dir/main.cpp.s
-.PHONY : main.cpp.s
+# fast build rule for target.
+LimeEvo1_autogen/fast:
+	$(MAKE) -f src/CMakeFiles/LimeEvo1_autogen.dir/build.make src/CMakeFiles/LimeEvo1_autogen.dir/build
+.PHONY : LimeEvo1_autogen/fast
 
 # Help Target
 help:
@@ -159,9 +145,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... LimeEvo1"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... LimeEvo1_autogen"
 .PHONY : help
 
 
