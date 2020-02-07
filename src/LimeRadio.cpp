@@ -21,7 +21,7 @@ LimeRadio::LimeRadio ()
   if ((n = LMS_GetDeviceList (device_info_list)) < 0)
     {
     std::cout << "ERROR --> " << LMS_GetLastErrorMessage ();
-    error (lmsdevice);
+    LimeDevice::lms_device_error(lmsdevice);
     }
 
   std::cout << "Found Lime Device\n";
@@ -33,12 +33,12 @@ LimeRadio::LimeRadio ()
     }
   if (LMS_Open (&lmsdevice, device_info_list[0], NULL))
     {
-    error (lmsdevice);
+    LimeDevice::lms_device_error(lmsdevice);
     }
 //  LMS_LoadConfig (lmsdevice,"path to config file");
   if (LMS_Init (lmsdevice) != 0)
     {
-    error (lmsdevice);
+    LimeDevice::lms_device_error(lmsdevice);
     }
   std::cout << "Device Initialized.";
   LMS_Close (lmsdevice);
