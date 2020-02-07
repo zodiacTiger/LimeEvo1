@@ -17,9 +17,9 @@
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
 
-if(DEFINED __INCLUDED_GR_TEST_CMAKE)
+if (DEFINED __INCLUDED_GR_TEST_CMAKE)
     return()
-endif()
+endif ()
 set(__INCLUDED_GR_TEST_CMAKE TRUE)
 
 ########################################################################
@@ -33,7 +33,7 @@ set(__INCLUDED_GR_TEST_CMAKE TRUE)
 ########################################################################
 function(GR_ADD_TEST test_name)
 
-    if(WIN32)
+    if (WIN32)
         #Ensure that the build exe also appears in the PATH.
         list(APPEND GR_TEST_TARGET_DEPS ${ARGN})
 
@@ -41,25 +41,25 @@ function(GR_ADD_TEST test_name)
         #Since the dependent libraries are not yet installed,
         #we must manually set them in the PATH to run tests.
         #The following appends the path of a target dependency.
-        foreach(target ${GR_TEST_TARGET_DEPS})
+        foreach (target ${GR_TEST_TARGET_DEPS})
             get_target_property(location ${target} LOCATION)
-            if(location)
+            if (location)
                 get_filename_component(path ${location} PATH)
                 string(REGEX REPLACE "\\$\\(.*\\)" ${CMAKE_BUILD_TYPE} path ${path})
                 list(APPEND GR_TEST_LIBRARY_DIRS ${path})
-            endif(location)
-        endforeach(target)
+            endif (location)
+        endforeach (target)
 
         #SWIG generates the python library files into a subdirectory.
         #Therefore, we must append this subdirectory into PYTHONPATH.
         #Only do this for the python directories matching the following:
-        foreach(pydir ${GR_TEST_PYTHON_DIRS})
+        foreach (pydir ${GR_TEST_PYTHON_DIRS})
             get_filename_component(name ${pydir} NAME)
-            if(name MATCHES "^(swig|lib|src)$")
+            if (name MATCHES "^(swig|lib|src)$")
                 list(APPEND GR_TEST_PYTHON_DIRS ${pydir}/${CMAKE_BUILD_TYPE})
-            endif()
-        endforeach(pydir)
-    endif(WIN32)
+            endif ()
+        endforeach (pydir)
+    endif (WIN32)
 
     file(TO_NATIVE_PATH ${CMAKE_CURRENT_SOURCE_DIR} srcdir)
     file(TO_NATIVE_PATH "${GR_TEST_LIBRARY_DIRS}" libpath) #ok to use on dir list?
@@ -73,7 +73,7 @@ function(GR_ADD_TEST test_name)
     #ADD_TEST(${ARGV})
     #SET_TESTS_PROPERTIES(${test_name} PROPERTIES ENVIRONMENT "${environs}")
 
-    if(UNIX)
+    if (UNIX)
         set(binpath "${CMAKE_CURRENT_BINARY_DIR}:$PATH")
         #set both LD and DYLD paths to cover multiple UNIX OS library paths
         list(APPEND libpath "$LD_LIBRARY_PATH" "$DYLD_LIBRARY_PATH")
@@ -89,13 +89,13 @@ function(GR_ADD_TEST test_name)
         set(sh_file ${CMAKE_CURRENT_BINARY_DIR}/${test_name}_test.sh)
         file(WRITE ${sh_file} "#!${SHELL}\n")
         #each line sets an environment variable
-        foreach(environ ${environs})
+        foreach (environ ${environs})
             file(APPEND ${sh_file} "export ${environ}\n")
-        endforeach(environ)
+        endforeach (environ)
         #load the command to run with its arguments
-        foreach(arg ${ARGN})
+        foreach (arg ${ARGN})
             file(APPEND ${sh_file} "${arg} ")
-        endforeach(arg)
+        endforeach (arg)
         file(APPEND ${sh_file} "\n")
 
         #make the shell file executable
@@ -103,9 +103,9 @@ function(GR_ADD_TEST test_name)
 
         add_test(${test_name} ${SHELL} ${sh_file})
 
-    endif(UNIX)
+    endif (UNIX)
 
-    if(WIN32)
+    if (WIN32)
         list(APPEND libpath ${DLL_PATHS} "%PATH%")
         list(APPEND pypath "%PYTHONPATH%")
 
@@ -118,16 +118,16 @@ function(GR_ADD_TEST test_name)
         set(bat_file ${CMAKE_CURRENT_BINARY_DIR}/${test_name}_test.bat)
         file(WRITE ${bat_file} "@echo off\n")
         #each line sets an environment variable
-        foreach(environ ${environs})
+        foreach (environ ${environs})
             file(APPEND ${bat_file} "SET ${environ}\n")
-        endforeach(environ)
+        endforeach (environ)
         #load the command to run with its arguments
-        foreach(arg ${ARGN})
+        foreach (arg ${ARGN})
             file(APPEND ${bat_file} "${arg} ")
-        endforeach(arg)
+        endforeach (arg)
         file(APPEND ${bat_file} "\n")
 
         add_test(${test_name} ${bat_file})
-    endif(WIN32)
+    endif (WIN32)
 
 endfunction(GR_ADD_TEST)

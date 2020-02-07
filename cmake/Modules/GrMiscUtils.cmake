@@ -17,9 +17,9 @@
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
 
-if(DEFINED __INCLUDED_GR_MISC_UTILS_CMAKE)
+if (DEFINED __INCLUDED_GR_MISC_UTILS_CMAKE)
     return()
-endif()
+endif ()
 set(__INCLUDED_GR_MISC_UTILS_CMAKE TRUE)
 
 ########################################################################
@@ -36,9 +36,9 @@ endfunction(GR_SET_GLOBAL)
 #  - def the pre-processor definition to set and condition name
 ########################################################################
 function(GR_ADD_COND_DEF def)
-    if(${def})
+    if (${def})
         add_definitions(-D${def})
-    endif(${def})
+    endif (${def})
 endfunction(GR_ADD_COND_DEF)
 
 ########################################################################
@@ -93,15 +93,15 @@ endmacro(GR_INCLUDE_SUBDIRECTORY)
 macro(GR_ADD_CXX_COMPILER_FLAG_IF_AVAILABLE flag have)
     include(CheckCXXCompilerFlag)
     CHECK_CXX_COMPILER_FLAG(${flag} ${have})
-    if(${have})
-      if(${CMAKE_VERSION} VERSION_GREATER "2.8.4")
-        STRING(FIND "${CMAKE_CXX_FLAGS}" "${flag}" flag_dup)
-        if(${flag_dup} EQUAL -1)
-          set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${flag}")
-          set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${flag}")
-        endif(${flag_dup} EQUAL -1)
-      endif(${CMAKE_VERSION} VERSION_GREATER "2.8.4")
-    endif(${have})
+    if (${have})
+        if (${CMAKE_VERSION} VERSION_GREATER "2.8.4")
+            STRING(FIND "${CMAKE_CXX_FLAGS}" "${flag}" flag_dup)
+            if (${flag_dup} EQUAL -1)
+                set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${flag}")
+                set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${flag}")
+            endif (${flag_dup} EQUAL -1)
+        endif (${CMAKE_VERSION} VERSION_GREATER "2.8.4")
+    endif (${have})
 endmacro(GR_ADD_CXX_COMPILER_FLAG_IF_AVAILABLE)
 
 ########################################################################
@@ -111,20 +111,20 @@ endmacro(GR_ADD_CXX_COMPILER_FLAG_IF_AVAILABLE)
 # Notice: there is not COMPONENT option, these will not get distributed.
 ########################################################################
 function(GR_LIBTOOL)
-    if(NOT DEFINED GENERATE_LIBTOOL)
+    if (NOT DEFINED GENERATE_LIBTOOL)
         set(GENERATE_LIBTOOL OFF) #disabled by default
-    endif()
+    endif ()
 
-    if(GENERATE_LIBTOOL)
+    if (GENERATE_LIBTOOL)
         include(CMakeParseArgumentsCopy)
         CMAKE_PARSE_ARGUMENTS(GR_LIBTOOL "" "TARGET;DESTINATION" "" ${ARGN})
 
         find_program(LIBTOOL libtool)
-        if(LIBTOOL)
+        if (LIBTOOL)
             include(CMakeMacroLibtoolFile)
             CREATE_LIBTOOL_FILE(${GR_LIBTOOL_TARGET} /${GR_LIBTOOL_DESTINATION})
-        endif(LIBTOOL)
-    endif(GENERATE_LIBTOOL)
+        endif (LIBTOOL)
+    endif (GENERATE_LIBTOOL)
 
 endfunction(GR_LIBTOOL)
 
@@ -144,18 +144,18 @@ function(GR_LIBRARY_FOO target)
 
     #install the generated files like so...
     install(TARGETS ${target}
-        LIBRARY DESTINATION ${GR_LIBRARY_DIR} COMPONENT ${GR_LIBRARY_RUNTIME_COMPONENT} # .so/.dylib file
-        ARCHIVE DESTINATION ${GR_LIBRARY_DIR} COMPONENT ${GR_LIBRARY_DEVEL_COMPONENT}   # .lib file
-        RUNTIME DESTINATION ${GR_RUNTIME_DIR} COMPONENT ${GR_LIBRARY_RUNTIME_COMPONENT} # .dll file
-    )
+            LIBRARY DESTINATION ${GR_LIBRARY_DIR} COMPONENT ${GR_LIBRARY_RUNTIME_COMPONENT} # .so/.dylib file
+            ARCHIVE DESTINATION ${GR_LIBRARY_DIR} COMPONENT ${GR_LIBRARY_DEVEL_COMPONENT}   # .lib file
+            RUNTIME DESTINATION ${GR_RUNTIME_DIR} COMPONENT ${GR_LIBRARY_RUNTIME_COMPONENT} # .dll file
+            )
 
     #extras mode enabled automatically on linux
-    if(NOT DEFINED LIBRARY_EXTRAS)
+    if (NOT DEFINED LIBRARY_EXTRAS)
         set(LIBRARY_EXTRAS ${LINUX})
-    endif()
+    endif ()
 
     #special extras mode to enable alternative naming conventions
-    if(LIBRARY_EXTRAS)
+    if (LIBRARY_EXTRAS)
 
         #create .la file before changing props
         GR_LIBTOOL(TARGET ${target} DESTINATION ${GR_LIBRARY_DIR})
@@ -166,22 +166,22 @@ function(GR_LIBRARY_FOO target)
 
         #custom command to generate symlinks
         add_custom_command(
-            TARGET ${target}
-            POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E create_symlink ${target_name} ${CMAKE_CURRENT_BINARY_DIR}/lib${target}.so
-            COMMAND ${CMAKE_COMMAND} -E create_symlink ${target_name} ${CMAKE_CURRENT_BINARY_DIR}/lib${target}-${LIBVER}.so.0
-            COMMAND ${CMAKE_COMMAND} -E touch ${target_name} #so the symlinks point to something valid so cmake 2.6 will install
+                TARGET ${target}
+                POST_BUILD
+                COMMAND ${CMAKE_COMMAND} -E create_symlink ${target_name} ${CMAKE_CURRENT_BINARY_DIR}/lib${target}.so
+                COMMAND ${CMAKE_COMMAND} -E create_symlink ${target_name} ${CMAKE_CURRENT_BINARY_DIR}/lib${target}-${LIBVER}.so.0
+                COMMAND ${CMAKE_COMMAND} -E touch ${target_name} #so the symlinks point to something valid so cmake 2.6 will install
         )
 
         #and install the extra symlinks
         install(
-            FILES
-            ${CMAKE_CURRENT_BINARY_DIR}/lib${target}.so
-            ${CMAKE_CURRENT_BINARY_DIR}/lib${target}-${LIBVER}.so.0
-            DESTINATION ${GR_LIBRARY_DIR} COMPONENT ${GR_LIBRARY_RUNTIME_COMPONENT}
+                FILES
+                ${CMAKE_CURRENT_BINARY_DIR}/lib${target}.so
+                ${CMAKE_CURRENT_BINARY_DIR}/lib${target}-${LIBVER}.so.0
+                DESTINATION ${GR_LIBRARY_DIR} COMPONENT ${GR_LIBRARY_RUNTIME_COMPONENT}
         )
 
-    endif(LIBRARY_EXTRAS)
+    endif (LIBRARY_EXTRAS)
 endfunction(GR_LIBRARY_FOO)
 
 ########################################################################
@@ -195,24 +195,24 @@ endfunction(GR_LIBRARY_FOO)
 ########################################################################
 function(GR_GEN_TARGET_DEPS name var)
     file(
-        WRITE ${CMAKE_CURRENT_BINARY_DIR}/${name}.cpp.in
-        "int main(void){return 0;}\n"
+            WRITE ${CMAKE_CURRENT_BINARY_DIR}/${name}.cpp.in
+            "int main(void){return 0;}\n"
     )
     execute_process(
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        ${CMAKE_CURRENT_BINARY_DIR}/${name}.cpp.in
-        ${CMAKE_CURRENT_BINARY_DIR}/${name}.cpp
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            ${CMAKE_CURRENT_BINARY_DIR}/${name}.cpp.in
+            ${CMAKE_CURRENT_BINARY_DIR}/${name}.cpp
     )
     add_executable(${name} ${CMAKE_CURRENT_BINARY_DIR}/${name}.cpp)
-    if(ARGN)
+    if (ARGN)
         add_dependencies(${name} ${ARGN})
-    endif(ARGN)
+    endif (ARGN)
 
-    if(CMAKE_CROSSCOMPILING)
+    if (CMAKE_CROSSCOMPILING)
         set(${var} "DEPENDS;${name}" PARENT_SCOPE) #cant call command when cross
-    else()
+    else ()
         set(${var} "DEPENDS;${name};COMMAND;${name}" PARENT_SCOPE)
-    endif()
+    endif ()
 endfunction(GR_GEN_TARGET_DEPS)
 
 ########################################################################
@@ -224,37 +224,37 @@ endfunction(GR_GEN_TARGET_DEPS)
 # Can manually set with -DENABLE_GR_LOG=0|1
 ########################################################################
 function(GR_LOGGING)
-  find_package(Log4cpp)
+    find_package(Log4cpp)
 
-  OPTION(ENABLE_GR_LOG "Use gr_logger" ON)
-  if(ENABLE_GR_LOG)
-    # If gr_logger is enabled, make it usable
-    add_definitions( -DENABLE_GR_LOG )
+    OPTION(ENABLE_GR_LOG "Use gr_logger" ON)
+    if (ENABLE_GR_LOG)
+        # If gr_logger is enabled, make it usable
+        add_definitions(-DENABLE_GR_LOG)
 
-    # also test LOG4CPP; if we have it, use this version of the logger
-    # otherwise, default to the stdout/stderr model.
-    if(LOG4CPP_FOUND)
-      SET(HAVE_LOG4CPP True CACHE INTERNAL "" FORCE)
-      add_definitions( -DHAVE_LOG4CPP )
-    else(not LOG4CPP_FOUND)
-      SET(HAVE_LOG4CPP False CACHE INTERNAL "" FORCE)
-      SET(LOG4CPP_INCLUDE_DIRS "" CACHE INTERNAL "" FORCE)
-      SET(LOG4CPP_LIBRARY_DIRS "" CACHE INTERNAL "" FORCE)
-      SET(LOG4CPP_LIBRARIES "" CACHE INTERNAL "" FORCE)
-    endif(LOG4CPP_FOUND)
+        # also test LOG4CPP; if we have it, use this version of the logger
+        # otherwise, default to the stdout/stderr model.
+        if (LOG4CPP_FOUND)
+            SET(HAVE_LOG4CPP True CACHE INTERNAL "" FORCE)
+            add_definitions(-DHAVE_LOG4CPP)
+        else (not LOG4CPP_FOUND)
+            SET(HAVE_LOG4CPP False CACHE INTERNAL "" FORCE)
+            SET(LOG4CPP_INCLUDE_DIRS "" CACHE INTERNAL "" FORCE)
+            SET(LOG4CPP_LIBRARY_DIRS "" CACHE INTERNAL "" FORCE)
+            SET(LOG4CPP_LIBRARIES "" CACHE INTERNAL "" FORCE)
+        endif (LOG4CPP_FOUND)
 
-    SET(ENABLE_GR_LOG ${ENABLE_GR_LOG} CACHE INTERNAL "" FORCE)
+        SET(ENABLE_GR_LOG ${ENABLE_GR_LOG} CACHE INTERNAL "" FORCE)
 
-  else(ENABLE_GR_LOG)
-    SET(HAVE_LOG4CPP False CACHE INTERNAL "" FORCE)
-    SET(LOG4CPP_INCLUDE_DIRS "" CACHE INTERNAL "" FORCE)
-    SET(LOG4CPP_LIBRARY_DIRS "" CACHE INTERNAL "" FORCE)
-    SET(LOG4CPP_LIBRARIES "" CACHE INTERNAL "" FORCE)
-  endif(ENABLE_GR_LOG)
+    else (ENABLE_GR_LOG)
+        SET(HAVE_LOG4CPP False CACHE INTERNAL "" FORCE)
+        SET(LOG4CPP_INCLUDE_DIRS "" CACHE INTERNAL "" FORCE)
+        SET(LOG4CPP_LIBRARY_DIRS "" CACHE INTERNAL "" FORCE)
+        SET(LOG4CPP_LIBRARIES "" CACHE INTERNAL "" FORCE)
+    endif (ENABLE_GR_LOG)
 
-  message(STATUS "ENABLE_GR_LOG set to ${ENABLE_GR_LOG}.")
-  message(STATUS "HAVE_LOG4CPP set to ${HAVE_LOG4CPP}.")
-  message(STATUS "LOG4CPP_LIBRARIES set to ${LOG4CPP_LIBRARIES}.")
+    message(STATUS "ENABLE_GR_LOG set to ${ENABLE_GR_LOG}.")
+    message(STATUS "HAVE_LOG4CPP set to ${HAVE_LOG4CPP}.")
+    message(STATUS "LOG4CPP_LIBRARIES set to ${LOG4CPP_LIBRARIES}.")
 
 endfunction(GR_LOGGING)
 
@@ -263,7 +263,7 @@ endfunction(GR_LOGGING)
 #  should be defined
 ########################################################################
 macro(GR_CHECK_LINUX_SCHED_AVAIL)
-set(CMAKE_REQUIRED_LIBRARIES -lpthread)
+    set(CMAKE_REQUIRED_LIBRARIES -lpthread)
     CHECK_CXX_SOURCE_COMPILES("
         #include <pthread.h>
         int main(){
@@ -271,7 +271,7 @@ set(CMAKE_REQUIRED_LIBRARIES -lpthread)
             pthread_setschedparam(pthread,  0, 0);
             return 0;
         } " HAVE_PTHREAD_SETSCHEDPARAM
-    )
+            )
     GR_ADD_COND_DEF(HAVE_PTHREAD_SETSCHEDPARAM)
 
     CHECK_CXX_SOURCE_COMPILES("
@@ -281,7 +281,7 @@ set(CMAKE_REQUIRED_LIBRARIES -lpthread)
             sched_setscheduler(pid, 0, 0);
             return 0;
         } " HAVE_SCHED_SETSCHEDULER
-    )
+            )
     GR_ADD_COND_DEF(HAVE_SCHED_SETSCHEDULER)
 endmacro(GR_CHECK_LINUX_SCHED_AVAIL)
 
@@ -290,10 +290,10 @@ endmacro(GR_CHECK_LINUX_SCHED_AVAIL)
 ########################################################################
 macro(GR_EXPAND_X_H component root)
 
-  include(GrPython)
+    include(GrPython)
 
-  file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
-"#!${PYTHON_EXECUTABLE}
+    file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
+            "#!${PYTHON_EXECUTABLE}
 
 import sys, os, re
 sys.path.append('${GR_RUNTIME_PYTHONPATH}')
@@ -309,34 +309,34 @@ if __name__ == '__main__':
         build_utils.expand_template(d, inp)
 ")
 
-  #make a list of all the generated headers
-  unset(expanded_files_h)
-  foreach(sig ${ARGN})
-    string(REGEX REPLACE "X+" ${sig} name ${root})
-    list(APPEND expanded_files_h ${CMAKE_CURRENT_BINARY_DIR}/${name}.h)
-  endforeach(sig)
-  unset(name)
+    #make a list of all the generated headers
+    unset(expanded_files_h)
+    foreach (sig ${ARGN})
+        string(REGEX REPLACE "X+" ${sig} name ${root})
+        list(APPEND expanded_files_h ${CMAKE_CURRENT_BINARY_DIR}/${name}.h)
+    endforeach (sig)
+    unset(name)
 
-  #create a command to generate the headers
-  add_custom_command(
-    OUTPUT ${expanded_files_h}
-    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${root}.h.t
-    COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
-    ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
-    ${root} ${root}.h.t ${ARGN}
-  )
+    #create a command to generate the headers
+    add_custom_command(
+            OUTPUT ${expanded_files_h}
+            DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${root}.h.t
+            COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
+            ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
+            ${root} ${root}.h.t ${ARGN}
+    )
 
-  #install rules for the generated headers
-  list(APPEND generated_includes ${expanded_files_h})
+    #install rules for the generated headers
+    list(APPEND generated_includes ${expanded_files_h})
 
 endmacro(GR_EXPAND_X_H)
 
 macro(GR_EXPAND_X_CC_H component root)
 
-  include(GrPython)
+    include(GrPython)
 
-  file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
-"#!${PYTHON_EXECUTABLE}
+    file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
+            "#!${PYTHON_EXECUTABLE}
 
 import sys, os, re
 sys.path.append('${GR_RUNTIME_PYTHONPATH}')
@@ -352,51 +352,51 @@ if __name__ == '__main__':
         build_utils.expand_template(d, inp)
 ")
 
-  #make a list of all the generated files
-  unset(expanded_files_cc)
-  unset(expanded_files_h)
-  foreach(sig ${ARGN})
-    string(REGEX REPLACE "X+" ${sig} name ${root})
-    list(APPEND expanded_files_cc ${CMAKE_CURRENT_BINARY_DIR}/${name}.cc)
-    list(APPEND expanded_files_h  ${CMAKE_CURRENT_BINARY_DIR}/${name}.h)
-  endforeach(sig)
-  unset(name)
+    #make a list of all the generated files
+    unset(expanded_files_cc)
+    unset(expanded_files_h)
+    foreach (sig ${ARGN})
+        string(REGEX REPLACE "X+" ${sig} name ${root})
+        list(APPEND expanded_files_cc ${CMAKE_CURRENT_BINARY_DIR}/${name}.cc)
+        list(APPEND expanded_files_h ${CMAKE_CURRENT_BINARY_DIR}/${name}.h)
+    endforeach (sig)
+    unset(name)
 
-  #create a command to generate the source files
-  add_custom_command(
-    OUTPUT ${expanded_files_cc}
-    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${root}.cc.t
-    COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
-    ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
-    ${root} ${root}.cc.t ${ARGN}
-  )
+    #create a command to generate the source files
+    add_custom_command(
+            OUTPUT ${expanded_files_cc}
+            DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${root}.cc.t
+            COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
+            ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
+            ${root} ${root}.cc.t ${ARGN}
+    )
 
-  #create a command to generate the header files
-  add_custom_command(
-    OUTPUT ${expanded_files_h}
-    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${root}.h.t
-    COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
-    ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
-    ${root} ${root}.h.t ${ARGN}
-  )
+    #create a command to generate the header files
+    add_custom_command(
+            OUTPUT ${expanded_files_h}
+            DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${root}.h.t
+            COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
+            ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
+            ${root} ${root}.h.t ${ARGN}
+    )
 
-  #make source files depends on headers to force generation
-  set_source_files_properties(${expanded_files_cc}
-    PROPERTIES OBJECT_DEPENDS "${expanded_files_h}"
-  )
+    #make source files depends on headers to force generation
+    set_source_files_properties(${expanded_files_cc}
+            PROPERTIES OBJECT_DEPENDS "${expanded_files_h}"
+            )
 
-  #install rules for the generated files
-  list(APPEND generated_sources ${expanded_files_cc})
-  list(APPEND generated_headers ${expanded_files_h})
+    #install rules for the generated files
+    list(APPEND generated_sources ${expanded_files_cc})
+    list(APPEND generated_headers ${expanded_files_h})
 
 endmacro(GR_EXPAND_X_CC_H)
 
 macro(GR_EXPAND_X_CC_H_IMPL component root)
 
-  include(GrPython)
+    include(GrPython)
 
-  file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
-"#!${PYTHON_EXECUTABLE}
+    file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
+            "#!${PYTHON_EXECUTABLE}
 
 import sys, os, re
 sys.path.append('${GR_RUNTIME_PYTHONPATH}')
@@ -412,48 +412,48 @@ if __name__ == '__main__':
         build_utils.expand_template(d, inp, '_impl')
 ")
 
-  #make a list of all the generated files
-  unset(expanded_files_cc_impl)
-  unset(expanded_files_h_impl)
-  unset(expanded_files_h)
-  foreach(sig ${ARGN})
-    string(REGEX REPLACE "X+" ${sig} name ${root})
-    list(APPEND expanded_files_cc_impl ${CMAKE_CURRENT_BINARY_DIR}/${name}_impl.cc)
-    list(APPEND expanded_files_h_impl ${CMAKE_CURRENT_BINARY_DIR}/${name}_impl.h)
-    list(APPEND expanded_files_h ${CMAKE_CURRENT_BINARY_DIR}/../include/gnuradio/${component}/${name}.h)
-  endforeach(sig)
-  unset(name)
+    #make a list of all the generated files
+    unset(expanded_files_cc_impl)
+    unset(expanded_files_h_impl)
+    unset(expanded_files_h)
+    foreach (sig ${ARGN})
+        string(REGEX REPLACE "X+" ${sig} name ${root})
+        list(APPEND expanded_files_cc_impl ${CMAKE_CURRENT_BINARY_DIR}/${name}_impl.cc)
+        list(APPEND expanded_files_h_impl ${CMAKE_CURRENT_BINARY_DIR}/${name}_impl.h)
+        list(APPEND expanded_files_h ${CMAKE_CURRENT_BINARY_DIR}/../include/gnuradio/${component}/${name}.h)
+    endforeach (sig)
+    unset(name)
 
-  #create a command to generate the _impl.cc files
-  add_custom_command(
-    OUTPUT ${expanded_files_cc_impl}
-    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${root}_impl.cc.t
-    COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
-    ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
-    ${root} ${root}_impl.cc.t ${ARGN}
-  )
+    #create a command to generate the _impl.cc files
+    add_custom_command(
+            OUTPUT ${expanded_files_cc_impl}
+            DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${root}_impl.cc.t
+            COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
+            ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
+            ${root} ${root}_impl.cc.t ${ARGN}
+    )
 
-  #create a command to generate the _impl.h files
-  add_custom_command(
-    OUTPUT ${expanded_files_h_impl}
-    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${root}_impl.h.t
-    COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
-    ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
-    ${root} ${root}_impl.h.t ${ARGN}
-  )
+    #create a command to generate the _impl.h files
+    add_custom_command(
+            OUTPUT ${expanded_files_h_impl}
+            DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/${root}_impl.h.t
+            COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
+            ${CMAKE_CURRENT_BINARY_DIR}/generate_helper.py
+            ${root} ${root}_impl.h.t ${ARGN}
+    )
 
-  #make _impl.cc source files depend on _impl.h to force generation
-  set_source_files_properties(${expanded_files_cc_impl}
-    PROPERTIES OBJECT_DEPENDS "${expanded_files_h_impl}"
-  )
+    #make _impl.cc source files depend on _impl.h to force generation
+    set_source_files_properties(${expanded_files_cc_impl}
+            PROPERTIES OBJECT_DEPENDS "${expanded_files_h_impl}"
+            )
 
-  #make _impl.h source files depend on headers to force generation
-  set_source_files_properties(${expanded_files_h_impl}
-    PROPERTIES OBJECT_DEPENDS "${expanded_files_h}"
-  )
+    #make _impl.h source files depend on headers to force generation
+    set_source_files_properties(${expanded_files_h_impl}
+            PROPERTIES OBJECT_DEPENDS "${expanded_files_h}"
+            )
 
-  #install rules for the generated files
-  list(APPEND generated_sources ${expanded_files_cc_impl})
-  list(APPEND generated_headers ${expanded_files_h_impl})
+    #install rules for the generated files
+    list(APPEND generated_sources ${expanded_files_cc_impl})
+    list(APPEND generated_headers ${expanded_files_h_impl})
 
 endmacro(GR_EXPAND_X_CC_H_IMPL)

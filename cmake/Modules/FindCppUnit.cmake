@@ -13,23 +13,23 @@ INCLUDE(FindPkgConfig)
 PKG_CHECK_MODULES(PC_CPPUNIT "cppunit")
 
 FIND_PATH(CPPUNIT_INCLUDE_DIRS
-    NAMES cppunit/TestCase.h
-    HINTS ${PC_CPPUNIT_INCLUDE_DIR}
-    PATHS
+        NAMES cppunit/TestCase.h
+        HINTS ${PC_CPPUNIT_INCLUDE_DIR}
+        PATHS
         /opt/local/include
         /usr/local/include
         /usr/include
-)
+        )
 
 FIND_LIBRARY(CPPUNIT_LIBRARIES
-    NAMES cppunit
-    HINTS ${PC_CPPUNIT_LIBDIR}
-    PATHS
+        NAMES cppunit
+        HINTS ${PC_CPPUNIT_LIBDIR}
+        PATHS
         ${CPPUNIT_INCLUDE_DIRS}/../lib
         /opt/local/lib
         /usr/local/include
         /usr/lib
-)
+        )
 
 LIST(APPEND CPPUNIT_LIBRARIES ${CMAKE_DL_LIBS})
 

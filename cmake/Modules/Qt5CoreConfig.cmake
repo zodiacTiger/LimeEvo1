@@ -1,7 +1,7 @@
 
 if (CMAKE_VERSION VERSION_LESS 3.1.0)
     message(FATAL_ERROR "Qt 5 Core module requires at least CMake version 3.1.0")
-endif()
+endif ()
 
 get_filename_component(_qt5Core_install_prefix "/opt/local/libexec/qt5/lib/cmake/Qt5Core/../../../" ABSOLUTE)
 
@@ -11,7 +11,7 @@ set(Qt5Core_VERSION_STRING 5.12.3)
 set(Qt5Core_LIBRARIES Qt5::Core)
 
 macro(_qt5_Core_check_file_exists file)
-    if(NOT EXISTS "${file}" )
+    if (NOT EXISTS "${file}")
         message(FATAL_ERROR "The imported target \"Qt5::Core\" references the file
    \"${file}\"
 but this file does not exist.  Possible reasons include:
@@ -21,7 +21,7 @@ but this file does not exist.  Possible reasons include:
    \"${CMAKE_CURRENT_LIST_FILE}\"
 but not all the files it references.
 ")
-    endif()
+    endif ()
 endmacro()
 
 macro(_populate_Core_target_properties Configuration LIB_LOCATION IMPLIB_LOCATION)
@@ -30,28 +30,28 @@ macro(_populate_Core_target_properties Configuration LIB_LOCATION IMPLIB_LOCATIO
     set(imported_location "${_qt5Core_install_prefix}/lib/${LIB_LOCATION}")
     _qt5_Core_check_file_exists(${imported_location})
     set_target_properties(Qt5::Core PROPERTIES
-        "INTERFACE_LINK_LIBRARIES" "${_Qt5Core_LIB_DEPENDENCIES}"
-        "IMPORTED_LOCATION_${Configuration}" ${imported_location}
-        # For backward compatibility with CMake < 2.8.12
-        "IMPORTED_LINK_INTERFACE_LIBRARIES_${Configuration}" "${_Qt5Core_LIB_DEPENDENCIES}"
-    )
+            "INTERFACE_LINK_LIBRARIES" "${_Qt5Core_LIB_DEPENDENCIES}"
+            "IMPORTED_LOCATION_${Configuration}" ${imported_location}
+            # For backward compatibility with CMake < 2.8.12
+            "IMPORTED_LINK_INTERFACE_LIBRARIES_${Configuration}" "${_Qt5Core_LIB_DEPENDENCIES}"
+            )
 
 endmacro()
 
 if (NOT TARGET Qt5::Core)
 
     set(_Qt5Core_OWN_INCLUDE_DIRS
-      "${_qt5Core_install_prefix}/lib/QtCore.framework"
-      "${_qt5Core_install_prefix}/lib/QtCore.framework/Headers"
-    )
+            "${_qt5Core_install_prefix}/lib/QtCore.framework"
+            "${_qt5Core_install_prefix}/lib/QtCore.framework/Headers"
+            )
     set(Qt5Core_PRIVATE_INCLUDE_DIRS
-        "${_qt5Core_install_prefix}/lib/QtCore.framework/Versions/5/Headers/5.12.3/"
-        "${_qt5Core_install_prefix}/lib/QtCore.framework/Versions/5/Headers/5.12.3/QtCore"
-    )
+            "${_qt5Core_install_prefix}/lib/QtCore.framework/Versions/5/Headers/5.12.3/"
+            "${_qt5Core_install_prefix}/lib/QtCore.framework/Versions/5/Headers/5.12.3/QtCore"
+            )
 
-    foreach(_dir ${_Qt5Core_OWN_INCLUDE_DIRS})
+    foreach (_dir ${_Qt5Core_OWN_INCLUDE_DIRS})
         _qt5_Core_check_file_exists(${_dir})
-    endforeach()
+    endforeach ()
 
 
     set(Qt5Core_INCLUDE_DIRS ${_Qt5Core_OWN_INCLUDE_DIRS})
@@ -66,39 +66,39 @@ if (NOT TARGET Qt5::Core)
     set(_Qt5Core_FIND_DEPENDENCIES_REQUIRED)
     if (Qt5Core_FIND_REQUIRED)
         set(_Qt5Core_FIND_DEPENDENCIES_REQUIRED REQUIRED)
-    endif()
+    endif ()
     set(_Qt5Core_FIND_DEPENDENCIES_QUIET)
     if (Qt5Core_FIND_QUIETLY)
         set(_Qt5Core_DEPENDENCIES_FIND_QUIET QUIET)
-    endif()
+    endif ()
     set(_Qt5Core_FIND_VERSION_EXACT)
     if (Qt5Core_FIND_VERSION_EXACT)
         set(_Qt5Core_FIND_VERSION_EXACT EXACT)
-    endif()
+    endif ()
 
     set(Qt5Core_EXECUTABLE_COMPILE_FLAGS "")
 
-    foreach(_module_dep ${_Qt5Core_MODULE_DEPENDENCIES})
+    foreach (_module_dep ${_Qt5Core_MODULE_DEPENDENCIES})
         if (NOT Qt5${_module_dep}_FOUND)
             find_package(Qt5${_module_dep}
-                5.12.3 ${_Qt5Core_FIND_VERSION_EXACT}
-                ${_Qt5Core_DEPENDENCIES_FIND_QUIET}
-                ${_Qt5Core_FIND_DEPENDENCIES_REQUIRED}
-                PATHS "/opt/local/libexec/qt5/lib/cmake/Qt5Core/.." NO_DEFAULT_PATH
-            )
-        endif()
+                    5.12.3 ${_Qt5Core_FIND_VERSION_EXACT}
+                    ${_Qt5Core_DEPENDENCIES_FIND_QUIET}
+                    ${_Qt5Core_FIND_DEPENDENCIES_REQUIRED}
+                    PATHS "/opt/local/libexec/qt5/lib/cmake/Qt5Core/.." NO_DEFAULT_PATH
+                    )
+        endif ()
 
         if (NOT Qt5${_module_dep}_FOUND)
             set(Qt5Core_FOUND False)
             return()
-        endif()
+        endif ()
 
         list(APPEND Qt5Core_INCLUDE_DIRS "${Qt5${_module_dep}_INCLUDE_DIRS}")
         list(APPEND Qt5Core_PRIVATE_INCLUDE_DIRS "${Qt5${_module_dep}_PRIVATE_INCLUDE_DIRS}")
         list(APPEND Qt5Core_DEFINITIONS ${Qt5${_module_dep}_DEFINITIONS})
         list(APPEND Qt5Core_COMPILE_DEFINITIONS ${Qt5${_module_dep}_COMPILE_DEFINITIONS})
         list(APPEND Qt5Core_EXECUTABLE_COMPILE_FLAGS ${Qt5${_module_dep}_EXECUTABLE_COMPILE_FLAGS})
-    endforeach()
+    endforeach ()
     list(REMOVE_DUPLICATES Qt5Core_INCLUDE_DIRS)
     list(REMOVE_DUPLICATES Qt5Core_PRIVATE_INCLUDE_DIRS)
     list(REMOVE_DUPLICATES Qt5Core_DEFINITIONS)
@@ -112,39 +112,37 @@ if (NOT TARGET Qt5::Core)
     set_property(TARGET Qt5::Core PROPERTY FRAMEWORK 1)
 
     set_property(TARGET Qt5::Core PROPERTY
-      INTERFACE_INCLUDE_DIRECTORIES ${_Qt5Core_OWN_INCLUDE_DIRS})
+            INTERFACE_INCLUDE_DIRECTORIES ${_Qt5Core_OWN_INCLUDE_DIRS})
     set_property(TARGET Qt5::Core PROPERTY
-      INTERFACE_COMPILE_DEFINITIONS QT_CORE_LIB)
+            INTERFACE_COMPILE_DEFINITIONS QT_CORE_LIB)
 
     set_property(TARGET Qt5::Core PROPERTY INTERFACE_QT_ENABLED_FEATURES properties;animation;textcodec;big_codecs;codecs;commandlineparser;cxx11_future;textdate;datestring;filesystemiterator;filesystemwatcher;gestures;itemmodel;proxymodel;identityproxymodel;library;mimetype;processenvironment;process;statemachine;qeventtransition;regularexpression;settings;sharedmemory;sortfilterproxymodel;std-atomic64;stringlistmodel;systemsemaphore;temporaryfile;timezone;topleveldomain;translation;xmlstream;xmlstreamreader;xmlstreamwriter)
-    set_property(TARGET Qt5::Core PROPERTY INTERFACE_QT_DISABLED_FEATURES )
+    set_property(TARGET Qt5::Core PROPERTY INTERFACE_QT_DISABLED_FEATURES)
 
     set(_Qt5Core_PRIVATE_DIRS_EXIST TRUE)
     foreach (_Qt5Core_PRIVATE_DIR ${Qt5Core_OWN_PRIVATE_INCLUDE_DIRS})
         if (NOT EXISTS ${_Qt5Core_PRIVATE_DIR})
             set(_Qt5Core_PRIVATE_DIRS_EXIST FALSE)
-        endif()
-    endforeach()
+        endif ()
+    endforeach ()
 
     if (_Qt5Core_PRIVATE_DIRS_EXIST)
         add_library(Qt5::CorePrivate INTERFACE IMPORTED)
         set_property(TARGET Qt5::CorePrivate PROPERTY
-            INTERFACE_INCLUDE_DIRECTORIES ${Qt5Core_OWN_PRIVATE_INCLUDE_DIRS}
-        )
+                INTERFACE_INCLUDE_DIRECTORIES ${Qt5Core_OWN_PRIVATE_INCLUDE_DIRS}
+                )
         set(_Qt5Core_PRIVATEDEPS)
-        foreach(dep ${_Qt5Core_LIB_DEPENDENCIES})
+        foreach (dep ${_Qt5Core_LIB_DEPENDENCIES})
             if (TARGET ${dep}Private)
                 list(APPEND _Qt5Core_PRIVATEDEPS ${dep}Private)
-            endif()
-        endforeach()
+            endif ()
+        endforeach ()
         set_property(TARGET Qt5::CorePrivate PROPERTY
-            INTERFACE_LINK_LIBRARIES Qt5::Core ${_Qt5Core_PRIVATEDEPS}
-        )
-    endif()
+                INTERFACE_LINK_LIBRARIES Qt5::Core ${_Qt5Core_PRIVATEDEPS}
+                )
+    endif ()
 
-    _populate_Core_target_properties(RELEASE "QtCore.framework/QtCore" "" )
-
-
+    _populate_Core_target_properties(RELEASE "QtCore.framework/QtCore" "")
 
 
     file(GLOB pluginTargets "/opt/local/libexec/qt5/lib/cmake/Qt5Core/Qt5Core_*Plugin.cmake")
@@ -155,21 +153,21 @@ if (NOT TARGET Qt5::Core)
         set(imported_location "${_qt5Core_install_prefix}/plugins/${PLUGIN_LOCATION}")
         _qt5_Core_check_file_exists(${imported_location})
         set_target_properties(Qt5::${Plugin} PROPERTIES
-            "IMPORTED_LOCATION_${Configuration}" ${imported_location}
-        )
+                "IMPORTED_LOCATION_${Configuration}" ${imported_location}
+                )
     endmacro()
 
     if (pluginTargets)
-        foreach(pluginTarget ${pluginTargets})
+        foreach (pluginTarget ${pluginTargets})
             include(${pluginTarget})
-        endforeach()
-    endif()
+        endforeach ()
+    endif ()
 
 
     include("/opt/local/libexec/qt5/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake")
 
     include("/opt/local/libexec/qt5/lib/cmake/Qt5Core/Qt5CoreMacros.cmake")
 
-_qt5_Core_check_file_exists("/opt/local/libexec/qt5/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake")
+    _qt5_Core_check_file_exists("/opt/local/libexec/qt5/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake")
 
-endif()
+endif ()

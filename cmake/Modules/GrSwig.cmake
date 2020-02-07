@@ -17,9 +17,9 @@
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
 
-if(DEFINED __INCLUDED_GR_SWIG_CMAKE)
+if (DEFINED __INCLUDED_GR_SWIG_CMAKE)
     return()
-endif()
+endif ()
 set(__INCLUDED_GR_SWIG_CMAKE TRUE)
 
 include(GrPython)
@@ -34,20 +34,20 @@ include(GrPython)
 ########################################################################
 function(GR_SWIG_MAKE_DOCS output_file)
     find_package(Doxygen)
-    if(DOXYGEN_FOUND)
+    if (DOXYGEN_FOUND)
 
         #setup the input files variable list, quote formated
         set(input_files)
         unset(INPUT_PATHS)
-        foreach(input_path ${ARGN})
+        foreach (input_path ${ARGN})
             if (IS_DIRECTORY ${input_path}) #when input path is a directory
                 file(GLOB input_path_h_files ${input_path}/*.h)
-            else() #otherwise its just a file, no glob
+            else () #otherwise its just a file, no glob
                 set(input_path_h_files ${input_path})
-            endif()
+            endif ()
             list(APPEND input_files ${input_path_h_files})
             set(INPUT_PATHS "${INPUT_PATHS} \"${input_path}\"")
-        endforeach(input_path)
+        endforeach (input_path)
 
         #determine the output directory
         get_filename_component(name ${output_file} NAME_WE)
@@ -57,9 +57,9 @@ function(GR_SWIG_MAKE_DOCS output_file)
 
         #generate the Doxyfile used by doxygen
         configure_file(
-            ${CMAKE_SOURCE_DIR}/docs/doxygen/Doxyfile.swig_doc.in
-            ${OUTPUT_DIRECTORY}/Doxyfile
-        @ONLY)
+                ${CMAKE_SOURCE_DIR}/docs/doxygen/Doxyfile.swig_doc.in
+                ${OUTPUT_DIRECTORY}/Doxyfile
+                @ONLY)
 
         #Create a dummy custom command that depends on other targets
         include(GrMiscUtils)
@@ -67,26 +67,26 @@ function(GR_SWIG_MAKE_DOCS output_file)
 
         #call doxygen on the Doxyfile + input headers
         add_custom_command(
-            OUTPUT ${OUTPUT_DIRECTORY}/xml/index.xml
-            DEPENDS ${input_files} ${GR_SWIG_DOCS_SOURCE_DEPS} ${tag_deps}
-            COMMAND ${DOXYGEN_EXECUTABLE} ${OUTPUT_DIRECTORY}/Doxyfile
-            COMMENT "Generating doxygen xml for ${name} docs"
+                OUTPUT ${OUTPUT_DIRECTORY}/xml/index.xml
+                DEPENDS ${input_files} ${GR_SWIG_DOCS_SOURCE_DEPS} ${tag_deps}
+                COMMAND ${DOXYGEN_EXECUTABLE} ${OUTPUT_DIRECTORY}/Doxyfile
+                COMMENT "Generating doxygen xml for ${name} docs"
         )
 
         #call the swig_doc script on the xml files
         add_custom_command(
-            OUTPUT ${output_file}
-            DEPENDS ${input_files} ${OUTPUT_DIRECTORY}/xml/index.xml
-            COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
+                OUTPUT ${output_file}
+                DEPENDS ${input_files} ${OUTPUT_DIRECTORY}/xml/index.xml
+                COMMAND ${PYTHON_EXECUTABLE} ${PYTHON_DASH_B}
                 ${CMAKE_SOURCE_DIR}/docs/doxygen/swig_doc.py
                 ${OUTPUT_DIRECTORY}/xml
                 ${output_file}
-            WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/docs/doxygen
+                WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/docs/doxygen
         )
 
-    else(DOXYGEN_FOUND)
+    else (DOXYGEN_FOUND)
         file(WRITE ${output_file} "\n") #no doxygen -> empty file
-    endif(DOXYGEN_FOUND)
+    endif (DOXYGEN_FOUND)
 endfunction(GR_SWIG_MAKE_DOCS)
 
 ########################################################################
@@ -111,7 +111,7 @@ macro(GR_SWIG_MAKE name)
         set(GR_SWIG_DOCS_TAREGT_DEPS ${GR_SWIG_TARGET_DEPS})
         GR_SWIG_MAKE_DOCS(${GR_SWIG_DOC_FILE} ${GR_SWIG_DOC_DIRS})
         list(APPEND GR_SWIG_SOURCE_DEPS ${GR_SWIG_DOC_FILE})
-    endif()
+    endif ()
 
     #append additional include directories
     find_package(PythonLibs 2)
@@ -122,12 +122,12 @@ macro(GR_SWIG_MAKE name)
 
     #determine include dependencies for swig file
     execute_process(
-        COMMAND ${PYTHON_EXECUTABLE}
+            COMMAND ${PYTHON_EXECUTABLE}
             ${CMAKE_BINARY_DIR}/get_swig_deps.py
             "${ifiles}" "${GR_SWIG_INCLUDE_DIRS}"
-        OUTPUT_STRIP_TRAILING_WHITESPACE
-        OUTPUT_VARIABLE SWIG_MODULE_${name}_EXTRA_DEPS
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+            OUTPUT_STRIP_TRAILING_WHITESPACE
+            OUTPUT_VARIABLE SWIG_MODULE_${name}_EXTRA_DEPS
+            WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
 
     #Create a dummy custom command that depends on other targets
@@ -135,9 +135,9 @@ macro(GR_SWIG_MAKE name)
     GR_GEN_TARGET_DEPS(_${name}_swig_tag tag_deps ${GR_SWIG_TARGET_DEPS})
     set(tag_file ${CMAKE_CURRENT_BINARY_DIR}/${name}.tag)
     add_custom_command(
-        OUTPUT ${tag_file}
-        DEPENDS ${GR_SWIG_SOURCE_DEPS} ${tag_deps}
-        COMMAND ${CMAKE_COMMAND} -E touch ${tag_file}
+            OUTPUT ${tag_file}
+            DEPENDS ${GR_SWIG_SOURCE_DEPS} ${tag_deps}
+            COMMAND ${CMAKE_COMMAND} -E touch ${tag_file}
     )
 
     #append the specified include directories
@@ -146,9 +146,9 @@ macro(GR_SWIG_MAKE name)
 
     #setup the swig flags with flags and include directories
     set(CMAKE_SWIG_FLAGS -fvirtual -modern -keyword -w511 -module ${name} ${GR_SWIG_FLAGS})
-    foreach(dir ${GR_SWIG_INCLUDE_DIRS})
+    foreach (dir ${GR_SWIG_INCLUDE_DIRS})
         list(APPEND CMAKE_SWIG_FLAGS "-I${dir}")
-    endforeach(dir)
+    endforeach (dir)
 
     #set the C++ property on the swig .i file so it builds
     set_source_files_properties(${ifiles} PROPERTIES CPLUSPLUS ON)
@@ -173,24 +173,24 @@ macro(GR_SWIG_INSTALL)
     include(CMakeParseArgumentsCopy)
     CMAKE_PARSE_ARGUMENTS(GR_SWIG_INSTALL "" "DESTINATION;COMPONENT" "TARGETS" ${ARGN})
 
-    foreach(name ${GR_SWIG_INSTALL_TARGETS})
+    foreach (name ${GR_SWIG_INSTALL_TARGETS})
         install(TARGETS ${SWIG_MODULE_${name}_REAL_NAME}
-            DESTINATION ${GR_SWIG_INSTALL_DESTINATION}
-            COMPONENT ${GR_SWIG_INSTALL_COMPONENT}
-        )
+                DESTINATION ${GR_SWIG_INSTALL_DESTINATION}
+                COMPONENT ${GR_SWIG_INSTALL_COMPONENT}
+                )
 
         include(GrPython)
         GR_PYTHON_INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/${name}.py
-            DESTINATION ${GR_SWIG_INSTALL_DESTINATION}
-            COMPONENT ${GR_SWIG_INSTALL_COMPONENT}
-        )
+                DESTINATION ${GR_SWIG_INSTALL_DESTINATION}
+                COMPONENT ${GR_SWIG_INSTALL_COMPONENT}
+                )
 
         GR_LIBTOOL(
-            TARGET ${SWIG_MODULE_${name}_REAL_NAME}
-            DESTINATION ${GR_SWIG_INSTALL_DESTINATION}
+                TARGET ${SWIG_MODULE_${name}_REAL_NAME}
+                DESTINATION ${GR_SWIG_INSTALL_DESTINATION}
         )
 
-    endforeach(name)
+    endforeach (name)
 
 endmacro(GR_SWIG_INSTALL)
 

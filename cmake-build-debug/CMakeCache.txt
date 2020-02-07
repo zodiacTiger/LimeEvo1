@@ -14,9 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//The directory containing a CMake configuration file for BladeRF.
-BladeRF_DIR:PATH=BladeRF_DIR-NOTFOUND
-
 //Boost atomic library (debug)
 Boost_ATOMIC_LIBRARY_DEBUG:FILEPATH=/opt/local/lib/libboost_atomic-mt.dylib
 
@@ -64,6 +61,9 @@ Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/opt/local/lib/libboost_thread-mt.dylib
 
 //Boost thread library (release)
 Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/opt/local/lib/libboost_thread-mt.dylib
+
+//Path to a program.
+CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
 //Path to a program.
 CMAKE_AR:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
@@ -121,6 +121,9 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
 //Flags used by the C compiler during RELWITHDEBINFO builds.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
+
+//Path to a program.
+CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
 //Executable file format
 CMAKE_EXECUTABLE_FORMAT:STRING=MACHO
@@ -207,6 +210,9 @@ CMAKE_PROJECT_NAME:STATIC=LimeEvo1
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
 
+//Path to a program.
+CMAKE_READELF:FILEPATH=CMAKE_READELF-NOTFOUND
+
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
 CMAKE_SHARED_LINKER_FLAGS:STRING=
@@ -276,7 +282,7 @@ DOXYGEN_DOT_EXECUTABLE:FILEPATH=/opt/local/bin/dot
 DOXYGEN_EXECUTABLE:FILEPATH=/opt/local/bin/doxygen
 
 //Path to a file.
-FFTW3_INCLUDE_DIR:PATH=/opt/local/include
+FFTW3_INCLUDE_DIR:PATH=/usr/local/include
 
 //Path to a file.
 GNURADIO_FILTER_INCLUDE_DIRS:PATH=/opt/local/include
@@ -377,9 +383,6 @@ LimeEvo1_SOURCE_DIR:STATIC=/Users/zero5/CLionProjects/LimeEvo1/src
 //The directory containing a CMake configuration file for LimeSuite.
 LimeSuite_DIR:PATH=/opt/local/lib/cmake/LimeSuite
 
-//The directory containing a CMake configuration file for Osmocom.
-Osmocom_DIR:PATH=Osmocom_DIR-NOTFOUND
-
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/opt/local/bin/pkg-config
 
@@ -394,6 +397,9 @@ Qt5Gui_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Gui
 
 //The directory containing a CMake configuration file for Qt5LimeSuite.
 Qt5LimeSuite_DIR:PATH=Qt5LimeSuite_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5LinguistTools.
+Qt5LinguistTools_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5LinguistTools
 
 //The directory containing a CMake configuration file for Qt5Network.
 Qt5Network_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Network
@@ -436,24 +442,6 @@ VOLK_LIBRARIES:STRING=Volk::volk
 
 //The directory containing a CMake configuration file for Volk.
 Volk_DIR:PATH=/opt/local/share/cmake/volk
-
-//The directory containing a CMake configuration file for bladeRF.
-bladeRF_DIR:PATH=bladeRF_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for bladerf.
-bladerf_DIR:PATH=bladerf_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for boost_filesystem.
-boost_filesystem_DIR:PATH=/usr/local/lib/cmake/boost_filesystem-1.72.0
-
-//The directory containing a CMake configuration file for boost_headers.
-boost_headers_DIR:PATH=/usr/local/lib/cmake/boost_headers-1.72.0
-
-//The directory containing a CMake configuration file for boost_system.
-boost_system_DIR:PATH=/usr/local/lib/cmake/boost_system-1.72.0
-
-//The directory containing a CMake configuration file for boost_thread.
-boost_thread_DIR:PATH=/usr/local/lib/cmake/boost_thread-1.72.0
 
 //The directory containing a CMake configuration file for fftw.
 fftw_DIR:PATH=fftw_DIR-NOTFOUND
@@ -533,6 +521,12 @@ pkgcfg_lib_PC_libosmogsm_osmogsm:FILEPATH=/opt/local/lib/libosmogsm.dylib
 //Path to a library.
 pkgcfg_lib_PC_libosmogsm_talloc:FILEPATH=/opt/local/lib/libtalloc.dylib
 
+//Value Computed by CMake
+qt_widgets_template_BINARY_DIR:STATIC=/Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug/src
+
+//Value Computed by CMake
+qt_widgets_template_SOURCE_DIR:STATIC=/Users/zero5/CLionProjects/LimeEvo1/src
+
 
 ########################
 # INTERNAL cache entries
@@ -570,6 +564,8 @@ Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
 Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ADDR2LINE
+CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -612,6 +608,8 @@ CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_DLLTOOL
+CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
 CMAKE_EXE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_DEBUG
@@ -675,6 +673,8 @@ CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_READELF
+CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
 CMAKE_ROOT:INTERNAL=/Users/zero5/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.18/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
@@ -728,8 +728,6 @@ FFTW3_INCLUDE_DIRS:INTERNAL=/opt/local/include
 FFTW3_LDFLAGS:INTERNAL=-L/opt/local/lib;-lfftw3
 FFTW3_LDFLAGS_OTHER:INTERNAL=
 FFTW3_LIBDIR:INTERNAL=/opt/local/lib
-//ADVANCED property for variable: FFTW3_LIBRARIES
-FFTW3_LIBRARIES-ADVANCED:INTERNAL=1
 FFTW3_LIBRARIES:INTERNAL=fftw3
 FFTW3_LIBRARY_DIRS:INTERNAL=/opt/local/lib
 FFTW3_LIBS:INTERNAL=
@@ -762,7 +760,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_CPPUNIT:INTERNAL=[/opt/local/lib/libcppunit.dylib][
 //Details about finding Doxygen
 FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/opt/local/bin/doxygen][cfound components:  doxygen dot ][v1.8.17()]
 //Details about finding FFTW3
-FIND_PACKAGE_MESSAGE_DETAILS_FFTW3:INTERNAL=[fftw3][/opt/local/include][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_FFTW3:INTERNAL=[fftw3][/usr/local/include][v()]
 //Details about finding GNURADIO_FILTER
 FIND_PACKAGE_MESSAGE_DETAILS_GNURADIO_FILTER:INTERNAL=[/opt/local/lib/libgnuradio-filter.dylib;/opt/local/lib/libgnuradio-fft.dylib;/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib][/opt/local/include][v()]
 //Details about finding GNURADIO_PMT
@@ -774,7 +772,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_LimeSuite:INTERNAL=[LimeSuite][/opt/local/include/l
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/opt/local/bin/pkg-config][v0.29.2()]
 //Details about finding SWIG
-FIND_PACKAGE_MESSAGE_DETAILS_SWIG:INTERNAL=[/opt/local/bin/swig][/opt/local/share/swig/3.0.12][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_SWIG:INTERNAL=[/opt/local/bin/swig][/opt/local/share/swig/3.0.12][v3.0.12()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding VOLK
@@ -814,14 +812,10 @@ LIMESUITE_CFLAGS_I:INTERNAL=
 LIMESUITE_CFLAGS_OTHER:INTERNAL=
 LIMESUITE_FOUND:INTERNAL=1
 LIMESUITE_INCLUDEDIR:INTERNAL=/opt/local/include
-//ADVANCED property for variable: LIMESUITE_INCLUDE_DIR
-LIMESUITE_INCLUDE_DIR-ADVANCED:INTERNAL=1
 LIMESUITE_INCLUDE_DIRS:INTERNAL=/opt/local/include
 LIMESUITE_LDFLAGS:INTERNAL=-L/opt/local/lib;-lLimeSuite
 LIMESUITE_LDFLAGS_OTHER:INTERNAL=
 LIMESUITE_LIBDIR:INTERNAL=/opt/local/lib
-//ADVANCED property for variable: LIMESUITE_LIBRARIES
-LIMESUITE_LIBRARIES-ADVANCED:INTERNAL=1
 LIMESUITE_LIBRARIES:INTERNAL=LimeSuite
 LIMESUITE_LIBRARY_DIRS:INTERNAL=/opt/local/lib
 LIMESUITE_LIBS:INTERNAL=
@@ -1085,9 +1079,9 @@ PC_libosmocoding_libosmocoding_INCLUDEDIR:INTERNAL=
 PC_libosmocoding_libosmocoding_LIBDIR:INTERNAL=
 PC_libosmocoding_libosmocoding_PREFIX:INTERNAL=
 PC_libosmocoding_libosmocoding_VERSION:INTERNAL=
-PC_libosmocore_CFLAGS:INTERNAL=-pthread;-I/opt/local/include/
+PC_libosmocore_CFLAGS:INTERNAL=-I/opt/local/include/
 PC_libosmocore_CFLAGS_I:INTERNAL=
-PC_libosmocore_CFLAGS_OTHER:INTERNAL=-pthread
+PC_libosmocore_CFLAGS_OTHER:INTERNAL=
 PC_libosmocore_FOUND:INTERNAL=1
 PC_libosmocore_INCLUDEDIR:INTERNAL=/opt/local/include
 PC_libosmocore_INCLUDE_DIRS:INTERNAL=/opt/local/include/
@@ -1101,9 +1095,9 @@ PC_libosmocore_LIBS_L:INTERNAL=
 PC_libosmocore_LIBS_OTHER:INTERNAL=
 PC_libosmocore_LIBS_PATHS:INTERNAL=
 PC_libosmocore_PREFIX:INTERNAL=/opt/local
-PC_libosmocore_STATIC_CFLAGS:INTERNAL=-pthread;-I/opt/local/include/
+PC_libosmocore_STATIC_CFLAGS:INTERNAL=-I/opt/local/include/
 PC_libosmocore_STATIC_CFLAGS_I:INTERNAL=
-PC_libosmocore_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
+PC_libosmocore_STATIC_CFLAGS_OTHER:INTERNAL=
 PC_libosmocore_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include/
 PC_libosmocore_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-Wl,-rpath,/opt/local/lib;-ltalloc;-losmocore
 PC_libosmocore_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/opt/local/lib
@@ -1203,14 +1197,6 @@ __pkg_config_checked_PC_libosmocodec:INTERNAL=1
 __pkg_config_checked_PC_libosmocoding:INTERNAL=1
 __pkg_config_checked_PC_libosmocore:INTERNAL=1
 __pkg_config_checked_PC_libosmogsm:INTERNAL=1
-//ADVANCED property for variable: boost_filesystem_DIR
-boost_filesystem_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: boost_headers_DIR
-boost_headers_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: boost_system_DIR
-boost_system_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: boost_thread_DIR
-boost_thread_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_FFTW3_fftw3
 pkgcfg_lib_FFTW3_fftw3-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_LIMESUITE_LimeSuite

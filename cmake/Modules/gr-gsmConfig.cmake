@@ -2,26 +2,26 @@ INCLUDE(FindPkgConfig)
 PKG_CHECK_MODULES(PC_GR_GSM grgsm)
 
 FIND_PATH(
-    GR_GSM_INCLUDE_DIRS
-    NAMES grgsm/api.h
-    HINTS $ENV{GR_GSM_DIR}/include
+        GR_GSM_INCLUDE_DIRS
+        NAMES grgsm/api.h
+        HINTS $ENV{GR_GSM_DIR}/include
         ${PC_GR_GSM_INCLUDEDIR}
-    PATHS ${CMAKE_INSTALL_PREFIX}/include
-          /usr/local/include
-          /usr/include
+        PATHS ${CMAKE_INSTALL_PREFIX}/include
+        /usr/local/include
+        /usr/include
 )
 
 FIND_LIBRARY(
-    GR_GSM_LIBRARIES
-    NAMES grgsm
-    HINTS $ENV{GR_GSM_DIR}/lib
+        GR_GSM_LIBRARIES
+        NAMES grgsm
+        HINTS $ENV{GR_GSM_DIR}/lib
         ${PC_GR_GSM_LIBDIR}
-    PATHS ${CMAKE_INSTALL_PREFIX}/lib
-          ${CMAKE_INSTALL_PREFIX}/lib64
-          /usr/local/lib
-          /usr/local/lib64
-          /usr/lib
-          /usr/lib64
+        PATHS ${CMAKE_INSTALL_PREFIX}/lib
+        ${CMAKE_INSTALL_PREFIX}/lib64
+        /usr/local/lib
+        /usr/local/lib64
+        /usr/lib
+        /usr/lib64
 )
 
 INCLUDE(FindPackageHandleStandardArgs)

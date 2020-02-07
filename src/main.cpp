@@ -1,48 +1,51 @@
-#include <iostream>
-#include <chrono>
-#include <QApplication>
-#include <QtWidgets>
-#include <QPushButton>
 #include "mainwindow.h"
-#include <lime/LimeSuite.h>
-#include "LimeRadio.hpp"
+#include <QSplashScreen>
+#include <QLabel>
+#include <QImage>
+#include <QApplication>
+#include <QElapsedTimer>
+#include "LimeDevice.h"
+
+void wait (float sec)
+{
+  QElapsedTimer timer;
+  timer.start ();
+  while (!timer.hasExpired (sec * 1000))
+    QCoreApplication::processEvents ();
+}
 
 int main (int argc, char *argv[])
 {
-  QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-  QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-  QApplication app(argc,argv);
-//  MainWindow::CustomSizeHintMap customSizeHints;
-//  switch (parseCustomSizeHints(QCoreApplication::arguments(), &customSizeHints)) {
-//    case CommandLineArgumentsOk:
-//      break;
-//    case CommandLineArgumentsError:
-//      usage();
-//      return -1;
-//    case HelpRequested:
-//      usage();
-//      return 0;
-//    }
+  QApplication a (argc, argv);
+  MainWindow w;
 
-MainWindow window;
-//  QPropertyAnimation *animation = new QPropertyAnimation(ui->pushButton, "geometry");
-//  animation->setDuration(10000);
-//  animation->setStartValue(ui->pushButton->geometry());
-//  animation->setEndValue(QRect(200, 200, 100, 50));
-//  animation->start();
+  QSplashScreen *splash = new QSplashScreen;
+  splash->setPixmap (QPixmap ("/Users/zero5/CLionProjects/LimeEvo1/images/splash.png"));
+  splash->show ();
+  QFont splashFont;
+  splashFont.setFamily (QString::fromUtf8 ("UbuntuMono NF"));
+  splashFont.setPointSize (12);
 
-  QPushButton *button1 = new QPushButton("Sup",&window);
-  button1->show ();
-  window.resize (800,600);
-  window.setWindowTitle ("TESTING");
-  window.show ();
-  lms_device_t *d = NULL;
-  lms_info_str_t dlist[8];
-  LimeRadio r;
-  std::cout << r.status (0);
-//  LimeRadio::find (d,dlist);
-//  std::cout << r.status (0);
-//  std::cout << r.status (1);
-  return app.exec ();
+  Qt::Alignment topRight = Qt::AlignRight | Qt::AlignTop;
+  splash->setFont (splashFont);
+  int status = 0;
+  splash->showMessage (QObject::tr ("Finding Device"),
+                       topRight, Qt::white);
+  if (LimeDevice::deviceFound ())
+    {
+    splash->showMessage (QObject::tr ("Lime Device Found"),
+                         topRight, Qt::white);
+    }
+  else if (!LimeDevice::deviceFound ())
+    {
+    splash->showMessage (QObject::tr ("No Lime Device Found!"),
+                         topRight, Qt::white);
+    }
 
+  wait (1);
+
+  delete splash;
+
+  w.show ();
+  return a.exec ();
 }

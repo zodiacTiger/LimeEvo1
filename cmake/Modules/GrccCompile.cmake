@@ -19,36 +19,36 @@
 # Boston, MA 02110-1301, USA.
 
 SET(PYTHONPATH
-    ${CMAKE_SOURCE_DIR}/python
-    ${CMAKE_SOURCE_DIR}/python/misc_utils
-    ${CMAKE_SOURCE_DIR}/python/demapping
-    ${CMAKE_SOURCE_DIR}/python/receiver
-    ${CMAKE_SOURCE_DIR}/python/transmitter
-    ${CMAKE_SOURCE_DIR}/python/trx
-    ${CMAKE_BINARY_DIR}/swig
-    $ENV{PYTHONPATH}
-    )
+        ${CMAKE_SOURCE_DIR}/python
+        ${CMAKE_SOURCE_DIR}/python/misc_utils
+        ${CMAKE_SOURCE_DIR}/python/demapping
+        ${CMAKE_SOURCE_DIR}/python/receiver
+        ${CMAKE_SOURCE_DIR}/python/transmitter
+        ${CMAKE_SOURCE_DIR}/python/trx
+        ${CMAKE_BINARY_DIR}/swig
+        $ENV{PYTHONPATH}
+        )
 string(REPLACE ";" ":" PYTHONPATH "${PYTHONPATH}")
 
 macro(GRCC_COMPILE file_name)
-    if(${CMAKE_VERSION} VERSION_LESS "3.2.0") #use wrapper script to set the environment on systems without cmake 3.2
+    if (${CMAKE_VERSION} VERSION_LESS "3.2.0") #use wrapper script to set the environment on systems without cmake 3.2
         ADD_CUSTOM_COMMAND(
-            OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${file_name}
-            COMMAND /bin/sh ${CMAKE_SOURCE_DIR}/cmake/Modules/GrccCompileWrapper.sh "${PYTHONPATH}" "${CMAKE_SOURCE_DIR}/grc" "${PC_GNURADIO_RUNTIME_PREFIX}/${GR_RUNTIME_DIR}/grcc -d ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/${file_name}.grc"
-            COMMAND "${CMAKE_COMMAND}" -E rename ${CMAKE_CURRENT_BINARY_DIR}/${file_name}.py ${CMAKE_CURRENT_BINARY_DIR}/${file_name}
-            DEPENDS ${file_name}.grc
+                OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${file_name}
+                COMMAND /bin/sh ${CMAKE_SOURCE_DIR}/cmake/Modules/GrccCompileWrapper.sh "${PYTHONPATH}" "${CMAKE_SOURCE_DIR}/grc" "${PC_GNURADIO_RUNTIME_PREFIX}/${GR_RUNTIME_DIR}/grcc -d ${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/${file_name}.grc"
+                COMMAND "${CMAKE_COMMAND}" -E rename ${CMAKE_CURRENT_BINARY_DIR}/${file_name}.py ${CMAKE_CURRENT_BINARY_DIR}/${file_name}
+                DEPENDS ${file_name}.grc
         )
-    else() #for the rest use new/more portable way
+    else () #for the rest use new/more portable way
         ADD_CUSTOM_COMMAND(
-            OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${file_name}
-            COMMAND "${CMAKE_COMMAND}"
+                OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${file_name}
+                COMMAND "${CMAKE_COMMAND}"
                 -E env PYTHONPATH="${PYTHONPATH}" GRC_BLOCKS_PATH=${CMAKE_SOURCE_DIR}/grc
                 ${PC_GNURADIO_RUNTIME_PREFIX}/${GR_RUNTIME_DIR}/grcc -d ${CMAKE_CURRENT_BINARY_DIR}
                 ${CMAKE_CURRENT_SOURCE_DIR}/${file_name}.grc
-            COMMAND "${CMAKE_COMMAND}" -E rename ${CMAKE_CURRENT_BINARY_DIR}/${file_name}.py ${CMAKE_CURRENT_BINARY_DIR}/${file_name}
-            DEPENDS ${file_name}.grc
+                COMMAND "${CMAKE_COMMAND}" -E rename ${CMAKE_CURRENT_BINARY_DIR}/${file_name}.py ${CMAKE_CURRENT_BINARY_DIR}/${file_name}
+                DEPENDS ${file_name}.grc
         )
-    endif()
+    endif ()
 endmacro(GRCC_COMPILE)
 
 ########################################################################
@@ -68,6 +68,6 @@ function(GR_UNIQUE_TARGET desc)
     file(RELATIVE_PATH reldir ${CMAKE_BINARY_DIR} ${CMAKE_CURRENT_BINARY_DIR})
     execute_process(COMMAND ${PYTHON_EXECUTABLE} -c "import re, hashlib
 print(re.sub('\\W', '_', '${desc} ${reldir}'))"
-    OUTPUT_VARIABLE _target OUTPUT_STRIP_TRAILING_WHITESPACE)
+            OUTPUT_VARIABLE _target OUTPUT_STRIP_TRAILING_WHITESPACE)
     add_custom_target(${_target} ALL DEPENDS ${ARGN})
 endfunction(GR_UNIQUE_TARGET)
