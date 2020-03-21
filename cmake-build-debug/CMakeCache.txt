@@ -275,6 +275,9 @@ CPPUNIT_INCLUDE_DIRS:PATH=/opt/local/include
 //Path to a library.
 CPPUNIT_LIBRARIES:FILEPATH=/opt/local/lib/libcppunit.dylib
 
+//Pick a version of Qt to use: 3 or 4
+DESIRED_QT_VERSION:STRING=3
+
 //Dot tool for use with Doxygen
 DOXYGEN_DOT_EXECUTABLE:FILEPATH=/opt/local/bin/dot
 
@@ -389,6 +392,47 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/opt/local/bin/pkg-config
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
+//Path to a file.
+QT3_QGLOBAL_H_FILE:FILEPATH=/opt/local/bin/include
+
+//Path to a file.
+QT4_QGLOBAL_H_FILE:FILEPATH=QT4_QGLOBAL_H_FILE-NOTFOUND
+
+//path to Qt3 include directory
+QT_INCLUDE_DIR:PATH=QT_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+QT_QASSISTANTCLIENT_LIBRARY:FILEPATH=QT_QASSISTANTCLIENT_LIBRARY-NOTFOUND
+
+QT_QMAKE_EXECUTABLE:FILEPATH=NOTFOUND
+
+//Path to a program.
+QT_QMAKE_EXECUTABLE_FINDQT:FILEPATH=QT_QMAKE_EXECUTABLE_FINDQT-NOTFOUND
+
+//Path to a library.
+QT_QT_LIBRARY:FILEPATH=QT_QT_LIBRARY-NOTFOUND
+
+//Path to a program.
+QT_UIC_EXECUTABLE:FILEPATH=QT_UIC_EXECUTABLE-NOTFOUND
+
+//Path to a library.
+QWT:FILEPATH=/usr/local/opt/qwt/lib/qwt.framework
+
+//The directory containing a CMake configuration file for QWT.
+QWT_DIR:PATH=QWT_DIR-NOTFOUND
+
+//Path to a file.
+QWT_INCLUDE_DIRS:PATH=/opt/local/include/qwt
+
+//Path to a library.
+QWT_LIBRARIES:FILEPATH=/opt/local/lib/libqwt.dylib
+
+//The directory containing a CMake configuration file for Qt4Core.
+Qt4Core_DIR:PATH=Qt4Core_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Concurrent.
+Qt5Concurrent_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Concurrent
+
 //The directory containing a CMake configuration file for Qt5Core.
 Qt5Core_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Core
 
@@ -410,17 +454,41 @@ Qt5QmlModels_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5QmlModels
 //The directory containing a CMake configuration file for Qt5Qml.
 Qt5Qml_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Qml
 
+//The directory containing a CMake configuration file for Qt5Qt5Qwt.
+Qt5Qt5Qwt_DIR:PATH=Qt5Qt5Qwt_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for Qt5QuickCompiler.
 Qt5QuickCompiler_DIR:PATH=/opt/local/lib/cmake/Qt5QuickCompiler
 
 //The directory containing a CMake configuration file for Qt5Quick.
 Qt5Quick_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Quick
 
+//The directory containing a CMake configuration file for Qt5Qwt4REQUIRED.
+Qt5Qwt4REQUIRED_DIR:PATH=Qt5Qwt4REQUIRED_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Qwt5Qwt.
+Qt5Qwt5Qwt_DIR:PATH=Qt5Qwt5Qwt_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Qwt5REQUIRED.
+Qt5Qwt5REQUIRED_DIR:PATH=Qt5Qwt5REQUIRED_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Qwt.
+Qt5Qwt_DIR:PATH=Qt5Qwt_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for Qt5Widgets.
 Qt5Widgets_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Widgets
 
 //The directory containing a CMake configuration file for Qt5.
 Qt5_DIR:PATH=/opt/local/lib/cmake/Qt5
+
+//The directory containing a CMake configuration file for QtQwt.
+QtQwt_DIR:PATH=QtQwt_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt.
+Qt_DIR:PATH=Qt_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Qwt.
+Qwt_DIR:PATH=Qwt_DIR-NOTFOUND
 
 //Path to a file.
 SWIG_DIR:PATH=/opt/local/share/swig/3.0.12
@@ -442,6 +510,18 @@ VOLK_LIBRARIES:STRING=Volk::volk
 
 //The directory containing a CMake configuration file for Volk.
 Volk_DIR:PATH=/opt/local/share/cmake/volk
+
+//The directory containing a CMake configuration file for W.
+W_DIR:PATH=W_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for bladeRF.
+bladeRF_DIR:PATH=bladeRF_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for blade.
+blade_DIR:PATH=blade_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for bladerf.
+bladerf_DIR:PATH=bladerf_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for fftw.
 fftw_DIR:PATH=fftw_DIR-NOTFOUND
@@ -526,6 +606,12 @@ qt_widgets_template_BINARY_DIR:STATIC=/Users/zero5/CLionProjects/LimeEvo1/cmake-
 
 //Value Computed by CMake
 qt_widgets_template_SOURCE_DIR:STATIC=/Users/zero5/CLionProjects/LimeEvo1/src
+
+//The directory containing a CMake configuration file for qwt-qt5.
+qwt-qt5_DIR:PATH=qwt-qt5_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for qwt.
+qwt_DIR:PATH=qwt_DIR-NOTFOUND
 
 
 ########################
@@ -768,11 +854,13 @@ FIND_PACKAGE_MESSAGE_DETAILS_GNURADIO_PMT:INTERNAL=[/opt/local/lib/libgnuradio-r
 //Details about finding GNURADIO_RUNTIME
 FIND_PACKAGE_MESSAGE_DETAILS_GNURADIO_RUNTIME:INTERNAL=[/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib][/opt/local/include][v()]
 //Details about finding LimeSuite
-FIND_PACKAGE_MESSAGE_DETAILS_LimeSuite:INTERNAL=[LimeSuite][/opt/local/include/limesuite][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_LimeSuite:INTERNAL=[LimeSuite][/opt/local/include][v()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/opt/local/bin/pkg-config][v0.29.2()]
+//Details about finding Qwt
+FIND_PACKAGE_MESSAGE_DETAILS_Qwt:INTERNAL=[/opt/local/lib/libqwt.dylib][/opt/local/include/qwt][v()]
 //Details about finding SWIG
-FIND_PACKAGE_MESSAGE_DETAILS_SWIG:INTERNAL=[/opt/local/bin/swig][/opt/local/share/swig/3.0.12][v3.0.12()]
+FIND_PACKAGE_MESSAGE_DETAILS_SWIG:INTERNAL=[/opt/local/bin/swig][/opt/local/share/swig/3.0.12][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding VOLK
@@ -812,10 +900,14 @@ LIMESUITE_CFLAGS_I:INTERNAL=
 LIMESUITE_CFLAGS_OTHER:INTERNAL=
 LIMESUITE_FOUND:INTERNAL=1
 LIMESUITE_INCLUDEDIR:INTERNAL=/opt/local/include
+//ADVANCED property for variable: LIMESUITE_INCLUDE_DIR
+LIMESUITE_INCLUDE_DIR-ADVANCED:INTERNAL=1
 LIMESUITE_INCLUDE_DIRS:INTERNAL=/opt/local/include
 LIMESUITE_LDFLAGS:INTERNAL=-L/opt/local/lib;-lLimeSuite
 LIMESUITE_LDFLAGS_OTHER:INTERNAL=
 LIMESUITE_LIBDIR:INTERNAL=/opt/local/lib
+//ADVANCED property for variable: LIMESUITE_LIBRARIES
+LIMESUITE_LIBRARIES-ADVANCED:INTERNAL=1
 LIMESUITE_LIBRARIES:INTERNAL=LimeSuite
 LIMESUITE_LIBRARY_DIRS:INTERNAL=/opt/local/lib
 LIMESUITE_LIBS:INTERNAL=
@@ -1151,6 +1243,10 @@ PC_libosmogsm_libosmogsm_VERSION:INTERNAL=
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QWT_INCLUDE_DIRS
+QWT_INCLUDE_DIRS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QWT_LIBRARIES
+QWT_LIBRARIES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SWIG_DIR
 SWIG_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SWIG_EXECUTABLE

@@ -1,4 +1,7 @@
 "/Users/zero5/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.18/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -G "CodeBlocks - Unix Makefiles" /Users/zero5/CLionProjects/LimeEvo1
+-- 
+-- Checking for module SWIG
+-- Found SWIG version 3.0.12.
 Checking for GNU Radio Module: RUNTIME
  * INCLUDES=/opt/local/include
  * LIBS=/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib
@@ -11,91 +14,6 @@ Checking for GNU Radio Module: PMT
  * INCLUDES=/opt/local/include
  * LIBS=/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib
 GNURADIO_PMT_FOUND = TRUE
-CMake Warning at src/CMakeLists.txt:68 (find_package):
-  By not providing "Findfftw.cmake" in CMAKE_MODULE_PATH this project has
-  asked CMake to find a package configuration file provided by "fftw", but
-  CMake did not find one.
-
-  Could not find a package configuration file provided by "fftw" with any of
-  the following names:
-
-    fftwConfig.cmake
-    fftw-config.cmake
-
-  Add the installation prefix of "fftw" to CMAKE_PREFIX_PATH or set
-  "fftw_DIR" to a directory containing one of the above files.  If "fftw"
-  provides a separate development package or SDK, be sure it has been
-  installed.
-
-
-CMake Warning at src/CMakeLists.txt:72 (find_package):
-  By not providing "FindLibosmocore.cmake" in CMAKE_MODULE_PATH this project
-  has asked CMake to find a package configuration file provided by
-  "Libosmocore", but CMake did not find one.
-
-  Could not find a package configuration file provided by "Libosmocore" with
-  any of the following names:
-
-    LibosmocoreConfig.cmake
-    libosmocore-config.cmake
-
-  Add the installation prefix of "Libosmocore" to CMAKE_PREFIX_PATH or set
-  "Libosmocore_DIR" to a directory containing one of the above files.  If
-  "Libosmocore" provides a separate development package or SDK, be sure it
-  has been installed.
-
-
-CMake Warning at src/CMakeLists.txt:73 (find_package):
-  By not providing "FindLibosmocodec.cmake" in CMAKE_MODULE_PATH this project
-  has asked CMake to find a package configuration file provided by
-  "Libosmocodec", but CMake did not find one.
-
-  Could not find a package configuration file provided by "Libosmocodec" with
-  any of the following names:
-
-    LibosmocodecConfig.cmake
-    libosmocodec-config.cmake
-
-  Add the installation prefix of "Libosmocodec" to CMAKE_PREFIX_PATH or set
-  "Libosmocodec_DIR" to a directory containing one of the above files.  If
-  "Libosmocodec" provides a separate development package or SDK, be sure it
-  has been installed.
-
-
-CMake Warning at src/CMakeLists.txt:74 (find_package):
-  By not providing "FindLibosmocoding.cmake" in CMAKE_MODULE_PATH this
-  project has asked CMake to find a package configuration file provided by
-  "Libosmocoding", but CMake did not find one.
-
-  Could not find a package configuration file provided by "Libosmocoding"
-  with any of the following names:
-
-    LibosmocodingConfig.cmake
-    libosmocoding-config.cmake
-
-  Add the installation prefix of "Libosmocoding" to CMAKE_PREFIX_PATH or set
-  "Libosmocoding_DIR" to a directory containing one of the above files.  If
-  "Libosmocoding" provides a separate development package or SDK, be sure it
-  has been installed.
-
-
-CMake Warning at src/CMakeLists.txt:75 (find_package):
-  By not providing "FindLibosmogsm.cmake" in CMAKE_MODULE_PATH this project
-  has asked CMake to find a package configuration file provided by
-  "Libosmogsm", but CMake did not find one.
-
-  Could not find a package configuration file provided by "Libosmogsm" with
-  any of the following names:
-
-    LibosmogsmConfig.cmake
-    libosmogsm-config.cmake
-
-  Add the installation prefix of "Libosmogsm" to CMAKE_PREFIX_PATH or set
-  "Libosmogsm_DIR" to a directory containing one of the above files.  If
-  "Libosmogsm" provides a separate development package or SDK, be sure it has
-  been installed.
-
-
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug

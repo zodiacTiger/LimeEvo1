@@ -5,7 +5,7 @@
 		<Option title="LimeEvo1"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\opt\;CMake Files\..\..\..\..\opt\local\;CMake Files\..\..\..\..\opt\local\share\;CMake Files\..\..\..\..\opt\local\share\cmake\;CMake Files\..\..\..\..\opt\local\share\cmake\gnuradio\;CMake Files\..\..\..\..\opt\local\share\cmake\volk\;CMake Files\..\..\..\..\opt\local\libexec\;CMake Files\..\..\..\..\opt\local\libexec\qt5\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5LinguistTools\;CMake Files\..\..\..\..\opt\local\lib\;CMake Files\..\..\..\..\opt\local\lib\cmake\;CMake Files\..\..\..\..\opt\local\lib\cmake\LimeSuite\;CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\cmake\;CMake Files\cmake\Modules\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\opt\;CMake Files\..\..\..\..\opt\local\;CMake Files\..\..\..\..\opt\local\share\;CMake Files\..\..\..\..\opt\local\share\cmake\;CMake Files\..\..\..\..\opt\local\share\cmake\gnuradio\;CMake Files\..\..\..\..\opt\local\libexec\;CMake Files\..\..\..\..\opt\local\libexec\qt5\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Concurrent\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5LinguistTools\;CMake Files\..\..\..\..\opt\local\lib\;CMake Files\..\..\..\..\opt\local\lib\cmake\;CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug"/>
@@ -49,11 +49,14 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_CONCURRENT_LIB"/>
 					<Add directory="/Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug/src"/>
 					<Add directory="/Users/zero5/CLionProjects/LimeEvo1/src"/>
 					<Add directory="/Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug/src/LimeEvo1_autogen/include"/>
 					<Add directory="/Users/zero5/CLionProjects/LimeEvo1/src/../include"/>
 					<Add directory="/opt/local/include/boost"/>
+					<Add directory="/opt/local/include"/>
+					<Add directory="/opt/local/libexec/qt5/lib/qwt.framework/headers"/>
 					<Add directory="/opt/local/libexec/qt5/lib/QtWidgets.framework"/>
 					<Add directory="/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers"/>
 					<Add directory="/opt/local/libexec/qt5/lib/QtGui.framework"/>
@@ -62,7 +65,8 @@
 					<Add directory="/opt/local/libexec/qt5/lib/QtCore.framework"/>
 					<Add directory="/opt/local/libexec/qt5/lib/QtCore.framework/Headers"/>
 					<Add directory="/opt/local/libexec/qt5/./mkspecs/macx-clang"/>
-					<Add directory="/opt/local/include"/>
+					<Add directory="/opt/local/libexec/qt5/lib/QtConcurrent.framework"/>
+					<Add directory="/opt/local/libexec/qt5/lib/QtConcurrent.framework/Headers"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
@@ -90,11 +94,14 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_CONCURRENT_LIB"/>
 					<Add directory="/Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug/src"/>
 					<Add directory="/Users/zero5/CLionProjects/LimeEvo1/src"/>
 					<Add directory="/Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug/src/LimeEvo1_autogen/include"/>
 					<Add directory="/Users/zero5/CLionProjects/LimeEvo1/src/../include"/>
 					<Add directory="/opt/local/include/boost"/>
+					<Add directory="/opt/local/include"/>
+					<Add directory="/opt/local/libexec/qt5/lib/qwt.framework/headers"/>
 					<Add directory="/opt/local/libexec/qt5/lib/QtWidgets.framework"/>
 					<Add directory="/opt/local/libexec/qt5/lib/QtWidgets.framework/Headers"/>
 					<Add directory="/opt/local/libexec/qt5/lib/QtGui.framework"/>
@@ -103,7 +110,8 @@
 					<Add directory="/opt/local/libexec/qt5/lib/QtCore.framework"/>
 					<Add directory="/opt/local/libexec/qt5/lib/QtCore.framework/Headers"/>
 					<Add directory="/opt/local/libexec/qt5/./mkspecs/macx-clang"/>
-					<Add directory="/opt/local/include"/>
+					<Add directory="/opt/local/libexec/qt5/lib/QtConcurrent.framework"/>
+					<Add directory="/opt/local/libexec/qt5/lib/QtConcurrent.framework/Headers"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include"/>
@@ -142,16 +150,73 @@
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/LimeDevice.h">
 			<Option target="LimeEvo1"/>
 		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/LimeRadio.hpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/RadioBladeRf.hpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/RadioRtlSdr.hpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/Radios.h">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/RxThread.hpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/RxThreadConcurrent.hpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/RxTx.hpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/TxThread.hpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/mainwindow.h">
 			<Option target="LimeEvo1"/>
 		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/rxThread.hpp">
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/include/ui.h">
 			<Option target="LimeEvo1"/>
 		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/LimeDevice.cpp">
 			<Option target="LimeEvo1"/>
 		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/LimeRadio.cpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/LimeStreamRx.cpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/LimeStreamRx.hpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/RadioBladeRf.cpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/RadioRtlSdr.cpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/Radios.cpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/RxThread.cpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/RxThreadConcurrent.cpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/RxTx.cpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/StreamTimer.cpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/StreamTimer.hpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/TxThread.cpp">
 			<Option target="LimeEvo1"/>
 		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/main.cpp">
@@ -166,9 +231,6 @@
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/resources.qrc">
 			<Option target="LimeEvo1"/>
 		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/rxThread.cpp">
-			<Option target="LimeEvo1"/>
-		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
@@ -178,26 +240,20 @@
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/resources.qrc">
 			<Option virtualFolder="CMake Files\src\"/>
 		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/share/cmake/gnuradio/FindCppUnit.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\share\cmake\gnuradio\"/>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/cmake/Modules/FindLimeSuite.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/cmake/Modules/FindSWIG.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/cmake/Modules/FindVolk.cmake">
+			<Option virtualFolder="CMake Files\cmake\Modules\"/>
 		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/share/cmake/gnuradio/GnuradioConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\share\cmake\gnuradio\"/>
 		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/share/cmake/gnuradio/GnuradioConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\share\cmake\gnuradio\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/share/cmake/volk/VolkConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\share\cmake\volk\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/share/cmake/volk/VolkConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\share\cmake\volk\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/share/cmake/volk/VolkTargets-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\share\cmake\volk\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/share/cmake/volk/VolkTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\share\cmake\volk\"/>
 		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Core\"/>
@@ -295,6 +351,12 @@
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5\"/>
 		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Concurrent/Qt5ConcurrentConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Concurrent\"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Concurrent/Qt5ConcurrentConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Concurrent\"/>
+		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5LinguistTools\"/>
 		</Unit>
@@ -303,12 +365,6 @@
 		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsMacros.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5LinguistTools\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/lib/cmake/LimeSuite/LimeSuiteConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\lib\cmake\LimeSuite\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/lib/cmake/LimeSuite/LimeSuiteConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\lib\cmake\LimeSuite\"/>
 		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/lib/cmake/Qt5/Qt5Config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5\"/>

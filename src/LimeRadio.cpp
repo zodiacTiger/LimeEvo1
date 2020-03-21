@@ -5,7 +5,6 @@
 #include "LimeRadio.hpp"
 #include <QDebug>
 #include <iostream>
-#include <chrono>
 #include <lime/LimeSuite.h>
 #include <cmath>
 #include <string>
@@ -14,9 +13,8 @@
 
 LimeRadio::LimeRadio ()
 {
-  lms_device_t *lmsdevice = NULL;
   int n;
-  lms_info_str_t device_info_list[8];
+  lms_info_str_t *device_info_list = new lms_info_str_t[8];
 
   if ((n = LMS_GetDeviceList (device_info_list)) < 0)
     {
@@ -42,12 +40,13 @@ LimeRadio::LimeRadio ()
     }
   std::cout << "Device Initialized.";
   LMS_Close (lmsdevice);
+  delete []device_info_list;
 }
 
 void LimeRadio::find (lms_device_t *d, lms_info_str_t device_info_list[8])
 {
   std::cout << "\n================================================\n";
-//    device_info_list[0] = dlist[0];
+
   LMS_GetDeviceList (device_info_list);
   LMS_Open (&d, device_info_list[0], NULL);
   std::cout << "\n" << device_info_list[0] << "\n";
@@ -60,14 +59,12 @@ void LimeRadio::find (lms_device_t *d, lms_info_str_t device_info_list[8])
 lms_device_t LimeRadio::showStatus (int i, lms_info_str_t device_info_list[8])
 {
   std::cout << "DEVICE STRING --> " << device_info_list[i];
-
 }
 
 std::string LimeRadio::status (int i, lms_device_t *d, lms_info_str_t device_info_list[8])
 {
 
   std::cout << "\nGETTING DEVICE LIST\n";
-  lms_dev_info_t dInfo;
   LMS_GetDeviceList (device_info_list);
   LMS_Open (&d, device_info_list[0], NULL);
   std::string currentDevice = device_info_list[i];
@@ -78,66 +75,67 @@ std::string LimeRadio::status (int i, lms_device_t *d, lms_info_str_t device_inf
 QString LimeRadio::QTStatus (int i, lms_device_t *d, lms_info_str_t device_info_list[8])
 {
   std::cout << "\nGETTING DEVICE LIST\n";
-  lms_dev_info_t dInfo;
-  LMS_GetDeviceList (device_info_list);
-  LMS_Open (&d, device_info_list[0], NULL);
-  QString currentDevice = QString::fromStdString (device_info_list[i]);
-  LMS_Close (d);
-  return currentDevice;
+  QString currentDeviceID;
+
+  if(LMS_GetDeviceList (device_info_list) !=0)
+    {
+      LMS_Open (&d, device_info_list[0], nullptr);
+      currentDeviceID = QString::fromStdString (device_info_list[i]);
+      LMS_Close (d);
+    }
+  else{
+    std::cerr << "\n[WARNING] Lime Device Not Found.\n";
+    currentDeviceID = "[WARNING] Lime Device Not Found.";
+  }
+
+  return currentDeviceID;
 }
 
-void LimeRadio::startRXstream (lms_device_t *d)
+QString LimeRadio::QTShowConnectedDevice ()
 {
-  lms_info_str_t device_info_list[8];
+  lms_info_str_t *device_info_list = new lms_info_str_t[8];
+  std::cout << "\nGETTING DEVICE LIST\n";
+  QString currentDeviceID;
 
-  LMS_GetDeviceList (device_info_list);
-  std::cout << "DEVICE INFO ----> " << device_info_list[0];
-
+  if(LMS_GetDeviceList (device_info_list) !=0)
+    {
+      currentDeviceID = QString::fromStdString (device_info_list[0]);
+    }
+  else
+    {
+      std::cerr << "\n[WARNING] Lime Device Not Found.\n";
+      currentDeviceID = "[WARNING] Lime Device Not Found.";
+    }
+  return currentDeviceID;
 }
 
-void LimeRadio::configureRX (lms_device_t *d, lms_info_str_t *dlist, int channel, float samp_rate, float_type freq)
-{
-  lms_info_str_t device_info_list[8];
-  LMS_GetDeviceList (device_info_list);
-  LMS_Open (&d, device_info_list[0], NULL);
-  if (LMS_Init (d))
-    {
-    LimeDevice::lms_device_error(d);
-    LimeDevice::lms_device_error(d);
-    }
-  else
-    {
-    std::cout << "Device Initialized";
-    }
-  if (LMS_EnableChannel (d, LMS_CH_RX, 0, true) != 0)
-    {
-    LimeDevice::lms_device_error(d);
-    }
-  else
-    {
-    std::cout << "Channel Configured";
-    }
-  if (LMS_SetLOFrequency (d, LMS_CH_RX, 0, freq) != 0)
-    {
-    LimeDevice::lms_device_error(d);
-    }
-  else
-    {
-    std::cout << "Frequency set at " << freq;
-    }
-  if (LMS_SetSampleRate (d, samp_rate, 2) != 0)
-    {
-    LimeDevice::lms_device_error(d);
-    }
-  double temp = 0.0;
-  LMS_GetChipTemperature (d, 0, &temp);
-  qDebug () << "\nLIME DEVICE :: Chip Temperature" << temp << " C";
-  if (LMS_Reset (d) == 0)
-    {
-    qDebug () << "LIME DEVICE :: Reset ";
-    }
-  LMS_Close (d);
 
+bool LimeRadio::DeviceConnected ()
+{
+  lms_device_t *d = nullptr;
+  lms_info_str_t *device_info_list=new lms_info_str_t[8];
+  LMS_GetDeviceList (device_info_list);
+
+
+
+
+  if(  LMS_Open (&d, device_info_list[0], NULL)!=0)
+    {
+    LMS_Close (d);
+    delete [] device_info_list;
+
+    return false;
+    }
+  else{
+    LMS_Close (d);
+    delete [] device_info_list;
+
+    return true;
+  }
+}
+lms_device_t *LimeRadio::getDevice ()
+{
+  return lmsdevice;
 }
 
 LimeRadio::~LimeRadio ()
@@ -147,11 +145,13 @@ short sine_generator (int samples)
 {
   short idata[samples];
   short qdata[samples];
+
   for (int i = 0; i < samples; i++)
     {
-    idata[i] = 32768 * sin ((2 * 3.14 * i) / samples);
-    qdata[i] = 32768 * cos ((2 * 3.14 * i) / samples);
+      idata[i] = 32768 * sin ((2 * 3.14 * i) / samples);
+      qdata[i] = 32768 * cos ((2 * 3.14 * i) / samples);
     }
+
   return 0;
 }
 

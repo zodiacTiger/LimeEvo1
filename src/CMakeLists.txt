@@ -10,6 +10,7 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
 
 # QtCreator supports the following variables for Android, which are identical to qmake Android variables.
 # Check http://doc.qt.io/qt-5/deployment-android.html for more information.
@@ -64,15 +65,15 @@ endif (SWIG_FOUND)
 set(GR_REQUIRED_COMPONENTS RUNTIME FILTER PMT)
 find_package(Gnuradio)
 find_package(Volk)
-find_package(CppUnit)
-find_package(fftw)
-find_package(Doxygen)
+#find_package(CppUnit)
+#find_package(fftw)
+#find_package(Doxygen)
 
 option(LOCAL_OSMOCOM "Build with local osmocom libraries" OFF)
-find_package(Libosmocore)
-find_package(Libosmocodec)
-find_package(Libosmocoding)
-find_package(Libosmogsm)
+#find_package(Libosmocore)
+#find_package(Libosmocodec)
+#find_package(Libosmocoding)
+#find_package(Libosmogsm)
 
 #if(NOT PKG_CONFIG_FOUND)
 #    message(FATAL_ERROR "pkg-config is required")
@@ -101,7 +102,6 @@ find_package(Qt5Core REQUIRED)
 
 find_package(Qt5Widgets CONFIG REQUIRED)
 
-
 set(BLANK_BOX_LINE "|                                             |")
 link_directories(${LINK_DIRS})
 add_definitions(-DLIBBLADERF_SEARCH_PREFIX="${CMAKE_INSTALL_PREFIX}")
@@ -109,12 +109,16 @@ add_definitions(-DLOGGING_ENABLED=1)
 include_directories(${TEST_CONFIG_FILE_INCLUDES} ${INCLUDES}
         "../include"
         "/opt/local/include/boost"
+        "/opt/local/include"
         )
+link_directories(/opt/local/lib)
 
 find_package(LimeSuite)
-find_package(Qt5 COMPONENTS Widgets LinguistTools REQUIRED)
+#find_package(qwt)
+find_package(Qt5 COMPONENTS Widgets Concurrent LinguistTools REQUIRED)
+#find_package(qwt)
 
-set(TS_FILES qt_widgets_template_en_US.ts rxThread.cpp ../include/rxThread.hpp)
+set(TS_FILES qt_widgets_template_en_US.ts RxThread.cpp ../include/RxThread.hpp LimeStreamRx.cpp LimeStreamRx.hpp ../include/helpers.hpp ../include/ui.h StreamTimer.cpp StreamTimer.hpp TxThread.cpp ../include/TxThread.hpp RxTx.cpp ../include/RxTx.hpp ../include/Base.cpp ../include/Base.hpp ../include/Derived.cpp ../include/Derived.hpp Radios.cpp ../include/Radios.h RadioBladeRf.cpp ../include/RadioBladeRf.hpp RadioRtlSdr.cpp ../include/RadioRtlSdr.hpp RxThreadConcurrent.cpp ../include/RxThreadConcurrent.hpp)
 
 if (ANDROID)
     add_library(LimeEvo1 SHARED
@@ -123,23 +127,24 @@ if (ANDROID)
             mainwindow.h
             mainwindow.ui
             ${TS_FILES}
-            )
+            StreamTimer.cpp StreamTimer.hpp TxThread.cpp ../include/TxThread.hpp RxTx.cpp ../include/RxTx.hpp Radios.cpp ../include/Radios.h RadioBladeRf.cpp ../include/RadioBladeRf.hpp RadioRtlSdr.cpp ../include/RadioRtlSdr.hpp RxThreadConcurrent.cpp ../include/RxThreadConcurrent.hpp)
 else ()
     add_executable(LimeEvo1
             main.cpp
-            mainwindow.cpp
-            LimeRadio.cpp
-            LimeDevice.cpp
-            ../include/LimeDevice.h
-            ../include/mainwindow.h
+            mainwindow.cpp ../include/mainwindow.h
+            LimeRadio.cpp ../include/LimeRadio.hpp
+            LimeDevice.cpp ../include/LimeDevice.h
             mainwindow.ui
+
             ../src/resources.qrc
-            ../src/rxThread.cpp
-            ../include/rxThread.hpp
+            RxThread.cpp
+            ../include/RxThread.hpp
+
             #            ${TS_FILES}
-            )
+            LimeStreamRx.cpp LimeStreamRx.hpp ../include/ui.h StreamTimer.cpp StreamTimer.hpp ../src/TxThread.cpp ../include/TxThread.hpp RxTx.cpp ../include/RxTx.hpp Radios.cpp ../include/Radios.h RadioBladeRf.cpp ../include/RadioBladeRf.hpp RadioRtlSdr.cpp ../include/RadioRtlSdr.hpp RxThreadConcurrent.cpp ../include/RxThreadConcurrent.hpp)
 endif ()
 
-target_link_libraries(LimeEvo1 PRIVATE Qt5::Widgets LimeSuite)
+include_directories(/opt/local/libexec/qt5/lib/qwt.framework/headers)
+target_link_libraries(LimeEvo1 PRIVATE LimeSuite bladerf Qt5::Widgets Qt5::Concurrent /opt/local/libexec/qt5/lib/qwt.framework)
 
 qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})

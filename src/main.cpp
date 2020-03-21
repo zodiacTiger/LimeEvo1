@@ -4,15 +4,13 @@
 #include <QImage>
 #include <QApplication>
 #include <QElapsedTimer>
+#include <QtWidgets>
+#include <QGraphicsItemAnimation>
+#include <Radios.h>
+#include <RadioRtlSdr.hpp>
+#include <RadioBladeRf.hpp>
 #include "LimeDevice.h"
-
-void wait (float sec)
-{
-  QElapsedTimer timer;
-  timer.start ();
-  while (!timer.hasExpired (sec * 1000))
-    QCoreApplication::processEvents ();
-}
+#include "helpers.hpp"
 
 int main (int argc, char *argv[])
 {
@@ -20,8 +18,18 @@ int main (int argc, char *argv[])
   MainWindow w;
 
   QSplashScreen *splash = new QSplashScreen;
+  QGraphicsOpacityEffect *eff = new QGraphicsOpacityEffect(splash);
+
   splash->setPixmap (QPixmap ("/Users/zero5/CLionProjects/LimeEvo1/images/splash.png"));
-  splash->show ();
+  splash->setGraphicsEffect(eff);
+
+  QPropertyAnimation *splash_effect = new QPropertyAnimation(eff,"opacity");
+  splash_effect->setDuration(1200);
+  splash_effect->setStartValue(0);
+
+  splash_effect->setEndValue(1);
+  splash_effect->setEasingCurve(QEasingCurve::InBack);
+  splash_effect->start(QPropertyAnimation::DeleteWhenStopped);
   QFont splashFont;
   splashFont.setFamily (QString::fromUtf8 ("UbuntuMono NF"));
   splashFont.setPointSize (12);
@@ -41,8 +49,9 @@ int main (int argc, char *argv[])
     splash->showMessage (QObject::tr ("No Lime Device Found!"),
                          topRight, Qt::white);
     }
+  splash->show ();
 
-  wait (1);
+//  wait (2);
 
   delete splash;
 

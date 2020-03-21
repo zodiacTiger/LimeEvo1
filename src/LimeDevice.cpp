@@ -4,26 +4,24 @@
 
 #include "LimeDevice.h"
 #include "LimeRadio.hpp"
+#include <QDebug>
 #include <iomanip>
 #include <cmath>
-lms_device_t *d = NULL;
-lms_info_str_t dlist[8];
 
 LimeDevice::LimeDevice ()
 = default;
 
 LimeDevice::~LimeDevice ()
 = default;
-
-int LimeDevice::lms_device_error (lms_device_t *device)
+std::string LimeDevice::lms_device_error (lms_device_t *device)
 {
   std::cout << "ERROR --> " << LMS_GetLastErrorMessage ();
   if (device != NULL)
     {
     LMS_Close (device);
-    exit (-1);
+    exit(-1);
     }
-  return 0;
+  return LMS_GetLastErrorMessage ();
 }
 
 bool LimeDevice::deviceFound ()
@@ -31,9 +29,10 @@ bool LimeDevice::deviceFound ()
   std::cout << "\n================================================\n";
   std::cout << "\n          Quick Check for Lime Device           \n";
   std::cout << "\n================================================\n";
+  lms_info_str_t device_info_list[8];
 
   bool deviceFound = false;
-  if (!LMS_GetDeviceList (dlist))
+  if (!LMS_GetDeviceList (device_info_list))
     {
     deviceFound = false;
     std::cout << "              No Device Found                   ";
@@ -42,23 +41,12 @@ bool LimeDevice::deviceFound ()
     {
     deviceFound = true;
     std::cout << "                Device Found                    ";
-    std::cout << "\n" << dlist[0] << "\n";
+    std::cout << "\n" << device_info_list[0] << "\n";
     }
   std::cout << "\n================================================\n";
 
   return deviceFound;
 }
-
-//QString LimeDevice::QLMSBoardTemp(){
-//  std::string temp;
-//  LimeRadio r;
-//}
-
-void LimeDevice::on_device_info_clicked ()
-{
-  qDebug () << "Device Info Called";
-  LimeRadio::status (0, d, dlist);
-};
 
 std::string LimeDevice::boardTemp ()
 {
@@ -66,10 +54,10 @@ std::string LimeDevice::boardTemp ()
 
   lms_info_str_t device_info_list[8];
   LMS_GetDeviceList (device_info_list);
-  LMS_Open (&d, device_info_list[0], NULL);
-  if (LMS_Init (d))
+  LMS_Open (&lmsdevice, device_info_list[0], NULL);
+  if (LMS_Init (lmsdevice))
     {
-      lms_device_error (d);
+      lms_device_error (lmsdevice);
     }
   else
     {
@@ -77,52 +65,15 @@ std::string LimeDevice::boardTemp ()
     }
   double temp = 0.0;
 
-  LMS_GetChipTemperature (d, 0, &temp);
+  LMS_GetChipTemperature (lmsdevice, 0, &temp);
   double rounded_temp = std::floor ((temp * 100) + .5) / 100;
 
   qDebug () << "\nLIME DEVICE :: Chip Temperature" << temp << " C";
-  if (LMS_Reset (d) == 0)
+  if (LMS_Reset (lmsdevice) == 0)
     {
     qDebug () << "LIME DEVICE :: Reset ";
     }
-  LMS_Close (d);
+  LMS_Close (lmsdevice);
   return std::to_string (rounded_temp);
 };
-
-void LimeDevice::on_gui_buttons_enabled ()
-{
-  this->dumpObjectInfo ();
-}
-void LimeDevice::on_tx_stream_clicked ()
-{
-  qDebug () << "Tx Stream Called";
-}
-
-void LimeDevice::on_tx_test_sine_clicked ()
-{
-  qDebug () << "Tx Test Sine Called";
-  emit emit_test ();
-};
-
-void LimeDevice::on_exit_clicked ()
-{
-  qDebug () << "Exit Called";
-  exit (0);
-}
-
-void LimeDevice::emit_test ()
-{
-  qDebug () << "EMIT";
-}
-
-void LimeDevice::on_load_cfg_clicked ()
-{
-  qDebug () << "LOAD CONFIG Clicked";
-}
-
-void LimeDevice::receiveFromQML ()
-{
-  qDebug () << "Received from QML";
-}
-
 
