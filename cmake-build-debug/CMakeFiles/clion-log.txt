@@ -1,7 +1,7 @@
 "/Users/zero5/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.18/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -G "CodeBlocks - Unix Makefiles" /Users/zero5/CLionProjects/LimeEvo1
 -- 
 -- Checking for module SWIG
--- Found SWIG version 3.0.12.
+-- Found SWIG version 4.0.1.
 Checking for GNU Radio Module: RUNTIME
  * INCLUDES=/opt/local/include
  * LIBS=/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib

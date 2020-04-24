@@ -201,6 +201,12 @@
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/Radios.cpp">
 			<Option target="LimeEvo1"/>
 		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/ReplayThread.cpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/ReplayThread.hpp">
+			<Option target="LimeEvo1"/>
+		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/src/RxThread.cpp">
 			<Option target="LimeEvo1"/>
 		</Unit>

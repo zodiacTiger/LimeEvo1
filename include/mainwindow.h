@@ -64,8 +64,6 @@ class MainWindow : public QMainWindow {
   bool rxToFileButtonActive = false;
   bool eventFilter(QObject *obj, QEvent *event);
 
-  static void showTemp();
-
  protected:
 
 

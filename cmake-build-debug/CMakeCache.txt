@@ -497,7 +497,7 @@ SWIG_DIR:PATH=/opt/local/share/swig/3.0.12
 SWIG_EXECUTABLE:FILEPATH=/opt/local/bin/swig
 
 //Swig version
-SWIG_VERSION:STRING=3.0.12
+SWIG_VERSION:STRING=4.0.1
 
 //Whether a compatible Volk was found
 VOLK_FOUND:BOOL=TRUE
