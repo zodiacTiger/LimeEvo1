@@ -5,7 +5,7 @@
 		<Option title="LimeEvo1"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\cmake\;CMake Files\cmake\Modules\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\opt\;CMake Files\..\..\..\..\opt\local\;CMake Files\..\..\..\..\opt\local\share\;CMake Files\..\..\..\..\opt\local\share\cmake\;CMake Files\..\..\..\..\opt\local\share\cmake\gnuradio\;CMake Files\..\..\..\..\opt\local\libexec\;CMake Files\..\..\..\..\opt\local\libexec\qt5\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Concurrent\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5LinguistTools\;CMake Files\..\..\..\..\opt\local\lib\;CMake Files\..\..\..\..\opt\local\lib\cmake\;CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\cmake\;CMake Files\cmake\Modules\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\opt\;CMake Files\..\..\..\..\opt\local\;CMake Files\..\..\..\..\opt\local\share\;CMake Files\..\..\..\..\opt\local\share\cmake\;CMake Files\..\..\..\..\opt\local\share\cmake\gnuradio\;CMake Files\..\..\..\..\opt\local\lib\;CMake Files\..\..\..\..\opt\local\lib\cmake\;CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5\;CMake Files\..\..\..\..\opt\local\libexec\;CMake Files\..\..\..\..\opt\local\libexec\qt5\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Concurrent\;CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5LinguistTools\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug"/>
@@ -261,8 +261,23 @@
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/share/cmake/gnuradio/GnuradioConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\share\cmake\gnuradio\"/>
 		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Core\"/>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/lib/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5\"/>
 		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Core\"/>
@@ -270,26 +285,8 @@
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Core\"/>
-		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Core\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QMacStylePlugin.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\"/>
 		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Gui\"/>
@@ -354,6 +351,15 @@
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Gui\"/>
 		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5Widgets/Qt5Widgets_QMacStylePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5Widgets\"/>
+		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5\"/>
 		</Unit>
@@ -371,12 +377,6 @@
 		</Unit>
 		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/libexec/qt5/lib/cmake/Qt5LinguistTools/Qt5LinguistToolsMacros.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\libexec\qt5\lib\cmake\Qt5LinguistTools\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/lib/cmake/Qt5/Qt5Config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5\"/>
-		</Unit>
-		<Unit filename="/Users/zero5/CLionProjects/LimeEvo1/../../../../opt/local/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\opt\local\lib\cmake\Qt5\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -45,14 +45,12 @@ class MainWindow : public QMainWindow {
   explicit MainWindow (QWidget *parent = nullptr);
   ~MainWindow ();
 
-
-
   bool checkStream = false;
   Ui::MainWindow *ui;
-  QMutex mutex;
+
   bool timedPlotUpdate = PLOT_UPDATE_MODE_DEFAULT;
 
-  Rx::RxThread *rx = new Rx::RxThread (&mutex,RX_START_FREQ, RX_START_GAIN, RX_SAMPLE_RATE, RX_START_STREAM_RATE, RX_CHANNEL, RX_ANTENNA, RX_TO_FILE);
+  Rx::RxThread *rx = new Rx::RxThread (RX_START_FREQ, RX_START_GAIN, RX_SAMPLE_RATE, RX_START_STREAM_RATE, RX_CHANNEL, RX_ANTENNA, RX_TO_FILE);
   Tx::TxThread *tx = new Tx::TxThread(TX_START_FREQ,TX_START_GAIN,TX_SAMPLE_RATE,TX_START_STREAM_RATE,TX_CHANNEL);
 
   ReplayThread *capture = new ReplayThread();

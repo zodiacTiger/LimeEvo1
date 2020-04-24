@@ -14,6 +14,7 @@ Checking for GNU Radio Module: PMT
  * INCLUDES=/opt/local/include
  * LIBS=/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib
 GNURADIO_PMT_FOUND = TRUE
+-- Could NOT find LimeSuite (missing: LIMESUITE_INCLUDE_DIR) 
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug

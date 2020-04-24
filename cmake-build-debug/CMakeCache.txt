@@ -63,9 +63,6 @@ Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/opt/local/lib/libboost_thread-mt.dylib
 Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/opt/local/lib/libboost_thread-mt.dylib
 
 //Path to a program.
-CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
-
-//Path to a program.
 CMAKE_AR:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
@@ -121,9 +118,6 @@ CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
 //Flags used by the C compiler during RELWITHDEBINFO builds.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
-
-//Path to a program.
-CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
 //Executable file format
 CMAKE_EXECUTABLE_FORMAT:STRING=MACHO
@@ -210,9 +204,6 @@ CMAKE_PROJECT_NAME:STATIC=LimeEvo1
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
 
-//Path to a program.
-CMAKE_READELF:FILEPATH=CMAKE_READELF-NOTFOUND
-
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
 CMAKE_SHARED_LINKER_FLAGS:STRING=
@@ -270,24 +261,6 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a file.
-CPPUNIT_INCLUDE_DIRS:PATH=/opt/local/include
-
-//Path to a library.
-CPPUNIT_LIBRARIES:FILEPATH=/opt/local/lib/libcppunit.dylib
-
-//Pick a version of Qt to use: 3 or 4
-DESIRED_QT_VERSION:STRING=3
-
-//Dot tool for use with Doxygen
-DOXYGEN_DOT_EXECUTABLE:FILEPATH=/opt/local/bin/dot
-
-//Doxygen documentation generation tool (http://www.doxygen.org)
-DOXYGEN_EXECUTABLE:FILEPATH=/opt/local/bin/doxygen
-
-//Path to a file.
-FFTW3_INCLUDE_DIR:PATH=/usr/local/include
-
-//Path to a file.
 GNURADIO_FILTER_INCLUDE_DIRS:PATH=/opt/local/include
 
 //Path to a library.
@@ -333,49 +306,10 @@ GNURADIO_RUNTIME_LIBRARIES_log4cpp:FILEPATH=/opt/local/lib/liblog4cpp.dylib
 Gnuradio_DIR:PATH=/opt/local/share/cmake/gnuradio
 
 //Path to a file.
-LIBOSMOCODEC_INCLUDE_DIR:PATH=/opt/local/include
-
-//Path to a library.
-LIBOSMOCODEC_LIBRARY:FILEPATH=/opt/local/lib/libosmocodec.dylib
-
-//Path to a file.
-LIBOSMOCODING_INCLUDE_DIR:PATH=/opt/local/include
-
-//Path to a library.
-LIBOSMOCODING_LIBRARY:FILEPATH=/opt/local/lib/libosmocoding.dylib
-
-//Path to a file.
-LIBOSMOCORE_INCLUDE_DIR:PATH=/opt/local/include
-
-//Path to a library.
-LIBOSMOCORE_LIBRARY:FILEPATH=/opt/local/lib/libosmocore.dylib
-
-//Path to a file.
-LIBOSMOGSM_INCLUDE_DIR:PATH=/opt/local/include
-
-//Path to a library.
-LIBOSMOGSM_LIBRARY:FILEPATH=/opt/local/lib/libosmogsm.dylib
-
-//Path to a file.
-LIMESUITE_INCLUDE_DIR:PATH=/opt/local/include
-
-//Path to a library.
-LIMESUITE_LIBRARY:FILEPATH=/opt/local/lib/libLimeSuite.dylib
+LIMESUITE_INCLUDE_DIR:PATH=LIMESUITE_INCLUDE_DIR-NOTFOUND
 
 //Build with local osmocom libraries
 LOCAL_OSMOCOM:BOOL=OFF
-
-//The directory containing a CMake configuration file for Libosmocodec.
-Libosmocodec_DIR:PATH=Libosmocodec_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Libosmocoding.
-Libosmocoding_DIR:PATH=Libosmocoding_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Libosmocore.
-Libosmocore_DIR:PATH=Libosmocore_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Libosmogsm.
-Libosmogsm_DIR:PATH=Libosmogsm_DIR-NOTFOUND
 
 //Value Computed by CMake
 LimeEvo1_BINARY_DIR:STATIC=/Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug/src
@@ -383,115 +317,32 @@ LimeEvo1_BINARY_DIR:STATIC=/Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug
 //Value Computed by CMake
 LimeEvo1_SOURCE_DIR:STATIC=/Users/zero5/CLionProjects/LimeEvo1/src
 
-//The directory containing a CMake configuration file for LimeSuite.
-LimeSuite_DIR:PATH=/opt/local/lib/cmake/LimeSuite
-
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/opt/local/bin/pkg-config
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
-//Path to a file.
-QT3_QGLOBAL_H_FILE:FILEPATH=/opt/local/bin/include
-
-//Path to a file.
-QT4_QGLOBAL_H_FILE:FILEPATH=QT4_QGLOBAL_H_FILE-NOTFOUND
-
-//path to Qt3 include directory
-QT_INCLUDE_DIR:PATH=QT_INCLUDE_DIR-NOTFOUND
-
-//Path to a library.
-QT_QASSISTANTCLIENT_LIBRARY:FILEPATH=QT_QASSISTANTCLIENT_LIBRARY-NOTFOUND
-
-QT_QMAKE_EXECUTABLE:FILEPATH=NOTFOUND
-
-//Path to a program.
-QT_QMAKE_EXECUTABLE_FINDQT:FILEPATH=QT_QMAKE_EXECUTABLE_FINDQT-NOTFOUND
-
-//Path to a library.
-QT_QT_LIBRARY:FILEPATH=QT_QT_LIBRARY-NOTFOUND
-
-//Path to a program.
-QT_UIC_EXECUTABLE:FILEPATH=QT_UIC_EXECUTABLE-NOTFOUND
-
-//Path to a library.
-QWT:FILEPATH=/usr/local/opt/qwt/lib/qwt.framework
-
-//The directory containing a CMake configuration file for QWT.
-QWT_DIR:PATH=QWT_DIR-NOTFOUND
-
-//Path to a file.
-QWT_INCLUDE_DIRS:PATH=/opt/local/include/qwt
-
-//Path to a library.
-QWT_LIBRARIES:FILEPATH=/opt/local/lib/libqwt.dylib
-
-//The directory containing a CMake configuration file for Qt4Core.
-Qt4Core_DIR:PATH=Qt4Core_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for Qt5Concurrent.
 Qt5Concurrent_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Concurrent
 
 //The directory containing a CMake configuration file for Qt5Core.
-Qt5Core_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Core
+Qt5Core_DIR:PATH=/opt/local/lib/cmake/Qt5Core
 
 //The directory containing a CMake configuration file for Qt5Gui.
 Qt5Gui_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Gui
 
-//The directory containing a CMake configuration file for Qt5LimeSuite.
-Qt5LimeSuite_DIR:PATH=Qt5LimeSuite_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for Qt5LinguistTools.
 Qt5LinguistTools_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5LinguistTools
 
-//The directory containing a CMake configuration file for Qt5Network.
-Qt5Network_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Network
-
-//The directory containing a CMake configuration file for Qt5QmlModels.
-Qt5QmlModels_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5QmlModels
-
-//The directory containing a CMake configuration file for Qt5Qml.
-Qt5Qml_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Qml
-
-//The directory containing a CMake configuration file for Qt5Qt5Qwt.
-Qt5Qt5Qwt_DIR:PATH=Qt5Qt5Qwt_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt5QuickCompiler.
-Qt5QuickCompiler_DIR:PATH=/opt/local/lib/cmake/Qt5QuickCompiler
-
-//The directory containing a CMake configuration file for Qt5Quick.
-Qt5Quick_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Quick
-
-//The directory containing a CMake configuration file for Qt5Qwt4REQUIRED.
-Qt5Qwt4REQUIRED_DIR:PATH=Qt5Qwt4REQUIRED_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt5Qwt5Qwt.
-Qt5Qwt5Qwt_DIR:PATH=Qt5Qwt5Qwt_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt5Qwt5REQUIRED.
-Qt5Qwt5REQUIRED_DIR:PATH=Qt5Qwt5REQUIRED_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt5Qwt.
-Qt5Qwt_DIR:PATH=Qt5Qwt_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for Qt5Widgets.
-Qt5Widgets_DIR:PATH=/opt/local/libexec/qt5/lib/cmake/Qt5Widgets
+Qt5Widgets_DIR:PATH=/opt/local/lib/cmake/Qt5Widgets
 
 //The directory containing a CMake configuration file for Qt5.
 Qt5_DIR:PATH=/opt/local/lib/cmake/Qt5
 
-//The directory containing a CMake configuration file for QtQwt.
-QtQwt_DIR:PATH=QtQwt_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qt.
-Qt_DIR:PATH=Qt_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for Qwt.
-Qwt_DIR:PATH=Qwt_DIR-NOTFOUND
-
 //Path to a file.
-SWIG_DIR:PATH=/opt/local/share/swig/3.0.12
+SWIG_DIR:PATH=/opt/local/share/swig/4.0.1
 
 //Path to a program.
 SWIG_EXECUTABLE:FILEPATH=/opt/local/bin/swig
@@ -499,41 +350,14 @@ SWIG_EXECUTABLE:FILEPATH=/opt/local/bin/swig
 //Swig version
 SWIG_VERSION:STRING=4.0.1
 
-//Whether a compatible Volk was found
-VOLK_FOUND:BOOL=TRUE
-
-//Volk Include Directories
-VOLK_INCLUDE_DIRS:STRING=/opt/local/include
-
-//Volk Library
-VOLK_LIBRARIES:STRING=Volk::volk
-
-//The directory containing a CMake configuration file for Volk.
-Volk_DIR:PATH=/opt/local/share/cmake/volk
-
-//The directory containing a CMake configuration file for W.
-W_DIR:PATH=W_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for bladeRF.
-bladeRF_DIR:PATH=bladeRF_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for blade.
-blade_DIR:PATH=blade_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for bladerf.
-bladerf_DIR:PATH=bladerf_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for fftw.
-fftw_DIR:PATH=fftw_DIR-NOTFOUND
+//Path to a file.
+VOLK_INCLUDE_DIRS:PATH=/opt/local/include
 
 //Path to a library.
-pkgcfg_lib_FFTW3_fftw3:FILEPATH=/opt/local/lib/libfftw3.dylib
+VOLK_LIBRARIES:FILEPATH=/opt/local/lib/libvolk.dylib
 
 //Path to a library.
 pkgcfg_lib_LIMESUITE_LimeSuite:FILEPATH=/opt/local/lib/libLimeSuite.dylib
-
-//Path to a library.
-pkgcfg_lib_PC_CPPUNIT_cppunit:FILEPATH=/opt/local/lib/libcppunit.dylib
 
 //Path to a library.
 pkgcfg_lib_PC_GNURADIO_FILTER_gnuradio-fft:FILEPATH=/opt/local/lib/libgnuradio-fft.dylib
@@ -570,48 +394,6 @@ pkgcfg_lib_PC_GNURADIO_RUNTIME_log4cpp:FILEPATH=/opt/local/lib/liblog4cpp.dylib
 
 //Path to a library.
 pkgcfg_lib_PC_VOLK_volk:FILEPATH=/opt/local/lib/libvolk.dylib
-
-//Path to a library.
-pkgcfg_lib_PC_libosmocodec_osmocodec:FILEPATH=/opt/local/lib/libosmocodec.dylib
-
-//Path to a library.
-pkgcfg_lib_PC_libosmocoding_osmocodec:FILEPATH=/opt/local/lib/libosmocodec.dylib
-
-//Path to a library.
-pkgcfg_lib_PC_libosmocoding_osmocoding:FILEPATH=/opt/local/lib/libosmocoding.dylib
-
-//Path to a library.
-pkgcfg_lib_PC_libosmocoding_osmocore:FILEPATH=/opt/local/lib/libosmocore.dylib
-
-//Path to a library.
-pkgcfg_lib_PC_libosmocoding_osmogsm:FILEPATH=/opt/local/lib/libosmogsm.dylib
-
-//Path to a library.
-pkgcfg_lib_PC_libosmocore_osmocore:FILEPATH=/opt/local/lib/libosmocore.dylib
-
-//Path to a library.
-pkgcfg_lib_PC_libosmocore_talloc:FILEPATH=/opt/local/lib/libtalloc.dylib
-
-//Path to a library.
-pkgcfg_lib_PC_libosmogsm_osmocore:FILEPATH=/opt/local/lib/libosmocore.dylib
-
-//Path to a library.
-pkgcfg_lib_PC_libosmogsm_osmogsm:FILEPATH=/opt/local/lib/libosmogsm.dylib
-
-//Path to a library.
-pkgcfg_lib_PC_libosmogsm_talloc:FILEPATH=/opt/local/lib/libtalloc.dylib
-
-//Value Computed by CMake
-qt_widgets_template_BINARY_DIR:STATIC=/Users/zero5/CLionProjects/LimeEvo1/cmake-build-debug/src
-
-//Value Computed by CMake
-qt_widgets_template_SOURCE_DIR:STATIC=/Users/zero5/CLionProjects/LimeEvo1/src
-
-//The directory containing a CMake configuration file for qwt-qt5.
-qwt-qt5_DIR:PATH=qwt-qt5_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for qwt.
-qwt_DIR:PATH=qwt_DIR-NOTFOUND
 
 
 ########################
@@ -650,8 +432,6 @@ Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
 Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_ADDR2LINE
-CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -694,8 +474,6 @@ CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_DLLTOOL
-CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
 CMAKE_EXE_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS_DEBUG
@@ -759,8 +537,6 @@ CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_READELF
-CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
 CMAKE_ROOT:INTERNAL=/Users/zero5/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/192.6817.18/CLion.app/Contents/bin/cmake/mac/share/cmake-3.15
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
@@ -793,108 +569,28 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/opt/local/libexec/gnubin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPPUNIT_INCLUDE_DIRS
-CPPUNIT_INCLUDE_DIRS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPPUNIT_LIBRARIES
-CPPUNIT_LIBRARIES-ADVANCED:INTERNAL=1
-//CppUnit Version
-CPPUNIT_VERSION:INTERNAL=1.13.2
-//ADVANCED property for variable: DOXYGEN_DOT_EXECUTABLE
-DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: DOXYGEN_EXECUTABLE
-DOXYGEN_EXECUTABLE-ADVANCED:INTERNAL=1
-FFTW3_CFLAGS:INTERNAL=-I/opt/local/include
-FFTW3_CFLAGS_I:INTERNAL=
-FFTW3_CFLAGS_OTHER:INTERNAL=
-FFTW3_FOUND:INTERNAL=1
-FFTW3_INCLUDEDIR:INTERNAL=/opt/local/include
-//ADVANCED property for variable: FFTW3_INCLUDE_DIR
-FFTW3_INCLUDE_DIR-ADVANCED:INTERNAL=1
-FFTW3_INCLUDE_DIRS:INTERNAL=/opt/local/include
-FFTW3_LDFLAGS:INTERNAL=-L/opt/local/lib;-lfftw3
-FFTW3_LDFLAGS_OTHER:INTERNAL=
-FFTW3_LIBDIR:INTERNAL=/opt/local/lib
-FFTW3_LIBRARIES:INTERNAL=fftw3
-FFTW3_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-FFTW3_LIBS:INTERNAL=
-FFTW3_LIBS_L:INTERNAL=
-FFTW3_LIBS_OTHER:INTERNAL=
-FFTW3_LIBS_PATHS:INTERNAL=
-FFTW3_PREFIX:INTERNAL=/opt/local
-FFTW3_STATIC_CFLAGS:INTERNAL=-I/opt/local/include
-FFTW3_STATIC_CFLAGS_I:INTERNAL=
-FFTW3_STATIC_CFLAGS_OTHER:INTERNAL=
-FFTW3_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include
-FFTW3_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-lfftw3;-lm
-FFTW3_STATIC_LDFLAGS_OTHER:INTERNAL=
-FFTW3_STATIC_LIBDIR:INTERNAL=
-FFTW3_STATIC_LIBRARIES:INTERNAL=fftw3;m
-FFTW3_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-FFTW3_STATIC_LIBS:INTERNAL=
-FFTW3_STATIC_LIBS_L:INTERNAL=
-FFTW3_STATIC_LIBS_OTHER:INTERNAL=
-FFTW3_STATIC_LIBS_PATHS:INTERNAL=
-FFTW3_VERSION:INTERNAL=3.3.8
-FFTW3_fftw3 _INCLUDEDIR:INTERNAL=
-FFTW3_fftw3 _LIBDIR:INTERNAL=
-FFTW3_fftw3 _PREFIX:INTERNAL=
-FFTW3_fftw3 _VERSION:INTERNAL=
 //Details about finding Boost
 FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/opt/local/include][cfound components:  filesystem system thread chrono date_time atomic ][v1.71.0(1.35)]
-//Details about finding CPPUNIT
-FIND_PACKAGE_MESSAGE_DETAILS_CPPUNIT:INTERNAL=[/opt/local/lib/libcppunit.dylib][/opt/local/include][v()]
-//Details about finding Doxygen
-FIND_PACKAGE_MESSAGE_DETAILS_Doxygen:INTERNAL=[/opt/local/bin/doxygen][cfound components:  doxygen dot ][v1.8.17()]
-//Details about finding FFTW3
-FIND_PACKAGE_MESSAGE_DETAILS_FFTW3:INTERNAL=[fftw3][/usr/local/include][v()]
 //Details about finding GNURADIO_FILTER
 FIND_PACKAGE_MESSAGE_DETAILS_GNURADIO_FILTER:INTERNAL=[/opt/local/lib/libgnuradio-filter.dylib;/opt/local/lib/libgnuradio-fft.dylib;/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib][/opt/local/include][v()]
 //Details about finding GNURADIO_PMT
 FIND_PACKAGE_MESSAGE_DETAILS_GNURADIO_PMT:INTERNAL=[/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib][/opt/local/include][v()]
 //Details about finding GNURADIO_RUNTIME
 FIND_PACKAGE_MESSAGE_DETAILS_GNURADIO_RUNTIME:INTERNAL=[/opt/local/lib/libgnuradio-runtime.dylib;/opt/local/lib/libgnuradio-pmt.dylib;/opt/local/lib/liblog4cpp.dylib][/opt/local/include][v()]
-//Details about finding LimeSuite
-FIND_PACKAGE_MESSAGE_DETAILS_LimeSuite:INTERNAL=[LimeSuite][/opt/local/include][v()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/opt/local/bin/pkg-config][v0.29.2()]
-//Details about finding Qwt
-FIND_PACKAGE_MESSAGE_DETAILS_Qwt:INTERNAL=[/opt/local/lib/libqwt.dylib][/opt/local/include/qwt][v()]
 //Details about finding SWIG
-FIND_PACKAGE_MESSAGE_DETAILS_SWIG:INTERNAL=[/opt/local/bin/swig][/opt/local/share/swig/3.0.12][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_SWIG:INTERNAL=[/opt/local/bin/swig][/opt/local/share/swig/4.0.1][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding VOLK
-FIND_PACKAGE_MESSAGE_DETAILS_VOLK:INTERNAL=[Volk::volk][/opt/local/include][v()]
-//Details about finding libosmocodec
-FIND_PACKAGE_MESSAGE_DETAILS_libosmocodec:INTERNAL=[/opt/local/lib/libosmocodec.dylib][/opt/local/include][v()]
-//Details about finding libosmocoding
-FIND_PACKAGE_MESSAGE_DETAILS_libosmocoding:INTERNAL=[/opt/local/lib/libosmocoding.dylib][/opt/local/include][v()]
-//Details about finding libosmocore
-FIND_PACKAGE_MESSAGE_DETAILS_libosmocore:INTERNAL=[/opt/local/lib/libosmocore.dylib][/opt/local/include][v()]
-//Details about finding libosmogsm
-FIND_PACKAGE_MESSAGE_DETAILS_libosmogsm:INTERNAL=[/opt/local/lib/libosmogsm.dylib][/opt/local/include][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_VOLK:INTERNAL=[/opt/local/lib/libvolk.dylib][/opt/local/include][v()]
 //ADVANCED property for variable: GNURADIO_FILTER_INCLUDE_DIRS
 GNURADIO_FILTER_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GNURADIO_PMT_INCLUDE_DIRS
 GNURADIO_PMT_INCLUDE_DIRS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GNURADIO_RUNTIME_INCLUDE_DIRS
 GNURADIO_RUNTIME_INCLUDE_DIRS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: LIBOSMOCODEC_INCLUDE_DIR
-LIBOSMOCODEC_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: LIBOSMOCODEC_LIBRARY
-LIBOSMOCODEC_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: LIBOSMOCODING_INCLUDE_DIR
-LIBOSMOCODING_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: LIBOSMOCODING_LIBRARY
-LIBOSMOCODING_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: LIBOSMOCORE_INCLUDE_DIR
-LIBOSMOCORE_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: LIBOSMOCORE_LIBRARY
-LIBOSMOCORE_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: LIBOSMOGSM_INCLUDE_DIR
-LIBOSMOGSM_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: LIBOSMOGSM_LIBRARY
-LIBOSMOGSM_LIBRARY-ADVANCED:INTERNAL=1
 LIMESUITE_CFLAGS:INTERNAL=-I/opt/local/include
 LIMESUITE_CFLAGS_I:INTERNAL=
 LIMESUITE_CFLAGS_OTHER:INTERNAL=
@@ -932,41 +628,7 @@ LIMESUITE_STATIC_LIBS:INTERNAL=
 LIMESUITE_STATIC_LIBS_L:INTERNAL=
 LIMESUITE_STATIC_LIBS_OTHER:INTERNAL=
 LIMESUITE_STATIC_LIBS_PATHS:INTERNAL=
-LIMESUITE_VERSION:INTERNAL=19.04.1-g9d19559c
-PC_CPPUNIT_CFLAGS:INTERNAL=-I/opt/local/include
-PC_CPPUNIT_CFLAGS_I:INTERNAL=
-PC_CPPUNIT_CFLAGS_OTHER:INTERNAL=
-PC_CPPUNIT_FOUND:INTERNAL=1
-PC_CPPUNIT_INCLUDEDIR:INTERNAL=/opt/local/include
-PC_CPPUNIT_INCLUDE_DIRS:INTERNAL=/opt/local/include
-PC_CPPUNIT_LDFLAGS:INTERNAL=-L/opt/local/lib;-lcppunit
-PC_CPPUNIT_LDFLAGS_OTHER:INTERNAL=
-PC_CPPUNIT_LIBDIR:INTERNAL=/opt/local/lib
-PC_CPPUNIT_LIBRARIES:INTERNAL=cppunit
-PC_CPPUNIT_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-PC_CPPUNIT_LIBS:INTERNAL=
-PC_CPPUNIT_LIBS_L:INTERNAL=
-PC_CPPUNIT_LIBS_OTHER:INTERNAL=
-PC_CPPUNIT_LIBS_PATHS:INTERNAL=
-PC_CPPUNIT_PREFIX:INTERNAL=/opt/local
-PC_CPPUNIT_STATIC_CFLAGS:INTERNAL=-I/opt/local/include
-PC_CPPUNIT_STATIC_CFLAGS_I:INTERNAL=
-PC_CPPUNIT_STATIC_CFLAGS_OTHER:INTERNAL=
-PC_CPPUNIT_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include
-PC_CPPUNIT_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-lcppunit;-ldl
-PC_CPPUNIT_STATIC_LDFLAGS_OTHER:INTERNAL=
-PC_CPPUNIT_STATIC_LIBDIR:INTERNAL=
-PC_CPPUNIT_STATIC_LIBRARIES:INTERNAL=cppunit;dl
-PC_CPPUNIT_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-PC_CPPUNIT_STATIC_LIBS:INTERNAL=
-PC_CPPUNIT_STATIC_LIBS_L:INTERNAL=
-PC_CPPUNIT_STATIC_LIBS_OTHER:INTERNAL=
-PC_CPPUNIT_STATIC_LIBS_PATHS:INTERNAL=
-PC_CPPUNIT_VERSION:INTERNAL=1.13.2
-PC_CPPUNIT_cppunit_INCLUDEDIR:INTERNAL=
-PC_CPPUNIT_cppunit_LIBDIR:INTERNAL=
-PC_CPPUNIT_cppunit_PREFIX:INTERNAL=
-PC_CPPUNIT_cppunit_VERSION:INTERNAL=
+LIMESUITE_VERSION:INTERNAL=20.01.0-gb14b3456
 PC_GNURADIO_FILTER_CFLAGS:INTERNAL=-I/opt/local/include
 PC_GNURADIO_FILTER_CFLAGS_I:INTERNAL=
 PC_GNURADIO_FILTER_CFLAGS_OTHER:INTERNAL=
@@ -1103,150 +765,10 @@ PC_VOLK_volk_INCLUDEDIR:INTERNAL=
 PC_VOLK_volk_LIBDIR:INTERNAL=
 PC_VOLK_volk_PREFIX:INTERNAL=
 PC_VOLK_volk_VERSION:INTERNAL=
-PC_libosmocodec_CFLAGS:INTERNAL=-I/opt/local/include/
-PC_libosmocodec_CFLAGS_I:INTERNAL=
-PC_libosmocodec_CFLAGS_OTHER:INTERNAL=
-PC_libosmocodec_FOUND:INTERNAL=1
-PC_libosmocodec_INCLUDEDIR:INTERNAL=/opt/local/include
-PC_libosmocodec_INCLUDE_DIRS:INTERNAL=/opt/local/include/
-PC_libosmocodec_LDFLAGS:INTERNAL=-L/opt/local/lib;-losmocodec
-PC_libosmocodec_LDFLAGS_OTHER:INTERNAL=
-PC_libosmocodec_LIBDIR:INTERNAL=/opt/local/lib
-PC_libosmocodec_LIBRARIES:INTERNAL=osmocodec
-PC_libosmocodec_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-PC_libosmocodec_LIBS:INTERNAL=
-PC_libosmocodec_LIBS_L:INTERNAL=
-PC_libosmocodec_LIBS_OTHER:INTERNAL=
-PC_libosmocodec_LIBS_PATHS:INTERNAL=
-PC_libosmocodec_PREFIX:INTERNAL=/opt/local
-PC_libosmocodec_STATIC_CFLAGS:INTERNAL=-I/opt/local/include/
-PC_libosmocodec_STATIC_CFLAGS_I:INTERNAL=
-PC_libosmocodec_STATIC_CFLAGS_OTHER:INTERNAL=
-PC_libosmocodec_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include/
-PC_libosmocodec_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-losmocodec
-PC_libosmocodec_STATIC_LDFLAGS_OTHER:INTERNAL=
-PC_libosmocodec_STATIC_LIBDIR:INTERNAL=
-PC_libosmocodec_STATIC_LIBRARIES:INTERNAL=osmocodec
-PC_libosmocodec_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-PC_libosmocodec_STATIC_LIBS:INTERNAL=
-PC_libosmocodec_STATIC_LIBS_L:INTERNAL=
-PC_libosmocodec_STATIC_LIBS_OTHER:INTERNAL=
-PC_libosmocodec_STATIC_LIBS_PATHS:INTERNAL=
-PC_libosmocodec_VERSION:INTERNAL=UNKNOWN
-PC_libosmocodec_libosmocodec_INCLUDEDIR:INTERNAL=
-PC_libosmocodec_libosmocodec_LIBDIR:INTERNAL=
-PC_libosmocodec_libosmocodec_PREFIX:INTERNAL=
-PC_libosmocodec_libosmocodec_VERSION:INTERNAL=
-PC_libosmocoding_CFLAGS:INTERNAL=-I/opt/local/include/
-PC_libosmocoding_CFLAGS_I:INTERNAL=
-PC_libosmocoding_CFLAGS_OTHER:INTERNAL=
-PC_libosmocoding_FOUND:INTERNAL=1
-PC_libosmocoding_INCLUDEDIR:INTERNAL=/opt/local/include
-PC_libosmocoding_INCLUDE_DIRS:INTERNAL=/opt/local/include/
-PC_libosmocoding_LDFLAGS:INTERNAL=-L/opt/local/lib;-losmocoding;-losmocodec;-losmogsm;-losmocore
-PC_libosmocoding_LDFLAGS_OTHER:INTERNAL=
-PC_libosmocoding_LIBDIR:INTERNAL=/opt/local/lib
-PC_libosmocoding_LIBRARIES:INTERNAL=osmocoding;osmocodec;osmogsm;osmocore
-PC_libosmocoding_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-PC_libosmocoding_LIBS:INTERNAL=
-PC_libosmocoding_LIBS_L:INTERNAL=
-PC_libosmocoding_LIBS_OTHER:INTERNAL=
-PC_libosmocoding_LIBS_PATHS:INTERNAL=
-PC_libosmocoding_PREFIX:INTERNAL=/opt/local
-PC_libosmocoding_STATIC_CFLAGS:INTERNAL=-I/opt/local/include/
-PC_libosmocoding_STATIC_CFLAGS_I:INTERNAL=
-PC_libosmocoding_STATIC_CFLAGS_OTHER:INTERNAL=
-PC_libosmocoding_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include/
-PC_libosmocoding_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-losmocoding;-losmocodec;-losmogsm;-losmocore
-PC_libosmocoding_STATIC_LDFLAGS_OTHER:INTERNAL=
-PC_libosmocoding_STATIC_LIBDIR:INTERNAL=
-PC_libosmocoding_STATIC_LIBRARIES:INTERNAL=osmocoding;osmocodec;osmogsm;osmocore
-PC_libosmocoding_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-PC_libosmocoding_STATIC_LIBS:INTERNAL=
-PC_libosmocoding_STATIC_LIBS_L:INTERNAL=
-PC_libosmocoding_STATIC_LIBS_OTHER:INTERNAL=
-PC_libosmocoding_STATIC_LIBS_PATHS:INTERNAL=
-PC_libosmocoding_VERSION:INTERNAL=UNKNOWN
-PC_libosmocoding_libosmocoding_INCLUDEDIR:INTERNAL=
-PC_libosmocoding_libosmocoding_LIBDIR:INTERNAL=
-PC_libosmocoding_libosmocoding_PREFIX:INTERNAL=
-PC_libosmocoding_libosmocoding_VERSION:INTERNAL=
-PC_libosmocore_CFLAGS:INTERNAL=-I/opt/local/include/
-PC_libosmocore_CFLAGS_I:INTERNAL=
-PC_libosmocore_CFLAGS_OTHER:INTERNAL=
-PC_libosmocore_FOUND:INTERNAL=1
-PC_libosmocore_INCLUDEDIR:INTERNAL=/opt/local/include
-PC_libosmocore_INCLUDE_DIRS:INTERNAL=/opt/local/include/
-PC_libosmocore_LDFLAGS:INTERNAL=-L/opt/local/lib;-Wl,-rpath,/opt/local/lib;-ltalloc;-losmocore
-PC_libosmocore_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/opt/local/lib
-PC_libosmocore_LIBDIR:INTERNAL=/opt/local/lib
-PC_libosmocore_LIBRARIES:INTERNAL=talloc;osmocore
-PC_libosmocore_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-PC_libosmocore_LIBS:INTERNAL=
-PC_libosmocore_LIBS_L:INTERNAL=
-PC_libosmocore_LIBS_OTHER:INTERNAL=
-PC_libosmocore_LIBS_PATHS:INTERNAL=
-PC_libosmocore_PREFIX:INTERNAL=/opt/local
-PC_libosmocore_STATIC_CFLAGS:INTERNAL=-I/opt/local/include/
-PC_libosmocore_STATIC_CFLAGS_I:INTERNAL=
-PC_libosmocore_STATIC_CFLAGS_OTHER:INTERNAL=
-PC_libosmocore_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include/
-PC_libosmocore_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-Wl,-rpath,/opt/local/lib;-ltalloc;-losmocore
-PC_libosmocore_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/opt/local/lib
-PC_libosmocore_STATIC_LIBDIR:INTERNAL=
-PC_libosmocore_STATIC_LIBRARIES:INTERNAL=talloc;osmocore
-PC_libosmocore_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-PC_libosmocore_STATIC_LIBS:INTERNAL=
-PC_libosmocore_STATIC_LIBS_L:INTERNAL=
-PC_libosmocore_STATIC_LIBS_OTHER:INTERNAL=
-PC_libosmocore_STATIC_LIBS_PATHS:INTERNAL=
-PC_libosmocore_VERSION:INTERNAL=UNKNOWN
-PC_libosmocore_libosmocore_INCLUDEDIR:INTERNAL=
-PC_libosmocore_libosmocore_LIBDIR:INTERNAL=
-PC_libosmocore_libosmocore_PREFIX:INTERNAL=
-PC_libosmocore_libosmocore_VERSION:INTERNAL=
-PC_libosmogsm_CFLAGS:INTERNAL=-I/opt/local/include/
-PC_libosmogsm_CFLAGS_I:INTERNAL=
-PC_libosmogsm_CFLAGS_OTHER:INTERNAL=
-PC_libosmogsm_FOUND:INTERNAL=1
-PC_libosmogsm_INCLUDEDIR:INTERNAL=/opt/local/include
-PC_libosmogsm_INCLUDE_DIRS:INTERNAL=/opt/local/include/
-PC_libosmogsm_LDFLAGS:INTERNAL=-L/opt/local/lib;-Wl,-rpath,/opt/local/lib;-ltalloc;-losmogsm;-losmocore
-PC_libosmogsm_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/opt/local/lib
-PC_libosmogsm_LIBDIR:INTERNAL=/opt/local/lib
-PC_libosmogsm_LIBRARIES:INTERNAL=talloc;osmogsm;osmocore
-PC_libosmogsm_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-PC_libosmogsm_LIBS:INTERNAL=
-PC_libosmogsm_LIBS_L:INTERNAL=
-PC_libosmogsm_LIBS_OTHER:INTERNAL=
-PC_libosmogsm_LIBS_PATHS:INTERNAL=
-PC_libosmogsm_PREFIX:INTERNAL=/opt/local
-PC_libosmogsm_STATIC_CFLAGS:INTERNAL=-I/opt/local/include/
-PC_libosmogsm_STATIC_CFLAGS_I:INTERNAL=
-PC_libosmogsm_STATIC_CFLAGS_OTHER:INTERNAL=
-PC_libosmogsm_STATIC_INCLUDE_DIRS:INTERNAL=/opt/local/include/
-PC_libosmogsm_STATIC_LDFLAGS:INTERNAL=-L/opt/local/lib;-Wl,-rpath,/opt/local/lib;-ltalloc;-losmogsm;-losmocore
-PC_libosmogsm_STATIC_LDFLAGS_OTHER:INTERNAL=-Wl,-rpath,/opt/local/lib
-PC_libosmogsm_STATIC_LIBDIR:INTERNAL=
-PC_libosmogsm_STATIC_LIBRARIES:INTERNAL=talloc;osmogsm;osmocore
-PC_libosmogsm_STATIC_LIBRARY_DIRS:INTERNAL=/opt/local/lib
-PC_libosmogsm_STATIC_LIBS:INTERNAL=
-PC_libosmogsm_STATIC_LIBS_L:INTERNAL=
-PC_libosmogsm_STATIC_LIBS_OTHER:INTERNAL=
-PC_libosmogsm_STATIC_LIBS_PATHS:INTERNAL=
-PC_libosmogsm_VERSION:INTERNAL=UNKNOWN
-PC_libosmogsm_libosmogsm_INCLUDEDIR:INTERNAL=
-PC_libosmogsm_libosmogsm_LIBDIR:INTERNAL=
-PC_libosmogsm_libosmogsm_PREFIX:INTERNAL=
-PC_libosmogsm_libosmogsm_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QWT_INCLUDE_DIRS
-QWT_INCLUDE_DIRS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QWT_LIBRARIES
-QWT_LIBRARIES-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SWIG_DIR
 SWIG_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SWIG_EXECUTABLE
@@ -1271,34 +793,18 @@ _Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/opt/local/lib
 _Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
-__pkg_config_arguments_FFTW3:INTERNAL=fftw3 >= 3.0
 __pkg_config_arguments_LIMESUITE:INTERNAL=LimeSuite
-__pkg_config_arguments_PC_CPPUNIT:INTERNAL=cppunit
 __pkg_config_arguments_PC_GNURADIO_FILTER:INTERNAL=gnuradio-filter
 __pkg_config_arguments_PC_GNURADIO_PMT:INTERNAL=gnuradio-runtime
 __pkg_config_arguments_PC_GNURADIO_RUNTIME:INTERNAL=gnuradio-runtime
 __pkg_config_arguments_PC_VOLK:INTERNAL=volk
-__pkg_config_arguments_PC_libosmocodec:INTERNAL=libosmocodec
-__pkg_config_arguments_PC_libosmocoding:INTERNAL=libosmocoding
-__pkg_config_arguments_PC_libosmocore:INTERNAL=libosmocore
-__pkg_config_arguments_PC_libosmogsm:INTERNAL=libosmogsm
-__pkg_config_checked_FFTW3:INTERNAL=1
 __pkg_config_checked_LIMESUITE:INTERNAL=1
-__pkg_config_checked_PC_CPPUNIT:INTERNAL=1
 __pkg_config_checked_PC_GNURADIO_FILTER:INTERNAL=1
 __pkg_config_checked_PC_GNURADIO_PMT:INTERNAL=1
 __pkg_config_checked_PC_GNURADIO_RUNTIME:INTERNAL=1
 __pkg_config_checked_PC_VOLK:INTERNAL=1
-__pkg_config_checked_PC_libosmocodec:INTERNAL=1
-__pkg_config_checked_PC_libosmocoding:INTERNAL=1
-__pkg_config_checked_PC_libosmocore:INTERNAL=1
-__pkg_config_checked_PC_libosmogsm:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_FFTW3_fftw3
-pkgcfg_lib_FFTW3_fftw3-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_LIMESUITE_LimeSuite
 pkgcfg_lib_LIMESUITE_LimeSuite-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_CPPUNIT_cppunit
-pkgcfg_lib_PC_CPPUNIT_cppunit-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_GNURADIO_FILTER_gnuradio-fft
 pkgcfg_lib_PC_GNURADIO_FILTER_gnuradio-fft-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_GNURADIO_FILTER_gnuradio-filter
@@ -1323,25 +829,5 @@ pkgcfg_lib_PC_GNURADIO_RUNTIME_gnuradio-runtime-ADVANCED:INTERNAL=1
 pkgcfg_lib_PC_GNURADIO_RUNTIME_log4cpp-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_PC_VOLK_volk
 pkgcfg_lib_PC_VOLK_volk-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_libosmocodec_osmocodec
-pkgcfg_lib_PC_libosmocodec_osmocodec-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_libosmocoding_osmocodec
-pkgcfg_lib_PC_libosmocoding_osmocodec-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_libosmocoding_osmocoding
-pkgcfg_lib_PC_libosmocoding_osmocoding-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_libosmocoding_osmocore
-pkgcfg_lib_PC_libosmocoding_osmocore-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_libosmocoding_osmogsm
-pkgcfg_lib_PC_libosmocoding_osmogsm-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_libosmocore_osmocore
-pkgcfg_lib_PC_libosmocore_osmocore-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_libosmocore_talloc
-pkgcfg_lib_PC_libosmocore_talloc-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_libosmogsm_osmocore
-pkgcfg_lib_PC_libosmogsm_osmocore-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_libosmogsm_osmogsm
-pkgcfg_lib_PC_libosmogsm_osmogsm-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: pkgcfg_lib_PC_libosmogsm_talloc
-pkgcfg_lib_PC_libosmogsm_talloc-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/opt/local/lib
 

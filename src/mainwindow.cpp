@@ -14,6 +14,7 @@
 #include <RadioBladeRf.hpp>
 #include <qwt_symbol.h>
 #include <QKeyEvent>
+#include <QProcess>
 
 double roundDecimal(double value, int precision )
 {
@@ -53,7 +54,7 @@ MainWindow::MainWindow (QWidget *parent)
 
   ui->rxToFile_checkbox->setChecked (false);
 
-  ui->rx1_constellation_plot_label->move(10,2);
+  ui->rx1_constellation_plot_label->move(60,2);
   ui->constellation1->move (10,40);
   ui->constellation1->setAxisTitle (QwtPlot::xBottom,"Real (In Phase)");
   ui->constellation1->setAxisTitle (QwtPlot::yLeft,"Imaginary (Quadrature)");
@@ -90,7 +91,6 @@ MainWindow::MainWindow (QWidget *parent)
   // connect signal & slot of GUI update timer
   connect(guiUpdate,SIGNAL(timeout()),this,SLOT(updateStreamStats ()));
   connect (rx, SIGNAL(update_constellation_plot_signal ()), this, SLOT(update_constellation_plot ()));
-
 
 }
 
@@ -175,8 +175,7 @@ void MainWindow::on_rx_0_stream_clicked ()
                                     "}");
     if(rx->isRunning ())
       {
-      ui->dataOutput2->setText ("RX Stream Active");
-
+        ui->dataOutput2->setText ("RX Stream Active");
       }
     }
     else if( !checkStream && LimeRadio::DeviceConnected ())
@@ -816,7 +815,7 @@ bool MainWindow::eventFilter (QObject *obj, QEvent *event)
     if (event->type () == QEvent::KeyPress)
       {
       //and here put your own logic!!
-      QKeyEvent *key = static_cast<QKeyEvent *>(event);
+      QKeyEvent *key = dynamic_cast<QKeyEvent *>(event);
       if((key->key()==Qt::Key_Enter) || (key->key()==Qt::Key_Return))
         {
           qDebug()<<"Enter Key Pressed.";

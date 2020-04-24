@@ -19,9 +19,9 @@ Rx::RxThread::RxThread(double freq, bool rxToFile)
     center_freq=freq;
   };
 
-Rx::RxThread::RxThread (QMutex *mu, double freq, unsigned int gain, double sampRate, const double streamRate, size_t rxChannel, size_t rxAntenna, bool rxToFile)
+Rx::RxThread::RxThread (double freq, unsigned int gain, double sampRate, const double streamRate, size_t rxChannel, size_t rxAntenna, bool rxToFile)
 {
- mutex=mu;
+
  center_freq = freq;
  rx_gain = gain;
  samp_rate = sampRate;
@@ -42,28 +42,25 @@ Rx::RxThread::RxThread (double freq, unsigned int gain, double sampRate, const d
 
 Rx::RxThread::~RxThread ()
   {
-    qDebug()<<"\n>> Destructor Called\n\n";
-    LMS_EnableChannel (lime_device,LMS_CH_RX,0,false);
-    LMS_EnableChannel (lime_device,LMS_CH_TX,0, false);
-    LMS_Close (lime_device);
-    delete this;
+//    delete this;
   };
 
 void Rx::RxThread::stop()
 {
-  QMutexLocker locker1(mutex);
+  mutex.lock();
+  qDebug()<<"STOPPING STREAM";
   LMS_StopStream (&rx_stream);
   LMS_DestroyStream (lime_device,&rx_stream);
   LMS_EnableChannel (lime_device,LMS_CH_RX,0,false);
-  LMS_EnableChannel (lime_device,LMS_CH_TX,0, false);
-    LMS_Reset (lime_device);
+  LMS_EnableChannel (lime_device,LMS_CH_RX,1,false);
   LMS_Close (lime_device);
   bStreamActive = false;
+  mutex.unlock ();
 }
 
 void Rx::RxThread::run()
 {
-  QMutexLocker locker(mutex);
+  mutex.lock ();
   auto timeLastStatus = std::chrono::high_resolution_clock::now ();
   droppedPackets = 0;
   overruns = 0;
@@ -231,6 +228,7 @@ if(rx_to_file)
       }
 
     }
+    mutex.unlock ();
 }
 
 QString Rx::RxThread::getDataRate()

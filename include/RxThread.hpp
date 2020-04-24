@@ -25,11 +25,11 @@ namespace Rx
   Q_OBJECT
 
      private:
-   QMutex *mutex;
+QMutex mutex;
 
      public:
 explicit RxThread (double freq, bool rxToFile);
-explicit RxThread (QMutex *mutex,double freq, unsigned int rx_gain, double sampRate, const double streamRate, size_t rxChannel, size_t rxAntenna, bool rxToFile);
+explicit RxThread (double freq, unsigned int rx_gain, double sampRate, const double streamRate, size_t rxChannel, size_t rxAntenna, bool rxToFile);
 explicit RxThread (double freq, unsigned int rx_gain, double sampRate, const double streamRate, bool rxToFile);
 ~RxThread () override;
 
