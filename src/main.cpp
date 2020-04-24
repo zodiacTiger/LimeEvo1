@@ -11,11 +11,14 @@
 #include <RadioBladeRf.hpp>
 #include "LimeDevice.h"
 #include "helpers.hpp"
+#include <QKeyEvent>
+#include <QEvent>
 
 int main (int argc, char *argv[])
 {
   QApplication a (argc, argv);
   MainWindow w;
+
 
   QSplashScreen *splash = new QSplashScreen;
   QGraphicsOpacityEffect *eff = new QGraphicsOpacityEffect(splash);

@@ -15,13 +15,13 @@
   LimeRadio ();
    lms_device_t *lmsdevice = nullptr;
    lms_dev_info_t device_info_list[8];
-   static void find (lms_device_t *d, lms_info_str_t device_info_list[8]);
+   static void find (lms_device_t *lmsDevice, lms_info_str_t device_info_list[8]);
   static lms_device_t showStatus (int i, lms_info_str_t device_info_list[8]);
-  static std::string status (int i, lms_device_t *d, lms_info_str_t device_info_list[8]);
+  static std::string status (int deviceIndex, lms_device_t *d, lms_info_str_t device_info_list[8]);
   lms_device_t *getDevice();
 
   ~LimeRadio ();
-  static QString QTStatus (int i, void *d, lms_info_str_t *device_info_list);
+  static QString QTStatus (int deviceIndex, void *lmsDevice, lms_info_str_t *device_info_list);
   static QString QTShowConnectedDevice ();
   static bool DeviceConnected();
 

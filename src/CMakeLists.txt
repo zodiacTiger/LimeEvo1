@@ -118,7 +118,7 @@ find_package(LimeSuite)
 find_package(Qt5 COMPONENTS Widgets Concurrent LinguistTools REQUIRED)
 #find_package(qwt)
 
-set(TS_FILES qt_widgets_template_en_US.ts RxThread.cpp ../include/RxThread.hpp LimeStreamRx.cpp LimeStreamRx.hpp ../include/helpers.hpp ../include/ui.h StreamTimer.cpp StreamTimer.hpp TxThread.cpp ../include/TxThread.hpp RxTx.cpp ../include/RxTx.hpp ../include/Base.cpp ../include/Base.hpp ../include/Derived.cpp ../include/Derived.hpp Radios.cpp ../include/Radios.h RadioBladeRf.cpp ../include/RadioBladeRf.hpp RadioRtlSdr.cpp ../include/RadioRtlSdr.hpp RxThreadConcurrent.cpp ../include/RxThreadConcurrent.hpp)
+set(TS_FILES qt_widgets_template_en_US.ts RxThread.cpp ../include/RxThread.hpp LimeStreamRx.cpp LimeStreamRx.hpp ../include/helpers.hpp ../include/ui.h StreamTimer.cpp StreamTimer.hpp TxThread.cpp ../include/TxThread.hpp RxTx.cpp ../include/RxTx.hpp ../include/Base.cpp ../include/Base.hpp ../include/Derived.cpp ../include/Derived.hpp Radios.cpp ../include/Radios.h RadioBladeRf.cpp ../include/RadioBladeRf.hpp RadioRtlSdr.cpp ../include/RadioRtlSdr.hpp RxThreadConcurrent.cpp ../include/RxThreadConcurrent.hpp ReplayThread.cpp ReplayThread.hpp)
 
 if (ANDROID)
     add_library(LimeEvo1 SHARED
@@ -127,7 +127,7 @@ if (ANDROID)
             mainwindow.h
             mainwindow.ui
             ${TS_FILES}
-            StreamTimer.cpp StreamTimer.hpp TxThread.cpp ../include/TxThread.hpp RxTx.cpp ../include/RxTx.hpp Radios.cpp ../include/Radios.h RadioBladeRf.cpp ../include/RadioBladeRf.hpp RadioRtlSdr.cpp ../include/RadioRtlSdr.hpp RxThreadConcurrent.cpp ../include/RxThreadConcurrent.hpp)
+            StreamTimer.cpp StreamTimer.hpp TxThread.cpp ../include/TxThread.hpp RxTx.cpp ../include/RxTx.hpp Radios.cpp ../include/Radios.h RadioBladeRf.cpp ../include/RadioBladeRf.hpp RadioRtlSdr.cpp ../include/RadioRtlSdr.hpp RxThreadConcurrent.cpp ../include/RxThreadConcurrent.hpp ReplayThread.cpp ReplayThread.hpp)
 else ()
     add_executable(LimeEvo1
             main.cpp
@@ -141,7 +141,7 @@ else ()
             ../include/RxThread.hpp
 
             #            ${TS_FILES}
-            LimeStreamRx.cpp LimeStreamRx.hpp ../include/ui.h StreamTimer.cpp StreamTimer.hpp ../src/TxThread.cpp ../include/TxThread.hpp RxTx.cpp ../include/RxTx.hpp Radios.cpp ../include/Radios.h RadioBladeRf.cpp ../include/RadioBladeRf.hpp RadioRtlSdr.cpp ../include/RadioRtlSdr.hpp RxThreadConcurrent.cpp ../include/RxThreadConcurrent.hpp)
+            LimeStreamRx.cpp LimeStreamRx.hpp ../include/ui.h StreamTimer.cpp StreamTimer.hpp ../src/TxThread.cpp ../include/TxThread.hpp RxTx.cpp ../include/RxTx.hpp Radios.cpp ../include/Radios.h RadioBladeRf.cpp ../include/RadioBladeRf.hpp RadioRtlSdr.cpp ../include/RadioRtlSdr.hpp RxThreadConcurrent.cpp ../include/RxThreadConcurrent.hpp ReplayThread.cpp ReplayThread.hpp)
 endif ()
 
 include_directories(/opt/local/libexec/qt5/lib/qwt.framework/headers)

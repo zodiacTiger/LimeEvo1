@@ -6,14 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1206</width>
-    <height>673</height>
+    <width>1233</width>
+    <height>750</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>16777215</width>
-    <height>673</height>
+    <height>750</height>
    </size>
   </property>
   <property name="font">
@@ -43,9 +49,9 @@ padding: 0;
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>480</y>
-      <width>611</width>
-      <height>161</height>
+      <y>540</y>
+      <width>441</width>
+      <height>181</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -56,17 +62,15 @@ padding: 0;
     </property>
     <property name="font">
      <font>
-      <family>Meslo LG M for Powerline</family>
-      <pointsize>9</pointsize>
+      <family>Oxanium</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
      <string notr="true">border: 1px solid rgb(80, 80, 80);
 color: rgb(241, 246, 246);
 background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border-top-right-radius: 8px;
-border-bottom-right-radius: 8px;
-border-bottom-left-radius: 8px;</string>
+border-radius: 8px;</string>
     </property>
     <property name="readOnly">
      <bool>true</bool>
@@ -75,7 +79,7 @@ border-bottom-left-radius: 8px;</string>
      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Meslo LG M for Powerline'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Oxanium'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:8px; font-family:'UbuntuMono NF'; font-size:13pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="placeholderText" stdset="0">
@@ -86,7 +90,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>460</y>
+      <y>470</y>
       <width>111</width>
       <height>20</height>
      </rect>
@@ -108,96 +112,1553 @@ border-top-right-radius: 6px;
 </string>
     </property>
     <property name="text">
-     <string>Device Output</string>
+     <string>DEVICE</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="DeviceIsConnected">
+   <widget class="QTabWidget" name="mainTabWidget">
     <property name="geometry">
      <rect>
-      <x>1060</x>
-      <y>20</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font/>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(123, 123, 123);
-color: rgb(28, 29, 29);
-border: 2px;
-border-color: rgb(59, 255, 6);
-border-radius: 3px;
-text-transform: uppercase;</string>
-    </property>
-    <property name="text">
-     <string>No Connection</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="connectionLabel">
-    <property name="geometry">
-     <rect>
-      <x>1050</x>
-      <y>10</y>
-      <width>141</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Titillium Web</family>
-      <pointsize>11</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(125, 255, 36);
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
-border: 1px solid rgb(153, 155, 155);
-border-radius: 4px;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>50</y>
-      <width>1211</width>
-      <height>391</height>
+      <x>-5</x>
+      <y>33</y>
+      <width>1241</width>
+      <height>461</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.0441176 rgba(36, 85, 123, 255), stop:0.960784 rgba(7, 30, 36, 255));
-border-top: 1px solid rgb(123, 123, 123);
-border-bottom: 1px solid rgb(123, 123, 123);
-</string>
+     <string notr="true">padding: 0;
+margin: 0;</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
     </property>
     <widget class="QWidget" name="streamTab">
+     <property name="styleSheet">
+      <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.0441176 rgba(36, 85, 123, 255), stop:0.960784 rgba(7, 30, 36, 255));</string>
+     </property>
      <attribute name="title">
       <string>Stats</string>
      </attribute>
-     <widget class="QFrame" name="menu">
+     <widget class="QwtPlot" name="constellation1">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>40</y>
+        <width>591</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Oxanium</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string extracomment="RX Channel 1 - Constellation Plot"/>
+      </property>
+      <property name="statusTip">
+       <string>RX Channel 1 - Constellation Plot</string>
+      </property>
+      <property name="whatsThis">
+       <string>RX Channel 1 - Constellation Plot</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(171, 255, 151);
+font: 10pt &quot;Oxanium&quot;;
+border: 1px solid qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.0343137 rgba(49, 49, 49, 255), stop:0.588235 rgba(168, 168, 168, 255), stop:0.857843 rgba(123, 123, 123, 255));
+
+background-color: qlineargradient(spread:pad, x1:0.181294, y1:1, x2:0.617647, y2:0.0227273, stop:0 rgba(55, 55, 55, 255), stop:1 rgba(0, 0, 0, 255));
+</string>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="propertiesDocument" stdset="0">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="IQPlotAutoscale">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>50</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rajdhani</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+margin: 0;
+padding: 0;
+}
+
+QPushButton::hover {
+border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+	background-color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));
+}</string>
+      </property>
+      <property name="text">
+       <string>AUTO</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="IQPlotScaleZoomIn">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>50</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Glyphter</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+padding-left: 4px;
+}
+
+QPushButton::hover {
+border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+	background-color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));
+}</string>
+      </property>
+      <property name="text">
+       <string>q</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="IQPlotScaleZoomOut">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>50</y>
+        <width>31</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Glyphter</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+padding-left: 4px;
+}
+
+QPushButton::hover {
+border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+	background-color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));
+}</string>
+      </property>
+      <property name="text">
+       <string>r</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>40</y>
+        <width>471</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid;
+border-color: ;
+border-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.52451 rgba(123, 123, 123, 255));
+border-radius: 6px;
+background-color: qlineargradient(spread:pad, x1:0.181294, y1:1, x2:0.617647, y2:0.0227273, stop:0 rgba(55, 55, 55, 255), stop:1 rgba(0, 0, 0, 255));
+padding-bottom: 2px;
+margin: 0;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="streamSampleRateLabel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Rajdhani</family>
+         <pointsize>14</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: none;
+border: 0;
+border-bottom: 1px solid rgb(168, 255, 79);
+border: 0;
+color: rgb(246, 246, 246);</string>
+       </property>
+       <property name="text">
+        <string>SAMPLE RATE MS/s</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="sampleRateComboBox">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>20</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+border: 1px solid rgb(139, 141, 141);
+border-radius: 0;
+text-align: center;
+color: rgb(168, 255, 79);
+}
+
+QComboBox::hover{
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+}</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>2000000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>4000000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>8000000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>10000000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>20000000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>30000000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>40000000</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="tempUpdateLabel">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>330</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Digital-7 Mono</family>
+         <pointsize>22</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+border: 1px solid rgb(139, 141, 141);
+border-radius: 4px;
+padding: 0;
+
+color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.220588 rgba(82, 198, 196, 255), stop:0.651961 rgba(119, 249, 250, 255));</string>
+       </property>
+       <property name="text">
+        <string>--</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="boardTempLabel">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>310</y>
+         <width>91</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: none;
+border: none;
+color: rgb(250, 250, 250);
+</string>
+       </property>
+       <property name="text">
+        <string>Chip Temp</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="sampleFormatChooser">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>50</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+border: 1px solid rgb(139, 141, 141);
+border-radius: 0;
+color: rgb(168, 255, 79);
+}
+
+QComboBox::hover{
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+}</string>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>12-Bit integer</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>16-Bit Integer</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>32-Bit float</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="streamSampleRateLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>50</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Rajdhani</family>
+         <pointsize>14</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: none;
+border: 0;
+border-bottom: 1px solid rgb(168, 255, 79);
+border: 0;
+color: rgb(246, 246, 246);</string>
+       </property>
+       <property name="text">
+        <string>FORMAT</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="DroppedPacketsUpdate">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>280</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Digital-7 Italic</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+border-radius: 0;
+color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.294118 rgba(145, 226, 67, 255), stop:0.779412 rgba(168, 255, 79, 255));</string>
+       </property>
+       <property name="text">
+        <string>--</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="OverrunLabel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>250</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+border-radius: 0;</string>
+       </property>
+       <property name="text">
+        <string>OVERRUNS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="DroppedPacketLabel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>280</y>
+         <width>101</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+border-radius: 0;
+padding-top: 2px;</string>
+       </property>
+       <property name="text">
+        <string>DROPPED PACKETS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="indent">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="OverrunsUpdate">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>250</y>
+         <width>61</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Digital-7 Italic</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+border-radius: 0;
+color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.294118 rgba(145, 226, 67, 255), stop:0.779412 rgba(168, 255, 79, 255));</string>
+       </property>
+       <property name="text">
+        <string>--</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="dataOutput2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>180</y>
+         <width>261</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Abel</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid rgb(80, 80, 80);
+color: rgb(168, 255, 79);
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+border-bottom-right-radius: 6px;
+border-bottom-left-radius: 6px;
+padding-left: 15px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="Line" name="line_4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>140</y>
+         <width>431</width>
+         <height>2</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:0.0152353, y1:1, x2:0.833333, y2:0.278409, stop:0.0490196 rgba(172, 172, 172, 255), stop:0.5 rgba(203, 203, 203, 255), stop:0.803922 rgba(126, 126, 126, 255));
+border-color: qlineargradient(spread:pad, x1:0.0152353, y1:1, x2:0.833333, y2:0.278409, stop:0.0490196 rgba(172, 172, 172, 255), stop:0.5 rgba(203, 203, 203, 255), stop:0.803922 rgba(126, 126, 126, 255));</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="stopRXStream">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>80</y>
+         <width>141</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Rajdhani</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+border: 1px solid rgb(135, 135, 135);
+border-radius: 2px;
+
+width: 90%;
+	color: rgb(167, 167, 167);
+padding: 0;
+}
+
+QPushButton::hover {
+	background-color: rgb(56, 57, 56);
+color:  rgb(170, 255, 155);
+border-color: rgb(170, 255, 155);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>STOP STREAM</string>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">deviceButtons</string>
+       </attribute>
+      </widget>
+      <widget class="QPushButton" name="tx0">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>20</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>30</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.294118 rgba(145, 226, 67, 255), stop:0.779412 rgba(168, 255, 79, 255));
+border: 1px solid rgb(135, 135, 135);
+border-radius: 4px;
+
+	color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.561576, y2:1, stop:0.576355 rgba(0, 0, 0, 255), stop:1 rgba(123, 123, 123, 255));
+width: 90%;
+padding: 0;
+}
+
+QPushButton::hover {
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+color:  rgb(170, 255, 155);
+border-color: rgb(170, 255, 155);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>TX</string>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">deviceButtons</string>
+       </attribute>
+      </widget>
+      <widget class="QPushButton" name="rx0">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>20</y>
+         <width>61</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>300</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>30</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { 
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.294118 rgba(145, 226, 67, 255), stop:0.779412 rgba(168, 255, 79, 255));
+border: 1px solid rgb(135, 135, 135);
+border-radius: 4px;
+
+	color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.561576, y2:1, stop:0.576355 rgba(0, 0, 0, 255), stop:1 rgba(123, 123, 123, 255));
+width: 90%;
+padding: 0;
+}
+
+QPushButton::hover {
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+color:  rgb(170, 255, 155);
+border-color: rgb(170, 255, 155);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>RX</string>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">deviceButtons</string>
+       </attribute>
+      </widget>
+      <widget class="QLabel" name="sampleRateUpdate">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>250</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Digital-7 Mono</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+border: 1px solid rgb(139, 141, 141);
+border-radius: 4px;
+text-align: center;
+color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.220588 rgba(82, 198, 196, 255), stop:0.651961 rgba(119, 249, 250, 255));</string>
+       </property>
+       <property name="text">
+        <string>--</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="sampleRateLabel">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>230</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;
+color: rgb(234, 234, 234);
+background: none;
+</string>
+       </property>
+       <property name="text">
+        <string>SAMPLE RATE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="dataRateUpdate_2">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>320</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Digital-7 Italic</family>
+         <pointsize>26</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid qlineargradient(spread:pad, x1:0.0152353, y1:1, x2:0.833333, y2:0.278409, stop:0.0490196 rgba(172, 172, 172, 255), stop:0.5 rgba(203, 203, 203, 255), stop:0.803922 rgba(126, 126, 126, 255));
+background-color: qlineargradient(spread:pad, x1:0.181294, y1:1, x2:0.617647, y2:0.0227273, stop:0 rgba(55, 55, 55, 255), stop:1 rgba(0, 0, 0, 255));
+border-radius: 4px;
+border-top-left-radius: 0;
+color: rgb(161, 255, 127);
+border-bottom-left-radius: 0;</string>
+       </property>
+       <property name="text">
+        <string>--</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="dataRateLabel_3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>320</y>
+         <width>61</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+border-radius: 0;</string>
+       </property>
+       <property name="text">
+        <string>DATA RATE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="linkRateUpdate">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>290</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Digital-7 Italic</family>
+         <pointsize>18</pointsize>
+         <italic>true</italic>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+border: 1px solid rgb(139, 141, 141);
+border-radius: 4px;
+text-align: center;
+color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.220588 rgba(82, 198, 196, 255), stop:0.651961 rgba(119, 249, 250, 255));</string>
+       </property>
+       <property name="text">
+        <string>--</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>270</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;
+color: rgb(234, 234, 234);
+background: none;
+</string>
+       </property>
+       <property name="text">
+        <string>LINK RATE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="streamLatencyLabel">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>80</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Rajdhani</family>
+         <pointsize>14</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: none;
+border: 0;
+border-bottom: 1px solid rgb(168, 255, 79);
+border: 0;
+color: rgb(246, 246, 246);</string>
+       </property>
+       <property name="text">
+        <string>STREAM LATENCY</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="streamRateVsLatencyComboBox">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>80</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+border: 1px solid rgb(139, 141, 141);
+border-radius: 0;
+text-align: center;
+color: rgb(168, 255, 79);
+}
+
+QComboBox::hover{
+
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+}</string>
+       </property>
+       <property name="currentIndex">
+        <number>4</number>
+       </property>
+       <property name="maxCount">
+        <number>10</number>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>0.0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.6</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.7</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>0.8</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.0</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="FIFOLabel">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>250</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+border-radius: 0;</string>
+       </property>
+       <property name="text">
+        <string>FIFO</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="FIFOPercentUpdate">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>270</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Digital-7 Italic</family>
+         <pointsize>21</pointsize>
+         <weight>50</weight>
+         <italic>true</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid rgb(153, 155, 155);
+color: rgb(234, 234, 234);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+border-radius: 0;
+color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.294118 rgba(145, 226, 67, 255), stop:0.779412 rgba(168, 255, 79, 255));
+</string>
+       </property>
+       <property name="text">
+        <string>--</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="rxToFile_checkbox">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>110</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Rajdhani</family>
+         <pointsize>12</pointsize>
+         <italic>false</italic>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QCheckBox{
+color: rgb(219, 219, 219);
+	background-color: none;
+border: 1px solid rgb(139, 141, 141);
+
+border-radius: 3px;
+padding-left: 5px;
+
+}
+
+QCheckBox::hover {
+	background-color: rgb(56, 57, 56);
+color: rgb(163, 236, 8);
+border: 1px solid rgb(186, 255, 154);
+}</string>
+       </property>
+       <property name="text">
+        <string>   RX TO FILE</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="refreshRate">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>110</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Abel</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+border: 1px solid rgb(139, 141, 141);
+border-radius: 3px;
+color: rgb(168, 255, 79);
+}
+
+QComboBox::hover{
+
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+}</string>
+       </property>
+       <property name="currentIndex">
+        <number>4</number>
+       </property>
+       <property name="maxVisibleItems">
+        <number>4</number>
+       </property>
+       <property name="frame">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>10</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>100</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>250</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>500</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1000</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QCheckBox" name="TimedPlotUpdate">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>110</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Abel</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: none;
+color: rgb(168, 255, 79);
+border: none;
+border-radius: 4px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="refreshRateLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: none;
+border: none;
+color: rgb(153, 255, 21);</string>
+       </property>
+       <property name="text">
+        <string>TIMED UPDATE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="DeviceIsConnected">
+       <property name="geometry">
+        <rect>
+         <x>320</x>
+         <y>190</y>
+         <width>121</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Rajdhani</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(123, 123, 123);
+color: rgb(28, 29, 29);
+border: 2px solid;
+border-color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));
+border-radius: 3px;
+</string>
+       </property>
+       <property name="text">
+        <string>No Connection</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="streamStatusLabel">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>150</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;
+border-radius: 0;
+color: rgb(234, 234, 234);
+background: none;
+border-bottom: 1px solid qlineargradient(spread:pad, x1:1, y1:0.58, x2:1, y2:0, stop:0 rgba(166, 255, 25, 255), stop:0.862745 rgba(98, 212, 48, 255));
+</string>
+       </property>
+       <property name="text">
+        <string>DEVICE</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="Line" name="line">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>170</y>
+         <width>1</width>
+         <height>191</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.0343137 rgba(49, 49, 49, 255), stop:0.588235 rgba(168, 168, 168, 255), stop:0.857843 rgba(123, 123, 123, 255));
+border: 0;</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="streamStatusLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>150</y>
+         <width>261</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border:none;
+border-radius: 0;
+color: rgb(234, 234, 234);
+background: none;
+border-bottom: 1px solid qlineargradient(spread:pad, x1:1, y1:0.58, x2:1, y2:0, stop:0 rgba(166, 255, 25, 255), stop:0.862745 rgba(98, 212, 48, 255));</string>
+       </property>
+       <property name="text">
+        <string>STREAM STATUS</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="dataOutput2_2">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>180</y>
+         <width>141</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Oxanium</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid rgb(80, 80, 80);
+color: rgb(168, 255, 79);
+background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+border-bottom-right-radius: 6px;
+border-bottom-left-radius: 6px;
+padding-left: 15px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="rxtofile_button">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>180</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Glyphter</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+border: 1px solid;
+border-radius: 0;
+border-top-right-radius: 2px;
+border-bottom-right-radius: 2px;
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+padding: 0;
+padding-left: 2px;
+	border-color: rgb(71, 71, 71);
+	color: rgb(168, 255, 79);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+
+}
+
+QPushButton::hover {
+border-color: rgb(170, 255, 145);
+	background-color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));
+	color: rgb(249, 249, 249);
+}</string>
+       </property>
+       <property name="text">
+        <string>V</string>
+       </property>
+      </widget>
+      <zorder>dataOutput2_2</zorder>
+      <zorder>streamSampleRateLabel</zorder>
+      <zorder>sampleRateComboBox</zorder>
+      <zorder>tempUpdateLabel</zorder>
+      <zorder>boardTempLabel</zorder>
+      <zorder>sampleFormatChooser</zorder>
+      <zorder>streamSampleRateLabel_2</zorder>
+      <zorder>DroppedPacketsUpdate</zorder>
+      <zorder>OverrunLabel</zorder>
+      <zorder>DroppedPacketLabel</zorder>
+      <zorder>OverrunsUpdate</zorder>
+      <zorder>dataOutput2</zorder>
+      <zorder>line_4</zorder>
+      <zorder>stopRXStream</zorder>
+      <zorder>tx0</zorder>
+      <zorder>rx0</zorder>
+      <zorder>sampleRateUpdate</zorder>
+      <zorder>sampleRateLabel</zorder>
+      <zorder>dataRateUpdate_2</zorder>
+      <zorder>dataRateLabel_3</zorder>
+      <zorder>linkRateUpdate</zorder>
+      <zorder>label_3</zorder>
+      <zorder>streamLatencyLabel</zorder>
+      <zorder>streamRateVsLatencyComboBox</zorder>
+      <zorder>FIFOLabel</zorder>
+      <zorder>FIFOPercentUpdate</zorder>
+      <zorder>rxToFile_checkbox</zorder>
+      <zorder>refreshRate</zorder>
+      <zorder>TimedPlotUpdate</zorder>
+      <zorder>refreshRateLabel_2</zorder>
+      <zorder>DeviceIsConnected</zorder>
+      <zorder>streamStatusLabel</zorder>
+      <zorder>line</zorder>
+      <zorder>streamStatusLabel_2</zorder>
+      <zorder>rxtofile_button</zorder>
+     </widget>
+     <widget class="QFrame" name="MainDeviceMenu">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>151</width>
-        <height>381</height>
+        <width>141</width>
+        <height>221</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -231,8 +1692,8 @@ border-radius: 4px;</string>
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>210</y>
-         <width>131</width>
+         <y>10</y>
+         <width>121</width>
          <height>31</height>
         </rect>
        </property>
@@ -284,199 +1745,13 @@ border-color: rgb(170, 255, 155);
        <property name="text">
         <string>DEVICE INFO</string>
        </property>
-       <attribute name="buttonGroup">
-        <string notr="true">deviceButtons</string>
-       </attribute>
-      </widget>
-      <widget class="QPushButton" name="tx0">
-       <property name="geometry">
-        <rect>
-         <x>80</x>
-         <y>20</y>
-         <width>61</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>300</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="baseSize">
-        <size>
-         <width>300</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Rajdhani</family>
-         <pointsize>14</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton { 
-	background-color: rgb(45, 45, 45);
-border: 1px solid rgb(135, 135, 135);
-border-radius: 4px;
-
-color: #f2f2f2;
-width: 90%;
-padding: 0;
-}
-
-QPushButton::hover {
-	background-color: rgb(56, 57, 56);
-color:  rgb(170, 255, 155);
-border-color: rgb(170, 255, 155);
-}
-</string>
-       </property>
-       <property name="text">
-        <string>TX-1</string>
-       </property>
-       <attribute name="buttonGroup">
-        <string notr="true">deviceButtons</string>
-       </attribute>
-      </widget>
-      <widget class="QPushButton" name="rx0">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>61</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>300</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="baseSize">
-        <size>
-         <width>300</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Rajdhani</family>
-         <pointsize>14</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton { 
-	background-color: rgb(45, 45, 45);
-border: 1px solid rgb(135, 135, 135);
-border-radius: 4px;
-
-color: #f2f2f2;
-width: 90%;
-padding: 0;
-}
-
-QPushButton::hover {
-	background-color: rgb(56, 57, 56);
-color:  rgb(170, 255, 155);
-border-color: rgb(170, 255, 155);
-}
-</string>
-       </property>
-       <property name="text">
-        <string>RX-1</string>
-       </property>
-       <attribute name="buttonGroup">
-        <string notr="true">deviceButtons</string>
-       </attribute>
-      </widget>
-      <widget class="QPushButton" name="stopRXStream">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>90</y>
-         <width>131</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>300</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="baseSize">
-        <size>
-         <width>300</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Rajdhani</family>
-         <pointsize>13</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton { 
-	background-color: rgb(45, 45, 45);
-border: 1px solid rgb(135, 135, 135);
-border-radius: 4px;
-
-color: #f2f2f2;
-width: 90%;
-padding: 0;
-}
-
-QPushButton::hover {
-	background-color: rgb(56, 57, 56);
-color:  rgb(170, 255, 155);
-border-color: rgb(170, 255, 155);
-}
-</string>
-       </property>
-       <property name="text">
-        <string>STOP STREAM</string>
-       </property>
-       <attribute name="buttonGroup">
-        <string notr="true">deviceButtons</string>
-       </attribute>
       </widget>
       <widget class="QPushButton" name="BoardTemp">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>240</y>
-         <width>131</width>
+         <y>50</y>
+         <width>121</width>
          <height>31</height>
         </rect>
        </property>
@@ -528,16 +1803,13 @@ border-color: rgb(170, 255, 155);
        <property name="text">
         <string>BOARD TEMP</string>
        </property>
-       <attribute name="buttonGroup">
-        <string notr="true">deviceButtons</string>
-       </attribute>
       </widget>
       <widget class="QPushButton" name="exit">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>330</y>
-         <width>131</width>
+         <y>170</y>
+         <width>121</width>
          <height>31</height>
         </rect>
        </property>
@@ -569,7 +1841,7 @@ border-color: rgb(170, 255, 155);
         <string notr="true">QPushButton { 
 	background-color: rgb(45, 45, 45);
 
-border: 1px solid rgb(26, 26, 26);
+border: 1px solid rgb(58, 58, 58);
 border-radius: 4px;
 
 color: #f2f2f2;
@@ -586,16 +1858,13 @@ color: rgb(163, 236, 8);
        <property name="text">
         <string>Exit</string>
        </property>
-       <attribute name="buttonGroup">
-        <string notr="true">deviceButtons</string>
-       </attribute>
       </widget>
       <widget class="QPushButton" name="showSchem">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>270</y>
-         <width>131</width>
+         <y>90</y>
+         <width>121</width>
          <height>31</height>
         </rect>
        </property>
@@ -648,450 +1917,162 @@ border-color: rgb(170, 255, 155);
         <string>SCHEMATIC</string>
        </property>
       </widget>
-      <widget class="Line" name="line">
+     </widget>
+     <widget class="QLabel" name="streamSectionLabel">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>0</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Rajdhani</family>
+        <pointsize>18</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: none;
+border: none;
+color: rgb(250, 250, 250);
+padding: 0;
+margin: 0;</string>
+      </property>
+      <property name="text">
+       <string>CHANNEL / STREAM MENU</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+      </property>
+     </widget>
+     <widget class="QFrame" name="rx1_constellation_plot_label">
+      <property name="geometry">
+       <rect>
+        <x>149</x>
+        <y>0</y>
+        <width>591</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: none;
+border: none;
+color: rgb(250, 250, 250);
+padding: 0;
+margin: 0;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="RXChannelLabel">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>140</y>
-         <width>131</width>
-         <height>2</height>
-        </rect>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>2</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(134, 134, 134);</string>
-       </property>
-       <property name="lineWidth">
-        <number>4</number>
-       </property>
-       <property name="midLineWidth">
-        <number>4</number>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-      <widget class="QCheckBox" name="rxToFile_checkbox">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>60</y>
-         <width>131</width>
-         <height>21</height>
+         <x>0</x>
+         <y>0</y>
+         <width>281</width>
+         <height>41</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <family>Oxanium</family>
-         <pointsize>11</pointsize>
-         <italic>false</italic>
+         <family>Rajdhani</family>
+         <pointsize>18</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">QCheckBox{
-color: rgb(219, 219, 219);
-	background-color: none;
-		
-border: none;
-border-radius: 5px;
-padding-left: 24px;
-}
-
-QCheckBox::hover {
-	background-color: rgb(56, 57, 56);
-color: rgb(163, 236, 8);
-}</string>
+        <string notr="true">color: rgb(155, 255, 62);</string>
        </property>
        <property name="text">
-        <string>RX TO FILE</string>
+        <string/>
        </property>
-       <property name="checked">
-        <bool>true</bool>
+       <property name="alignment">
+        <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="constellationPlotLabel">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>0</y>
+         <width>311</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Rajdhani</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(248, 248, 248, 255), stop:1 rgba(194, 194, 194, 255));</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
        </property>
       </widget>
      </widget>
-     <widget class="QwtPlot" name="constellation1">
+     <widget class="QLabel" name="streamSectionChannelLabel">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>10</y>
-        <width>461</width>
-        <height>351</height>
+        <x>750</x>
+        <y>0</y>
+        <width>231</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Titillium Web</family>
-        <pointsize>10</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(171, 255, 151);
-
-border-color: rgb(191, 191, 191);
-background-color: qlineargradient(spread:pad, x1:0.181294, y1:1, x2:0.617647, y2:0.0227273, stop:0 rgba(55, 55, 55, 255), stop:1 rgba(0, 0, 0, 255));</string>
-      </property>
-      <property name="lineWidth">
-       <number>2</number>
-      </property>
-      <property name="propertiesDocument" stdset="0">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="IQPlotAutoscale">
-      <property name="geometry">
-       <rect>
-        <x>540</x>
-        <y>10</y>
-        <width>41</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Abel</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-border: 1px solid rgb(153, 155, 155);
-color: rgb(234, 234, 234);
-background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
-}
-
-QPushButton::hover {
-border: 1px solid rgb(153, 155, 155);
-color: rgb(234, 234, 234);
-	background-color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));
-}</string>
-      </property>
-      <property name="text">
-       <string>AUTO</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="IQPlotScaleZoomIn">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>10</y>
-        <width>21</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Abel</family>
-        <pointsize>18</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-border: 1px solid rgb(153, 155, 155);
-color: rgb(234, 234, 234);
-background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
-}
-
-QPushButton::hover {
-border: 1px solid rgb(153, 155, 155);
-color: rgb(234, 234, 234);
-	background-color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));
-}</string>
-      </property>
-      <property name="text">
-       <string>-</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="IQPlotScaleZoomOut">
-      <property name="geometry">
-       <rect>
-        <x>580</x>
-        <y>10</y>
-        <width>21</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Abel</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-border: 1px solid rgb(153, 155, 155);
-color: rgb(234, 234, 234);
-background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
-}
-
-QPushButton::hover {
-border: 1px solid rgb(153, 155, 155);
-color: rgb(234, 234, 234);
-	background-color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));
-}</string>
-      </property>
-      <property name="text">
-       <string>+</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="dataOutput2">
-      <property name="geometry">
-       <rect>
-        <x>640</x>
-        <y>290</y>
-        <width>251</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Oxanium</family>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border: 1px solid rgb(80, 80, 80);
-color: rgb(168, 255, 79);
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
-border-bottom-right-radius: 6px;
-border-bottom-left-radius: 6px;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="OverrunsUpdate">
-      <property name="geometry">
-       <rect>
-        <x>810</x>
-        <y>160</y>
-        <width>81</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Digital-7 Italic</family>
+        <family>Rajdhani</family>
         <pointsize>18</pointsize>
         <weight>50</weight>
-        <italic>true</italic>
+        <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid rgb(139, 141, 141);
-border-top-right-radius: 5px;
-text-align: center;
-color: rgb(168, 255, 79);
+       <string notr="true">background-color: none;
+border: none;
+padding: 0;
+color: rgb(155, 255, 62);
+margin: 0;</string>
+      </property>
+      <property name="text">
+       <string>CHANNEL / STREAM MENU</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="replayTab">
+     <property name="styleSheet">
+      <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+border-top: 1px solid rgb(123, 123, 123);
+border-bottom: 1px solid rgb(123, 123, 123);
 </string>
-      </property>
-      <property name="text">
-       <string>--</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="DroppedPacketsUpdate">
+     </property>
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+     <widget class="QFrame" name="captureMenu">
       <property name="geometry">
        <rect>
-        <x>810</x>
-        <y>190</y>
-        <width>81</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Digital-7 Italic</family>
-        <pointsize>18</pointsize>
-        <weight>50</weight>
-        <italic>true</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid rgb(139, 141, 141);
-border-radius: 0;
-text-align: center;
-color: rgb(168, 255, 79);
-</string>
-      </property>
-      <property name="text">
-       <string>--</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="FIFOupdate">
-      <property name="geometry">
-       <rect>
-        <x>680</x>
-        <y>250</y>
-        <width>211</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Digital-7 Italic</family>
-        <pointsize>18</pointsize>
-        <weight>50</weight>
-        <italic>true</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid rgb(139, 141, 141);
-border-radius: 0;
-text-align: center;
-color: rgb(168, 255, 79);
-</string>
-      </property>
-      <property name="text">
-       <string>--</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="DroppedPacketLabel">
-      <property name="geometry">
-       <rect>
-        <x>640</x>
-        <y>190</y>
-        <width>171</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Oxanium</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border: 1px solid rgb(153, 155, 155);
-color: rgb(234, 234, 234);
-background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
-</string>
-      </property>
-      <property name="text">
-       <string>DROPPED PACKETS</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="OverrunLabel">
-      <property name="geometry">
-       <rect>
-        <x>640</x>
-        <y>160</y>
-        <width>171</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Oxanium</family>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border: 1px solid rgb(153, 155, 155);
-color: rgb(234, 234, 234);
-background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
-border-top-left-radius: 6px;</string>
-      </property>
-      <property name="text">
-       <string>OVERRUNS</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="FIFOPercentUpdate">
-      <property name="geometry">
-       <rect>
-        <x>680</x>
-        <y>220</y>
-        <width>211</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Digital-7 Italic</family>
-        <pointsize>18</pointsize>
-        <weight>50</weight>
-        <italic>true</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid rgb(139, 141, 141);
-border-radius: 0;
-text-align: center;
-color: rgb(168, 255, 79);
-</string>
-      </property>
-      <property name="text">
-       <string>--</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="FIFOLabel">
-      <property name="geometry">
-       <rect>
-        <x>640</x>
-        <y>220</y>
-        <width>41</width>
-        <height>61</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Oxanium</family>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border: 1px solid rgb(153, 155, 155);
-color: rgb(234, 234, 234);
-background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
-</string>
-      </property>
-      <property name="text">
-       <string>FIFO</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-     <widget class="QFrame" name="frame">
-      <property name="geometry">
-       <rect>
-        <x>910</x>
-        <y>10</y>
-        <width>281</width>
-        <height>351</height>
+        <x>210</x>
+        <y>30</y>
+        <width>821</width>
+        <height>281</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1107,439 +2088,254 @@ background-color: qlineargradient(spread:pad, x1:0.181294, y1:1, x2:0.617647, y2
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pushButton">
-       <property name="geometry">
-        <rect>
-         <x>110</x>
-         <y>320</y>
-         <width>51</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Oxanium</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton{
-	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
-border: 1px solid rgb(26, 26, 26);
-color: rgb(249, 249, 249);
-border: 1px solid rgb(181, 181, 181);
-border-radius: 0;
-}
-
-QPushButton::hover {
-	background-color: rgb(56, 57, 56);
-color: rgb(163, 236, 8);
-border-color: rgb(179, 182, 182);
-}</string>
-       </property>
-       <property name="text">
-        <string>SET</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="registerChangeData">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>320</y>
-         <width>91</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid rgb(139, 141, 141);
-border-radius: 0;
-text-align: center;
-color: rgb(168, 255, 79);
-</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="DeviceRegisterSetLabel">
+      <widget class="QLabel" name="captureLabel">
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>300</y>
-         <width>141</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Exo 2</family>
-         <pointsize>11</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: none;
-border: 0;
-border-bottom: 1px solid rgb(168, 255, 79);
-border: 0;
-color: rgb(246, 246, 246);</string>
-       </property>
-       <property name="text">
-        <string>DEVICE REGISTER SET</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignHCenter|Qt::AlignTop</set>
-       </property>
-      </widget>
-      <widget class="Line" name="line_3">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>270</y>
-         <width>261</width>
-         <height>1</height>
-        </rect>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: qlineargradient(spread:pad, x1:0.0152353, y1:1, x2:0.833333, y2:0.278409, stop:0.0490196 rgba(172, 172, 172, 255), stop:0.5 rgba(203, 203, 203, 255), stop:0.803922 rgba(126, 126, 126, 255));
-border-color: qlineargradient(spread:pad, x1:0.0152353, y1:1, x2:0.833333, y2:0.278409, stop:0.0490196 rgba(172, 172, 172, 255), stop:0.5 rgba(203, 203, 203, 255), stop:0.803922 rgba(126, 126, 126, 255));</string>
-       </property>
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-      </widget>
-      <widget class="QLabel" name="streamSampleRateLabel">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>60</y>
-         <width>91</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Exo 2</family>
-         <pointsize>11</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: none;
-border: 0;
-border-bottom: 1px solid rgb(168, 255, 79);
-border: 0;
-color: rgb(246, 246, 246);</string>
-       </property>
-       <property name="text">
-        <string>SAMPLE RATE</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="streamRateVsLatencyComboBox">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>30</y>
-         <width>121</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Oxanium</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid rgb(139, 141, 141);
-border-radius: 0;
-text-align: center;
-color: rgb(168, 255, 79);
-</string>
-       </property>
-       <property name="currentIndex">
-        <number>2</number>
-       </property>
-       <property name="frame">
-        <bool>false</bool>
-       </property>
-       <item>
-        <property name="text">
-         <string>0.0</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>0.3</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>0.5</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>0.7</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>0.9</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>1.0</string>
-        </property>
-       </item>
-      </widget>
-      <widget class="QComboBox" name="sampleRateComboBox">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>60</y>
-         <width>121</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Oxanium</family>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid rgb(139, 141, 141);
-border-radius: 0;
-text-align: center;
-color: rgb(168, 255, 79);
-</string>
-       </property>
-       <item>
-        <property name="text">
-         <string>2000000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>4000000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>8000000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>10000000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>20000000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>30000000</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>40000000</string>
-        </property>
-       </item>
-      </widget>
-      <widget class="QLabel" name="streamLatencyLabel">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>30</y>
-         <width>91</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Exo 2</family>
-         <pointsize>11</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: none;
-border: 0;
-border-bottom: 1px solid rgb(168, 255, 79);
-border: 0;
-color: rgb(246, 246, 246);</string>
-       </property>
-       <property name="text">
-        <string>STREAM LATENCY</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-      <widget class="QLabel" name="tempUpdateLabel">
-       <property name="geometry">
-        <rect>
-         <x>180</x>
-         <y>310</y>
-         <width>91</width>
+         <y>0</y>
+         <width>821</width>
          <height>31</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <family>Digital-7 Mono</family>
-         <pointsize>22</pointsize>
-         <weight>50</weight>
-         <italic>true</italic>
-         <bold>false</bold>
+         <family>Rajdhani</family>
+         <pointsize>24</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid rgb(139, 141, 141);
-border-radius: 6px;
-color: rgb(168, 255, 79);
-text-align: center;</string>
+        <string notr="true">background-color: rgb(154, 255, 62);
+border: none;
+color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));
+border-radius: 0;</string>
        </property>
        <property name="text">
-        <string>--</string>
+        <string>   CAPTURE  /  REPLAY</string>
        </property>
        <property name="alignment">
-        <set>Qt::AlignCenter</set>
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="boardTempLabel">
+      <widget class="QPushButton" name="pushButton_2">
        <property name="geometry">
         <rect>
-         <x>180</x>
-         <y>290</y>
-         <width>91</width>
-         <height>21</height>
+         <x>110</x>
+         <y>180</y>
+         <width>171</width>
+         <height>51</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Oxanium</family>
-         <pointsize>11</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
+         <pointsize>18</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: none;
-border: none;
-color: rgb(250, 250, 250);
+        <string notr="true">QPushButton { 
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+border: 1px solid rgb(135, 135, 135);
+border-radius: 4px;
+
+	color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.583333, y2:0, stop:0 rgba(143, 143, 143, 255), stop:0.52451 rgba(246, 246, 246, 255));
+width: 90%;
+padding: 0;
+}
+
+QPushButton::hover {
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+color:  rgb(170, 255, 155);
+border-color: rgb(170, 255, 155);
+}
 </string>
        </property>
        <property name="text">
-        <string>Temp °C</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignHCenter|Qt::AlignTop</set>
+        <string>Capture</string>
        </property>
       </widget>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="Line" name="line_5">
        <property name="geometry">
         <rect>
-         <x>143</x>
-         <y>90</y>
-         <width>121</width>
-         <height>21</height>
+         <x>402</x>
+         <y>40</y>
+         <width>1</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+border-radius: 0;</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>180</y>
+         <width>171</width>
+         <height>51</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Oxanium</family>
-         <pointsize>12</pointsize>
+         <pointsize>18</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid rgb(139, 141, 141);
-border-radius: 0;
-text-align: center;
-color: rgb(168, 255, 79);</string>
+        <string notr="true">QPushButton { 
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+border: 1px solid rgb(135, 135, 135);
+border-radius: 4px;
+
+	color: qlineargradient(spread:pad, x1:1, y1:1, x2:0.583333, y2:0, stop:0 rgba(143, 143, 143, 255), stop:0.52451 rgba(246, 246, 246, 255));
+width: 90%;
+padding: 0;
+}
+
+QPushButton::hover {
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+color:  rgb(170, 255, 155);
+border-color: rgb(170, 255, 155);
+}
+</string>
        </property>
-       <item>
-        <property name="text">
-         <string>32-Bit float</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>16-Bit Integer</string>
-        </property>
-       </item>
+       <property name="text">
+        <string>Replay</string>
+       </property>
       </widget>
-      <widget class="QLabel" name="streamSampleRateLabel_2">
+      <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>20</x>
-         <y>90</y>
-         <width>101</width>
-         <height>21</height>
+         <x>750</x>
+         <y>0</y>
+         <width>71</width>
+         <height>31</height>
         </rect>
        </property>
        <property name="font">
         <font>
          <family>Exo 2</family>
-         <pointsize>11</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
+         <pointsize>18</pointsize>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: none;
+        <string notr="true">background: none;
 border: 0;
-border-bottom: 1px solid rgb(168, 255, 79);
-border: 0;
-color: rgb(246, 246, 246);</string>
+border-radius: 0;
+color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));</string>
        </property>
        <property name="text">
-        <string>SAMPLE FORMAT</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        <string>v 0.0.0</string>
        </property>
       </widget>
+      <widget class="QFrame" name="frame_2">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>50</y>
+         <width>221</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>10</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Oxanium</family>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 0;
+background-color: qlineargradient(spread:pad, x1:0.181294, y1:1, x2:0.617647, y2:0.0227273, stop:0 rgba(55, 55, 55, 255), stop:1 rgba(0, 0, 0, 255));
+color: rgb(141, 255, 48);</string>
+        </property>
+        <property name="text">
+         <string>0.0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="captureLabel_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>41</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Glyphter</family>
+          <pointsize>36</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(241, 241, 241);
+border: none;
+background: none;</string>
+        </property>
+        <property name="text">
+         <string>O</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>40</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Oxanium</family>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(241, 241, 241);
+border: none;
+background: none;</string>
+        </property>
+        <property name="text">
+         <string>Time Limit Enabled</string>
+        </property>
+       </widget>
+      </widget>
      </widget>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Tab 2</string>
-     </attribute>
     </widget>
    </widget>
    <widget class="QTabWidget" name="freqGainSettings">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>450</y>
-      <width>561</width>
-      <height>191</height>
+      <x>640</x>
+      <y>550</y>
+      <width>581</width>
+      <height>171</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1560,25 +2356,24 @@ border-radius: 12px;</string>
      <widget class="QLabel" name="rx1FreqLabel">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>40</y>
-        <width>31</width>
-        <height>31</height>
+        <x>0</x>
+        <y>30</y>
+        <width>41</width>
+        <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Oxanium</family>
-        <pointsize>10</pointsize>
+        <pointsize>12</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(54, 54, 54);
-color: rgb(240, 240, 240);
-border-radius: 0;
+       <string notr="true">background: none;
+color: #f2f2f2;
 border: 0;</string>
       </property>
       <property name="text">
@@ -1588,497 +2383,101 @@ border: 0;</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QSlider" name="gain">
+     <widget class="QComboBox" name="antennaSelect">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>10</y>
-        <width>441</width>
-        <height>31</height>
+        <x>470</x>
+        <y>70</y>
+        <width>91</width>
+        <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Oxanium</family>
+        <pointsize>12</pointsize>
+        <italic>false</italic>
+       </font>
+      </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(158, 158, 158);
-color: rgb(22, 23, 23);
-font: 25 13pt &quot;Titillium Web&quot;;
-border-radius: 0;</string>
+       <string notr="true">QComboBox{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+color: rgb(168, 255, 79);
+border: 1px solid rgb(178, 178, 178);
+padding: 6px;
+border-top: 0;
+border-radius: 4px;
+}
+
+QComboBox::hover{
+	background-color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.561576, y2:1, stop:0.576355 rgba(0, 0, 0, 255), stop:1 rgba(123, 123, 123, 255));
+	border-color: qlineargradient(spread:pad, x1:1, y1:0.58, x2:1, y2:0, stop:0 rgba(166, 255, 25, 255), stop:0.862745 rgba(98, 212, 48, 255));
+}</string>
       </property>
-      <property name="minimum">
-       <number>1</number>
+      <property name="currentIndex">
+       <number>2</number>
       </property>
-      <property name="maximum">
-       <number>70</number>
+      <property name="maxCount">
+       <number>3</number>
       </property>
-      <property name="value">
-       <number>70</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="tickPosition">
-       <enum>QSlider::TicksBothSides</enum>
-      </property>
-      <property name="tickInterval">
-       <number>5</number>
-      </property>
+      <item>
+       <property name="text">
+        <string>High</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Low</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Wide</string>
+       </property>
+      </item>
      </widget>
-     <widget class="QSlider" name="freq">
+     <widget class="QSlider" name="rx0_freq">
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>40</y>
-        <width>501</width>
-        <height>31</height>
+        <y>30</y>
+        <width>521</width>
+        <height>21</height>
        </rect>
       </property>
-      <property name="palette">
-       <palette>
-        <active>
-         <colorrole role="WindowText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>22</red>
-            <green>23</green>
-            <blue>23</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Button">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>158</red>
-            <green>158</green>
-            <blue>158</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Light">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>175</red>
-            <green>255</green>
-            <blue>157</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Midlight">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>123</red>
-            <green>255</green>
-            <blue>93</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Dark">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>35</red>
-            <green>127</green>
-            <blue>14</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Mid">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>47</red>
-            <green>170</green>
-            <blue>19</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Text">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>22</red>
-            <green>23</green>
-            <blue>23</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="BrightText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="ButtonText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>22</red>
-            <green>23</green>
-            <blue>23</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Base">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>158</red>
-            <green>158</green>
-            <blue>158</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Window">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>158</red>
-            <green>158</green>
-            <blue>158</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Shadow">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>0</red>
-            <green>0</green>
-            <blue>0</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Highlight">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>160</red>
-            <green>255</green>
-            <blue>131</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="AlternateBase">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>163</red>
-            <green>255</green>
-            <blue>142</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="ToolTipBase">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>255</red>
-            <green>255</green>
-            <blue>220</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="ToolTipText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>0</red>
-            <green>0</green>
-            <blue>0</blue>
-           </color>
-          </brush>
-         </colorrole>
-        </active>
-        <inactive>
-         <colorrole role="WindowText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>22</red>
-            <green>23</green>
-            <blue>23</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Button">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>158</red>
-            <green>158</green>
-            <blue>158</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Light">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>175</red>
-            <green>255</green>
-            <blue>157</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Midlight">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>123</red>
-            <green>255</green>
-            <blue>93</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Dark">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>35</red>
-            <green>127</green>
-            <blue>14</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Mid">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>47</red>
-            <green>170</green>
-            <blue>19</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Text">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>22</red>
-            <green>23</green>
-            <blue>23</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="BrightText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="ButtonText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>22</red>
-            <green>23</green>
-            <blue>23</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Base">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>158</red>
-            <green>158</green>
-            <blue>158</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Window">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>158</red>
-            <green>158</green>
-            <blue>158</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Shadow">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>0</red>
-            <green>0</green>
-            <blue>0</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Highlight">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>160</red>
-            <green>255</green>
-            <blue>131</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="AlternateBase">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>163</red>
-            <green>255</green>
-            <blue>142</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="ToolTipBase">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>255</red>
-            <green>255</green>
-            <blue>220</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="ToolTipText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>0</red>
-            <green>0</green>
-            <blue>0</blue>
-           </color>
-          </brush>
-         </colorrole>
-        </inactive>
-        <disabled>
-         <colorrole role="WindowText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>22</red>
-            <green>23</green>
-            <blue>23</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Button">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>158</red>
-            <green>158</green>
-            <blue>158</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Light">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>175</red>
-            <green>255</green>
-            <blue>157</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Midlight">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>123</red>
-            <green>255</green>
-            <blue>93</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Dark">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>35</red>
-            <green>127</green>
-            <blue>14</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Mid">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>47</red>
-            <green>170</green>
-            <blue>19</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Text">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>22</red>
-            <green>23</green>
-            <blue>23</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="BrightText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>255</red>
-            <green>255</green>
-            <blue>255</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="ButtonText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>22</red>
-            <green>23</green>
-            <blue>23</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Base">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>158</red>
-            <green>158</green>
-            <blue>158</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Window">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>158</red>
-            <green>158</green>
-            <blue>158</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Shadow">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>0</red>
-            <green>0</green>
-            <blue>0</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="Highlight">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>208</red>
-            <green>208</green>
-            <blue>208</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="AlternateBase">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>71</red>
-            <green>255</green>
-            <blue>29</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="ToolTipBase">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>255</red>
-            <green>255</green>
-            <blue>220</blue>
-           </color>
-          </brush>
-         </colorrole>
-         <colorrole role="ToolTipText">
-          <brush brushstyle="SolidPattern">
-           <color alpha="255">
-            <red>0</red>
-            <green>0</green>
-            <blue>0</blue>
-           </color>
-          </brush>
-         </colorrole>
-        </disabled>
-       </palette>
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>10</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>1000</width>
+        <height>31</height>
+       </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(158, 158, 158);
-color: rgb(22, 23, 23);
-font: 25 13pt &quot;Titillium Web&quot;;
-border-radius: 0;
-padding:0;</string>
+       <string notr="true">QSlider{
+background: none;
+border-radius: 2px;
+}
+
+QSlider::groove::horizontal{
+    border: 1px solid #999999;
+    height: 5px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+    margin: 2px 0;
+	background-color: rgb(17, 17, 17);
+}
+
+QSlider::handle:horizontal {
+    border:0;
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(248, 248, 248, 255), stop:1 rgba(194, 194, 194, 255));
+    width: 8px;
+	height: 30px;
+    margin: -25px 0; /* handle is placed by default on the contents rect of the groove. Expand outside the groove */
+    border-radius: 1px;
+}</string>
       </property>
       <property name="minimum">
        <number>70000000</number>
@@ -2086,182 +2485,24 @@ padding:0;</string>
       <property name="maximum">
        <number>2147483647</number>
       </property>
-      <property name="singleStep">
-       <number>102</number>
-      </property>
-      <property name="pageStep">
-       <number>1000</number>
-      </property>
-      <property name="value">
-       <number>1938800000</number>
-      </property>
-      <property name="sliderPosition">
-       <number>1938800000</number>
-      </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="tickPosition">
-       <enum>QSlider::NoTicks</enum>
-      </property>
-     </widget>
-     <widget class="QLabel" name="rx1GainLabel">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>31</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Oxanium</family>
-        <pointsize>10</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(54, 54, 54);
-color: rgb(240, 240, 240);
-border-radius: 0;
-border: 0;</string>
-      </property>
-      <property name="text">
-       <string>GAIN</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="gainUpdate">
-      <property name="geometry">
-       <rect>
-        <x>480</x>
-        <y>10</y>
-        <width>61</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Digital-7 Italic</family>
-        <pointsize>18</pointsize>
-        <weight>50</weight>
-        <italic>true</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.0343137 rgba(49, 49, 49, 255), stop:0.588235 rgba(168, 168, 168, 255), stop:0.857843 rgba(123, 123, 123, 255));
-border-radius: 0;
-color: rgb(168, 255, 79);
-text-align: center;</string>
-      </property>
-      <property name="text">
-       <string>--</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="freqLabel">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>80</y>
-        <width>231</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Oxanium</family>
-        <pointsize>11</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: none;
-border: none;
-color: rgb(250, 250, 250);
-border-bottom: 1px solid rgb(155, 255, 120);</string>
-      </property>
-      <property name="text">
-       <string>CENTER FREQUENCY</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignHCenter|Qt::AlignTop</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="freqUpdate">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>110</y>
-        <width>181</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Digital-7 Italic</family>
-        <pointsize>28</pointsize>
-        <italic>true</italic>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid qlineargradient(spread:pad, x1:0.0152353, y1:1, x2:0.833333, y2:0.278409, stop:0.0490196 rgba(172, 172, 172, 255), stop:0.5 rgba(203, 203, 203, 255), stop:0.803922 rgba(126, 126, 126, 255));
-border-radius: 8px;
-border-top-left-radius: 0;
-border-top-right-radius: 0;
-border-bottom-right-radius: 0;
-
-color: rgb(168, 255, 79);
-
-text-align: center;
-
-QLineEdit::hover{
-	color: rgb(195, 255, 177);
-
-border-color: rgb(169, 255, 157);
-}</string>
-      </property>
-      <property name="inputMask">
-       <string/>
-      </property>
-      <property name="maxLength">
-       <number>380000000</number>
-      </property>
-      <property name="frame">
-       <bool>false</bool>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <property name="placeholderText">
-       <string>--</string>
       </property>
      </widget>
      <widget class="QPushButton" name="setFreqButton">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>130</y>
+        <x>260</x>
+        <y>90</y>
         <width>31</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Oxanium</family>
+        <family>Rajdhani</family>
         <pointsize>11</pointsize>
+        <italic>false</italic>
        </font>
       </property>
       <property name="styleSheet">
@@ -2284,61 +2525,18 @@ border-color: rgb(179, 182, 182);
        <string>SET</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="antennaSelect">
-      <property name="geometry">
-       <rect>
-        <x>250</x>
-        <y>110</y>
-        <width>101</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Titillium Web</family>
-        <pointsize>10</pointsize>
-        <italic>false</italic>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-color: rgb(168, 255, 79);
-border: 1px solid rgb(178, 178, 178);
-padding: 6px;
-border-top: 0;
-border-radius: 4px;</string>
-      </property>
-      <property name="currentIndex">
-       <number>2</number>
-      </property>
-      <item>
-       <property name="text">
-        <string>LNAH</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>LNAL</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>LNAW</string>
-       </property>
-      </item>
-     </widget>
      <widget class="QPushButton" name="gsmFreq1">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>110</y>
+        <x>260</x>
+        <y>70</y>
         <width>31</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Oxanium</family>
+        <family>Rajdhani</family>
         <pointsize>11</pointsize>
         <italic>false</italic>
        </font>
@@ -2350,6 +2548,7 @@ border: 1px solid rgb(26, 26, 26);
 color: rgb(249, 249, 249);
 border: 1px solid rgb(181, 181, 181);
 border-radius: 0;
+border-top-right-radius: 6px;
 }
 
 QPushButton::hover {
@@ -2362,72 +2561,59 @@ border-color: rgb(179, 182, 182);
        <string>GSM</string>
       </property>
      </widget>
-     <widget class="QLabel" name="dataRateLabel">
+     <widget class="QLineEdit" name="freqUpdate">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>80</y>
-        <width>181</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Exo 2</family>
-        <pointsize>12</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: none;
-border: 0;
-color: rgb(250, 250, 250);
-border-bottom: 1px solid rgb(155, 255, 120);</string>
-      </property>
-      <property name="text">
-       <string>DATA RATE</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignHCenter|Qt::AlignTop</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="dataRateUpdate">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>110</y>
-        <width>181</width>
+        <x>10</x>
+        <y>70</y>
+        <width>231</width>
         <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Digital-7 Italic</family>
-        <pointsize>23</pointsize>
+        <pointsize>25</pointsize>
         <italic>true</italic>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(38, 39, 39);
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
 border: 1px solid qlineargradient(spread:pad, x1:0.0152353, y1:1, x2:0.833333, y2:0.278409, stop:0.0490196 rgba(172, 172, 172, 255), stop:0.5 rgba(203, 203, 203, 255), stop:0.803922 rgba(126, 126, 126, 255));
-border-radius: 6px;
-color: rgb(168, 255, 79);
-text-align: center;</string>
+border-radius: 8px;
+border-top-left-radius: 8px;
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+color: rgb(151, 237, 235);
+text-align: center;
+
+QLineEdit::hover{
+color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.0980392 rgba(145, 226, 67, 255), stop:0.666667 rgba(194, 253, 164, 255));
+
+border-color: rgb(169, 255, 157);
+}</string>
       </property>
-      <property name="text">
-       <string>--</string>
+      <property name="inputMask">
+       <string/>
+      </property>
+      <property name="maxLength">
+       <number>380000000</number>
+      </property>
+      <property name="frame">
+       <bool>false</bool>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>--</string>
       </property>
      </widget>
      <widget class="QPushButton" name="rx_0_freq_up">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>110</y>
+        <x>240</x>
+        <y>70</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -2435,7 +2621,7 @@ text-align: center;</string>
       <property name="font">
        <font>
         <family>Oxanium</family>
-        <pointsize>18</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -2460,8 +2646,8 @@ border-color: rgb(179, 182, 182);
      <widget class="QPushButton" name="rx_0_freq_down">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>130</y>
+        <x>240</x>
+        <y>90</y>
         <width>21</width>
         <height>21</height>
        </rect>
@@ -2469,7 +2655,7 @@ border-color: rgb(179, 182, 182);
       <property name="font">
        <font>
         <family>Oxanium</family>
-        <pointsize>18</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -2491,35 +2677,68 @@ border-color: rgb(179, 182, 182);
        <string>-</string>
       </property>
      </widget>
-     <widget class="QLabel" name="dataRateLabel_2">
+     <widget class="QLabel" name="rx1GainLabel">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>80</y>
-        <width>101</width>
-        <height>21</height>
+        <x>420</x>
+        <y>60</y>
+        <width>31</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Exo 2</family>
-        <pointsize>12</pointsize>
+        <family>Oxanium</family>
+        <pointsize>11</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: none;
+       <string notr="true">background: none;
+color: rgb(240, 240, 240);
+border-radius: 0;
 border: 0;
-color: rgb(250, 250, 250);
-border-bottom: 1px solid rgb(155, 255, 120);</string>
+</string>
       </property>
       <property name="text">
-       <string>ANTENNA</string>
+       <string>Gain</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignHCenter|Qt::AlignTop</set>
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="gainUpdate">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>80</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Digital-7 Italic</family>
+        <pointsize>22</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
+border: 1px solid qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.0343137 rgba(49, 49, 49, 255), stop:0.588235 rgba(168, 168, 168, 255), stop:0.857843 rgba(123, 123, 123, 255));
+border-radius: 0;
+color: rgb(168, 255, 79);
+text-align: center;</string>
+      </property>
+      <property name="text">
+       <string>--</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -4724,8 +4943,8 @@ text-align: center;</string>
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>151</width>
-      <height>71</height>
+      <width>141</width>
+      <height>58</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -4733,6 +4952,7 @@ text-align: center;</string>
 background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.0294118 rgba(0, 0, 0, 255), stop:0.77451 rgba(123, 123, 123, 255));
 padding: 0;
 padding-bottom: 10px;
+border: 0;
 border-bottom: 5px solid;
 border-bottom-color: rgb(163, 236, 8);
 margin: 0;
@@ -4745,78 +4965,577 @@ margin: 0;
      <enum>QFrame::Raised</enum>
     </property>
    </widget>
-   <widget class="QTextEdit" name="connectedDevice">
+   <widget class="QLabel" name="rx0_tia_gain_update">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>10</y>
-      <width>651</width>
+      <x>470</x>
+      <y>550</y>
+      <width>31</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Titillium Web</family>
-      <pointsize>10</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-      <stylestrategy>PreferAntialias</stylestrategy>
+      <family>Oxanium</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">border: 1px solid rgb(110, 111, 111);
-color: rgb(244, 244, 244);
-background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));</string>
+     <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+color: rgb(168, 255, 79);
+border: 1px solid;
+border-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.0343137 rgba(49, 49, 49, 255), stop:0.588235 rgba(168, 168, 168, 255), stop:0.857843 rgba(123, 123, 123, 255));
+border-top-left-radius: 8px;</string>
     </property>
-    <property name="verticalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOff</enum>
+    <property name="text">
+     <string>19</string>
     </property>
-    <property name="horizontalScrollBarPolicy">
-     <enum>Qt::ScrollBarAlwaysOff</enum>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="bladerf_setup">
+   <widget class="QLabel" name="rx0_pga_update">
     <property name="geometry">
      <rect>
-      <x>380</x>
-      <y>460</y>
-      <width>71</width>
+      <x>510</x>
+      <y>550</y>
+      <width>31</width>
       <height>21</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>300</width>
-      <height>16777215</height>
-     </size>
-    </property>
-    <property name="baseSize">
-     <size>
-      <width>300</width>
-      <height>0</height>
-     </size>
-    </property>
     <property name="font">
      <font>
-      <family>Rajdhani</family>
-      <pointsize>14</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
+      <family>Oxanium</family>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton { 
+     <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+color: rgb(168, 255, 79);
+border: 1px solid;
+border-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.0343137 rgba(49, 49, 49, 255), stop:0.588235 rgba(168, 168, 168, 255), stop:0.857843 rgba(123, 123, 123, 255));</string>
+    </property>
+    <property name="text">
+     <string>12</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rx0_lna_gain_update">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>550</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Oxanium</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+color: rgb(168, 255, 79);
+border: 1px solid;
+border-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.0343137 rgba(49, 49, 49, 255), stop:0.588235 rgba(168, 168, 168, 255), stop:0.857843 rgba(123, 123, 123, 255));</string>
+    </property>
+    <property name="text">
+     <string>30</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="rx0_lna_gain">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>570</y>
+      <width>31</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider{
+background-color: qlineargradient(spread:pad, x1:1, y1:0.58, x2:1, y2:0, stop:0 rgba(166, 255, 25, 255), stop:0.862745 rgba(98, 212, 48, 255));
+padding-bottom: 2px;
+padding-top: 5px;
+padding-top: 5px;
+border-right: 1px solid #333;
+
+}
+
+QSlider::groove::vertical{
+    border: 1px solid #999999;
+    width: 10px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+    margin: 2px 0;
+}
+
+QSlider::handle::vertical {
+    border: 1px solid #5c5c5c;
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.220588 rgba(126, 200, 10, 255), stop:0.647059 rgba(163, 236, 8, 255));
+    width: 10px;
+	height: 14px;
+    border-radius: 2px;
+}</string>
+    </property>
+    <property name="maximum">
+     <number>30</number>
+    </property>
+    <property name="pageStep">
+     <number>5</number>
+    </property>
+    <property name="value">
+     <number>30</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="rx0_tia_gain">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>570</y>
+      <width>31</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider{
+background-color: qlineargradient(spread:pad, x1:1, y1:0.58, x2:1, y2:0, stop:0 rgba(166, 255, 25, 255), stop:0.862745 rgba(98, 212, 48, 255));
+padding-bottom: 2px;
+border-bottom-left-radius: 8px;
+padding-top: 5px;
+border-right: 1px solid #333;
+}
+
+QSlider::groove::vertical{
+    border: 1px solid #999999;
+    width: 10px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+    margin: 2px 0;
+}
+
+QSlider::handle::vertical {
+    border: 1px solid #5c5c5c;
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.220588 rgba(126, 200, 10, 255), stop:0.647059 rgba(163, 236, 8, 255));
+    width: 10px;
+	height: 14px;
+    border-radius: 2px;
+}</string>
+    </property>
+    <property name="minimum">
+     <number>-12</number>
+    </property>
+    <property name="maximum">
+     <number>19</number>
+    </property>
+    <property name="pageStep">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>19</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="rx0_pga_gain">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>570</y>
+      <width>31</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider{
+background-color: qlineargradient(spread:pad, x1:1, y1:0.58, x2:1, y2:0, stop:0 rgba(166, 255, 25, 255), stop:0.862745 rgba(98, 212, 48, 255));
+padding-bottom: 2px;
+padding-top: 5px;
+border-right: 1px solid #333;
+}
+
+QSlider::groove::vertical{
+    border: 1px solid #999999;
+    width: 10px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+    margin: 2px 0;
+}
+
+QSlider::handle::vertical {
+    border: 1px solid #5c5c5c;
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.220588 rgba(126, 200, 10, 255), stop:0.647059 rgba(163, 236, 8, 255));
+    width: 10px;
+	height: 14px;
+    border-radius: 2px;
+}</string>
+    </property>
+    <property name="maximum">
+     <number>12</number>
+    </property>
+    <property name="pageStep">
+     <number>2</number>
+    </property>
+    <property name="value">
+     <number>12</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rx0_lna_label_2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>530</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Oxanium</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: none;</string>
+    </property>
+    <property name="text">
+     <string>LNA</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rx0_pga_label_2">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>530</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Oxanium</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: none;</string>
+    </property>
+    <property name="text">
+     <string>PGA</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rx0_tia_label_2">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>530</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Oxanium</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: none;</string>
+    </property>
+    <property name="text">
+     <string>TIA</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="rx0_master_gain">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>570</y>
+      <width>31</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider{
+background-color: qlineargradient(spread:pad, x1:1, y1:0.58, x2:1, y2:0, stop:0 rgba(166, 255, 25, 255), stop:0.862745 rgba(98, 212, 48, 255));
+border-bottom-right-radius: 8px;
+padding-bottom: 2px;
+padding-top: 5px;
+border-leftt: 6px solid #333;
+}
+
+QSlider::groove::vertical{
+    border: 1px solid #999999;
+    width: 10px; /* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */
+	background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+    margin: 2px 0;
+}
+
+QSlider::handle::vertical {
+    border: 1px solid #5c5c5c;
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.220588 rgba(126, 200, 10, 255), stop:0.647059 rgba(163, 236, 8, 255));
+    width: 10px;
+	height: 14px;
+    border-radius: 2px;
+}</string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>70</number>
+    </property>
+    <property name="pageStep">
+     <number>5</number>
+    </property>
+    <property name="value">
+     <number>70</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rx0_master_gain_label_2">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>530</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Oxanium</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: none;</string>
+    </property>
+    <property name="text">
+     <string>MAIN</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="rx0_master_gain_update">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>550</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Oxanium</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0 rgba(86, 86, 86, 255), stop:1 rgba(34, 35, 34, 255));
+color: rgb(168, 255, 79);
+border: 1px solid;
+border-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.0343137 rgba(49, 49, 49, 255), stop:0.588235 rgba(168, 168, 168, 255), stop:0.857843 rgba(123, 123, 123, 255));
+border-top-right-radius: 8px;</string>
+    </property>
+    <property name="text">
+     <string>70</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gain_section_label">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>510</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Oxanium</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: none;
+border: 2px solid #333;
+border-left: none;
+border-right: none;
+border-top: none;</string>
+    </property>
+    <property name="text">
+     <string>GAINS RX 1</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mainMenuToggle">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>10</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Glyphter</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border: 1px solid;
+border-radius: 4px;
+
+	border-color: rgb(71, 71, 71);
+	color: rgb(168, 255, 79);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+padding-left: 2px;
+padding-bottom: 0;
+}
+
+QPushButton::hover {
+border-color: rgb(170, 255, 145);
+	background-color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));
+	color: rgb(249, 249, 249);
+}</string>
+    </property>
+    <property name="text">
+     <string>e</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button3_2">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Glyphter</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+border: 1px solid;
+border-radius: 4px;
+	border-color: rgb(71, 71, 71);
+	color: rgb(168, 255, 79);
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0.176471 rgba(123, 123, 123, 255), stop:0.710784 rgba(84, 84, 84, 255));
+padding-left: 5px;
+padding-bottom: 2px;
+}
+
+QPushButton::hover {
+border-color: rgb(170, 255, 145);
+	background-color: qlineargradient(spread:pad, x1:0.438, y1:0, x2:0.433498, y2:1, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(94, 94, 94, 255));
+	color: rgb(249, 249, 249);
+}</string>
+    </property>
+    <property name="text">
+     <string>P</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_3">
+    <property name="geometry">
+     <rect>
+      <x>99</x>
+      <y>0</y>
+      <width>1131</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.0441176 rgba(36, 85, 123, 255), stop:0.960784 rgba(7, 30, 36, 255));
+border: none;
+color: rgb(250, 250, 250);
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="bladerf_setup">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>10</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>300</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>300</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Rajdhani</family>
+       <pointsize>14</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton { 
 	background-color: rgb(45, 45, 45);
 border: 1px solid rgb(135, 135, 135);
 border-radius: 4px;
@@ -4832,85 +5551,125 @@ color:  rgb(170, 255, 155);
 border-color: rgb(170, 255, 155);
 }
 </string>
-    </property>
-    <property name="text">
-     <string>BladeRF</string>
-    </property>
+     </property>
+     <property name="text">
+      <string>BladeRF</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="connectedDevice">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>0</y>
+       <width>451</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Oxanium</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: none;
+color: rgb(248, 248, 248);
+border: none;
+padding: 0;
+margin: 0;</string>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <zorder>bladerf_setup</zorder>
+    <zorder>mainTabWidget</zorder>
+    <zorder>connectedDevice</zorder>
    </widget>
-   <widget class="QLabel" name="sampleRateUpdate">
+   <widget class="QLabel" name="gain_section_label_2">
     <property name="geometry">
      <rect>
-      <x>940</x>
-      <y>30</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Digital-7 Mono</family>
-      <pointsize>18</pointsize>
-      <weight>50</weight>
-      <italic>true</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:0.79803 rgba(53, 53, 53, 255));
-border: 1px solid rgb(139, 141, 141);
-border-radius: 6px;
-color: rgb(168, 255, 79);
-text-align: center;</string>
-    </property>
-    <property name="text">
-     <string>--</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="sampleRateLabel">
-    <property name="geometry">
-     <rect>
-      <x>940</x>
-      <y>10</y>
-      <width>91</width>
-      <height>21</height>
+      <x>140</x>
+      <y>510</y>
+      <width>151</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Oxanium</family>
-      <pointsize>11</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: none;
-border: none;
-color: rgb(250, 250, 250);
-</string>
+     <string notr="true">background: none;
+border: 2px solid #333;
+border-left: none;
+border-right: none;
+border-top: none;</string>
     </property>
     <property name="text">
-     <string>Sample Rate</string>
+     <string>DEVICE INFO</string>
     </property>
     <property name="alignment">
-     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <zorder>connectionLabel</zorder>
+   <widget class="QLabel" name="gain_section_label_3">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>510</y>
+      <width>391</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Oxanium</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: none;
+border: 2px solid #333;
+border-left: none;
+border-right: none;
+border-top: none;</string>
+    </property>
+    <property name="text">
+     <string>CHANNEL FREQUENCY / ANTENNA</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>frame_3</zorder>
    <zorder>deviceOutput</zorder>
    <zorder>DeviceOutLabel</zorder>
-   <zorder>DeviceIsConnected</zorder>
-   <zorder>tabWidget</zorder>
+   <zorder>mainTabWidget</zorder>
    <zorder>freqGainSettings</zorder>
    <zorder>LimeLogo</zorder>
-   <zorder>connectedDevice</zorder>
-   <zorder>bladerf_setup</zorder>
-   <zorder>sampleRateUpdate</zorder>
-   <zorder>sampleRateLabel</zorder>
+   <zorder>rx0_tia_gain_update</zorder>
+   <zorder>rx0_pga_update</zorder>
+   <zorder>rx0_lna_gain_update</zorder>
+   <zorder>rx0_lna_gain</zorder>
+   <zorder>rx0_tia_gain</zorder>
+   <zorder>rx0_pga_gain</zorder>
+   <zorder>rx0_lna_label_2</zorder>
+   <zorder>rx0_pga_label_2</zorder>
+   <zorder>rx0_tia_label_2</zorder>
+   <zorder>rx0_master_gain</zorder>
+   <zorder>rx0_master_gain_label_2</zorder>
+   <zorder>rx0_master_gain_update</zorder>
+   <zorder>gain_section_label</zorder>
+   <zorder>mainMenuToggle</zorder>
+   <zorder>button3_2</zorder>
+   <zorder>gain_section_label_2</zorder>
+   <zorder>gain_section_label_3</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
@@ -4922,10 +5681,8 @@ color: rgb(250, 250, 250);
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>deviceInfo</tabstop>
   <tabstop>rx0</tabstop>
   <tabstop>tx0</tabstop>
-  <tabstop>exit</tabstop>
   <tabstop>testSine</tabstop>
  </tabstops>
  <resources>
@@ -4933,98 +5690,18 @@ color: rgb(250, 250, 250);
  </resources>
  <connections>
   <connection>
-   <sender>exit</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>140</x>
-     <y>432</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>182</x>
-     <y>0</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>testSine</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>on_tx_test_sine_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>803</x>
-     <y>576</y>
+     <x>795</x>
+     <y>667</y>
     </hint>
     <hint type="destinationlabel">
      <x>399</x>
      <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>deviceInfo</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>on_device_info_clicked()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>140</x>
-     <y>304</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>231</x>
-     <y>23</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>BoardTemp</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>on_board_temp_clicked()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>140</x>
-     <y>334</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>399</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>gain</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>MainWindow</receiver>
-   <slot>on_gain_changed()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>894</x>
-     <y>487</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>413</x>
-     <y>302</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>freq</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>MainWindow</receiver>
-   <slot>on_center_freq_changed()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>894</x>
-     <y>527</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>465</x>
-     <y>335</y>
     </hint>
    </hints>
   </connection>
@@ -5035,8 +5712,8 @@ color: rgb(250, 250, 250);
    <slot>on_rx_0_antenna_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>984</x>
-     <y>587</y>
+     <x>1196</x>
+     <y>647</y>
     </hint>
     <hint type="destinationlabel">
      <x>557</x>
@@ -5051,8 +5728,8 @@ color: rgb(250, 250, 250);
    <slot>on_rx_1_antenna_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1043</x>
-     <y>596</y>
+     <x>1035</x>
+     <y>687</y>
     </hint>
     <hint type="destinationlabel">
      <x>767</x>
@@ -5067,8 +5744,8 @@ color: rgb(250, 250, 250);
    <slot>on_tx_0_antenna_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1043</x>
-     <y>596</y>
+     <x>1035</x>
+     <y>687</y>
     </hint>
     <hint type="destinationlabel">
      <x>800</x>
@@ -5083,28 +5760,12 @@ color: rgb(250, 250, 250);
    <slot>on_tx_1_antenna_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1043</x>
-     <y>596</y>
+     <x>1035</x>
+     <y>687</y>
     </hint>
     <hint type="destinationlabel">
      <x>816</x>
      <y>383</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>rxToFile_checkbox</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>MainWindow</receiver>
-   <slot>on_rxToFile_clicked()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>100</x>
-     <y>152</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>205</x>
-     <y>379</y>
     </hint>
    </hints>
   </connection>
@@ -5115,8 +5776,8 @@ color: rgb(250, 250, 250);
    <slot>on_center_freq_line_edit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>874</x>
-     <y>627</y>
+     <x>934</x>
+     <y>667</y>
     </hint>
     <hint type="destinationlabel">
      <x>916</x>
@@ -5131,8 +5792,8 @@ color: rgb(250, 250, 250);
    <slot>on_gsmFreq1_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>874</x>
-     <y>594</y>
+     <x>934</x>
+     <y>647</y>
     </hint>
     <hint type="destinationlabel">
      <x>910</x>
@@ -5147,8 +5808,8 @@ color: rgb(250, 250, 250);
    <slot>on_tx_1_gain_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>828</x>
-     <y>488</y>
+     <x>826</x>
+     <y>587</y>
     </hint>
     <hint type="destinationlabel">
      <x>665</x>
@@ -5163,44 +5824,12 @@ color: rgb(250, 250, 250);
    <slot>on_tx_1_freq_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>804</x>
-     <y>536</y>
+     <x>796</x>
+     <y>627</y>
     </hint>
     <hint type="destinationlabel">
      <x>701</x>
      <y>454</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>stopRXStream</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>on_rxtx_stop_clicked()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>140</x>
-     <y>192</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>7</x>
-     <y>147</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>exit</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>136</x>
-     <y>432</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>62</x>
-     <y>311</y>
     </hint>
    </hints>
   </connection>
@@ -5211,44 +5840,12 @@ color: rgb(250, 250, 250);
    <slot>on_bladerf_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>115</x>
-     <y>332</y>
+     <x>340</x>
+     <y>500</y>
     </hint>
     <hint type="destinationlabel">
      <x>602</x>
      <y>336</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>rx0</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>on_rx_0_stream_clicked()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>46</x>
-     <y>112</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>94</x>
-     <y>414</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>tx0</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>on_tx_0_stream_clicked()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>125</x>
-     <y>112</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>326</x>
-     <y>420</y>
     </hint>
    </hints>
   </connection>
@@ -5259,8 +5856,8 @@ color: rgb(250, 250, 250);
    <slot>on_rx0_freq_up_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>842</x>
-     <y>594</y>
+     <x>904</x>
+     <y>647</y>
     </hint>
     <hint type="destinationlabel">
      <x>565</x>
@@ -5275,8 +5872,8 @@ color: rgb(250, 250, 250);
    <slot>on_rx0_freq_down_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>837</x>
-     <y>616</y>
+     <x>904</x>
+     <y>667</y>
     </hint>
     <hint type="destinationlabel">
      <x>606</x>
@@ -5285,34 +5882,146 @@ color: rgb(250, 250, 250);
    </hints>
   </connection>
   <connection>
-   <sender>IQPlotAutoscale</sender>
-   <signal>clicked()</signal>
+   <sender>rx0_lna_gain</sender>
+   <signal>valueChanged(int)</signal>
    <receiver>MainWindow</receiver>
-   <slot>on_qwt_plot_autoscale_clicked()</slot>
+   <slot>on_rx0_lna_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>580</x>
-     <y>96</y>
+     <x>550</x>
+     <y>568</y>
     </hint>
     <hint type="destinationlabel">
-     <x>701</x>
-     <y>42</y>
+     <x>644</x>
+     <y>4</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>IQPlotScaleZoomIn</sender>
-   <signal>clicked()</signal>
+   <sender>rx0_pga_gain</sender>
+   <signal>valueChanged(int)</signal>
    <receiver>MainWindow</receiver>
-   <slot>on_qwt_plot_scale_increase()</slot>
+   <slot>on_rx0_pga_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>608</x>
-     <y>92</y>
+     <x>520</x>
+     <y>540</y>
     </hint>
     <hint type="destinationlabel">
-     <x>450</x>
-     <y>42</y>
+     <x>755</x>
+     <y>34</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rx0_tia_gain</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_rx0_tia_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>480</x>
+     <y>541</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>782</x>
+     <y>45</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rx0_master_gain</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_rx0_gain_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>600</x>
+     <y>550</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>847</x>
+     <y>15</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rx0_freq</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_center_freq_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>731</x>
+     <y>617</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>725</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rxtofile_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_rxToFile_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1028</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>521</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button3_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>220</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>394</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button3_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_exit_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>220</x>
+     <y>31</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mainMenuToggle</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_main_menu_toggle_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>48</y>
     </hint>
    </hints>
   </connection>
@@ -5323,8 +6032,8 @@ color: rgb(250, 250, 250);
    <slot>on_qwt_plot_scale_decrease()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>600</x>
-     <y>101</y>
+     <x>698</x>
+     <y>129</y>
     </hint>
     <hint type="destinationlabel">
      <x>687</x>
@@ -5333,18 +6042,50 @@ color: rgb(250, 250, 250);
    </hints>
   </connection>
   <connection>
-   <sender>streamRateVsLatencyComboBox</sender>
-   <signal>currentIndexChanged(int)</signal>
+   <sender>deviceInfo</sender>
+   <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>on_stream_latency_changed()</slot>
+   <slot>on_device_info_clicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>705</x>
-     <y>202</y>
+     <x>104</x>
+     <y>93</y>
     </hint>
     <hint type="destinationlabel">
-     <x>916</x>
-     <y>29</y>
+     <x>349</x>
+     <y>9</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rx0</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_rx_0_stream_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1076</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>94</x>
+     <y>414</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stopRXStream</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_rxtx_stop_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1168</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>147</y>
     </hint>
    </hints>
   </connection>
@@ -5355,8 +6096,8 @@ color: rgb(250, 250, 250);
    <slot>on_stream_sample_rate_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>850</x>
-     <y>199</y>
+     <x>916</x>
+     <y>139</y>
     </hint>
     <hint type="destinationlabel">
      <x>894</x>
@@ -5365,18 +6106,210 @@ color: rgb(250, 250, 250);
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
+   <sender>streamRateVsLatencyComboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
    <receiver>MainWindow</receiver>
-   <slot>on_set_register_clicked()</slot>
+   <slot>on_stream_latency_changed()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1088</x>
-     <y>386</y>
+     <x>916</x>
+     <y>199</y>
     </hint>
     <hint type="destinationlabel">
-     <x>976</x>
-     <y>41</y>
+     <x>916</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_rx_replay_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>920</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1210</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BoardTemp</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_board_temp_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>4</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>IQPlotAutoscale</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_qwt_plot_autoscale_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>668</x>
+     <y>129</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>701</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tx0</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_tx_0_stream_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1155</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>326</x>
+     <y>420</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>IQPlotScaleZoomIn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_qwt_plot_scale_increase()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>728</x>
+     <y>112</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sampleFormatChooser</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_stream_format_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>964</x>
+     <y>169</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>908</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_rx_capture_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>498</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>refreshRate</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_refreshRate_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>868</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>455</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>TimedPlotUpdate</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_plot_update_mode_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>838</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>745</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rxToFile_checkbox</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_rxToFile_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1038</x>
+     <y>229</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1158</x>
+     <y>11</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rxtofile_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_rxToFile_button_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1028</x>
+     <y>309</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1127</x>
+     <y>7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>freqGainSettings</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>on_freq_gain_channel_tab_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1063</x>
+     <y>569</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>931</x>
+     <y>-14</y>
     </hint>
    </hints>
   </connection>
@@ -5416,6 +6349,18 @@ color: rgb(250, 250, 250);
   <slot>on_stream_sample_rate_changed()</slot>
   <slot>on_stream_latency_changed()</slot>
   <slot>on_set_register_clicked()</slot>
+  <slot>on_stream_format_changed()</slot>
+  <slot>on_rx0_gain_changed()</slot>
+  <slot>on_rx0_tia_changed()</slot>
+  <slot>on_rx0_pga_changed()</slot>
+  <slot>on_rx0_lna_changed()</slot>
+  <slot>on_main_menu_toggle_clicked()</slot>
+  <slot>on_rxToFile_button_clicked()</slot>
+  <slot>on_refreshRate_changed()</slot>
+  <slot>on_rx_capture_clicked()</slot>
+  <slot>on_rx_replay_clicked()</slot>
+  <slot>on_plot_update_mode_changed()</slot>
+  <slot>on_freq_gain_channel_tab_changed()</slot>
  </slots>
  <buttongroups>
   <buttongroup name="deviceButtons"/>
