@@ -379,7 +379,7 @@ void MainWindow::on_tx_test_sine_clicked ()
       lms_stream_status_t stream_status = rx->getStreamStatus ();
       if(stream_status.active && rx->isRunning ())
         {
-          ui->dataOutput2->setText("[ STREAM IN PROGRESS ]");
+          ui->dataOutput2->setText("[ TX STREAM IN PROGRESS ]");
           ui->dataOutput2->setText ("Total Samples RX'd=" + rx->getTotalSamples ());
 //          ui->dataOutput2->append("sample time stamp=" + QString::number (stream_status.timestamp));
           ui->dataOutput2->setText ("Data Rate =" + rx->getDataRate ());
