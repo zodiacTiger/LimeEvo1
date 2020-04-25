@@ -13,7 +13,7 @@
  public:
   ReplayThread();
   ~ReplayThread () override;
-  void run();
+  void run() override;
   void stop();
   bool captureRunning = false;
 };

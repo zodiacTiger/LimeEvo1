@@ -67,7 +67,7 @@ explicit RxThread (double freq, unsigned int rx_gain, double sampRate, const dou
    lms_stream_meta_t rx_meta;
 
   void stop();
-  void run();
+  void run() override;
 
   QString getCurrentGain();
   QString setFreq(double freq, size_t channel, size_t path);
